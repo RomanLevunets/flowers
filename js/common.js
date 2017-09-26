@@ -8,7 +8,7 @@ $(document).ready(function() {
         nextArrow: '<div class="intro-next"><p>След</p></div>',
         responsive: [
             {
-                breakpoint: 768,
+                breakpoint: 769,
                 settings: {
                     slidesToScroll: 1,
                     arrows: false
@@ -171,7 +171,7 @@ $(document).ready(function() {
     //burger animation
     $('.burger').click(function(){
         $('.burger__line').toggleClass('active-b');
-        $('.menu').toggleClass('open');
+        $('.Lside').toggleClass('active');
         $('.wrapper').toggleClass('bg-active');
 
     });
