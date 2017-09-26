@@ -5,7 +5,17 @@ $(document).ready(function() {
     $('.intro-slider').slick({
         speed: 1000,
         prevArrow: '<div class="intro-prev"><p>Пред</p></div>',
-        nextArrow: '<div class="intro-next"><p>След</p></div>'
+        nextArrow: '<div class="intro-next"><p>След</p></div>',
+        responsive: [
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToScroll: 1,
+                    arrows: false
+                }
+            }
+        ]
+
     });
 
     $('.reviews-slider').slick({
@@ -13,7 +23,75 @@ $(document).ready(function() {
         slidesToShow: 4,
         slidesToScroll: 1,
         prevArrow: '<div class="reviews-prev"></div>',
-        nextArrow: '<div class="reviews-next"></div>'
+        nextArrow: '<div class="reviews-next"></div>',
+        responsive: [
+            {
+                breakpoint: 1200,
+                settings: {
+                    slidesToShow: 3,
+                    centerMode: true,
+                    slidesToScroll: 1,
+                    arrows: false
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 2,
+                    centerMode: true,
+                    slidesToScroll: 1,
+                    arrows: false
+                }
+            },
+            {
+                breakpoint: 460,
+                settings: {
+                    slidesToShow: 1,
+                    centerMode: true,
+                    slidesToScroll: 1,
+                    arrows: false
+                }
+            }
+        ]
+    });
+
+    $('.ourInfo').slick({
+        speed: 500,
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        variableWidth: true,
+        infinite: false,
+        arrows: false,
+        responsive: [
+            {
+                breakpoint: 1200,
+                settings: {
+                    slidesToShow: 2,
+                    initialSlide: 2,
+                    centerMode: true,
+                    slidesToScroll: 1
+
+                }
+            },
+            {
+                breakpoint: 980,
+                settings: {
+                    slidesToShow: 2,
+                    initialSlide: 1,
+                    centerMode: true,
+                    slidesToScroll: 1
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                    initialSlide: 1,
+                    centerMode: true,
+                    slidesToScroll: 1
+                }
+            }
+        ]
     });
 
     $('.certificates-content').slick({
@@ -21,18 +99,49 @@ $(document).ready(function() {
         slidesToShow: 3,
         slidesToScroll: 1,
         prevArrow: '<div class="reviews-prev"></div>',
-        nextArrow: '<div class="reviews-next"></div>'
+        nextArrow: '<div class="reviews-next"></div>',
+        responsive: [
+            {
+                breakpoint: 1200,
+                settings: {
+                    slidesToShow: 2,
+                    initialSlide: 1,
+                    centerMode: true,
+                    slidesToScroll: 1,
+                    arrows: false,
+
+                }
+            },
+            {
+                breakpoint: 992,
+                settings: {
+                    slidesToShow: 2,
+                    initialSlide: 1,
+                    centerMode: true,
+                    slidesToScroll: 1
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 1,
+                    initialSlide: 1,
+                    centerMode: true,
+                    slidesToScroll: 1
+                }
+            }
+        ]
     });
 
     //fancy box for certificates
     $('.certificates-content a').fancybox({
-        'loop': true,
-        'showNavArrows': true
+        loop: true,
+        showNavArrows: true
     });
     //florist gallery
     $('.floristGallery-item').fancybox({
-        'loop': true,
-        'showNavArrows': true
+        loop: true,
+        showNavArrows: true
     });
 
     //height service-top block====
@@ -68,21 +177,45 @@ $(document).ready(function() {
     });
 
     //service item
-    if(document.documentElement.clientWidth > 1000) {
-        $('.serviceL-item:not(:last-child)').mouseover(function () {
-            $('.serviceL-item:last-child').hide();
-        });
+    if(document.documentElement.clientWidth < 1200) {
+        $('.ourContent').slick({
+            speed: 500,
+            slidesToShow: 4,
+            slidesToScroll: 1,
+            infinite: true,
+            variableWidth: true,
+            arrows: false,
+            responsive: [
+                {
+                    breakpoint: 1200,
+                    settings: {
+                        slidesToShow: 3,
+                        initialSlide: 2,
+                        centerMode: true,
+                        slidesToScroll: 1
 
-        $('.serviceL-item').mouseleave(function () {
-            $('.serviceL-item:last-child').show();
-        });
+                    }
+                },
+                {
+                    breakpoint: 768,
+                    settings: {
+                        slidesToShow: 2,
+                        initialSlide: 1,
+                        centerMode: true,
+                        slidesToScroll: 1
+                    }
+                },
 
-        $('.serviceR-item:not(:last-child)').mouseover(function () {
-            $('.serviceR-item:last-child').hide();
-        });
-
-        $('.serviceR-item').mouseleave(function () {
-            $('.serviceR-item:last-child').show();
+                {
+                    breakpoint: 480,
+                    settings: {
+                        slidesToShow: 1,
+                        initialSlide: 1,
+                        centerMode: true,
+                        slidesToScroll: 1
+                    }
+                }
+            ]
         });
     }
 });
