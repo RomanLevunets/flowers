@@ -2210,6 +2210,206 @@ a:focus {
       .map-list li:last-child::before {
         background-image: url("../img/svg/address-time.svg"); }
 
+.hidden {
+  display: none; }
+
+.mfp-close-btn-in .mfp-close {
+  font: 100% "Lato-Light", sans-serif;
+  text-align: center;
+  font-size: 0;
+  width: 40px;
+  height: 40px;
+  border: 1px solid #EC5A6F;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  top: 20px;
+  right: 20px; }
+  .mfp-close-btn-in .mfp-close::after {
+    content: " ";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    width: 17px;
+    height: 17px;
+    background-image: url("../img/svg/close-btn.svg"); }
+
+.callback, .sing, .buy {
+  font-size: 0;
+  background: #fff;
+  width: 100%;
+  max-width: 1030px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 999;
+  padding: 32px 100px 50px; }
+  .callback::before, .sing::before, .buy::before {
+    content: " ";
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+    left: 68px;
+    display: inline-block;
+    width: 46px;
+    height: 47px;
+    background-image: url("../img/svg/mini-dec1.svg"); }
+  .callback::after, .sing::after, .buy::after {
+    content: " ";
+    position: absolute;
+    right: 92px;
+    bottom: 59px;
+    width: 66px;
+    height: 66px;
+    background-image: url("../img/svg/mini-dec7.svg");
+    display: inline-block; }
+  .callback .container, .sing .container, .buy .container {
+    width: 100%; }
+  .callback .section-desc, .sing .section-desc, .buy .section-desc {
+    max-width: 550px;
+    margin: 0 auto; }
+  .callback .section, .sing .section, .buy .section {
+    padding-bottom: 0; }
+
+.formCallback, .formBuy {
+  padding-top: 55px;
+  max-width: 555px;
+  margin: 0 auto; }
+  .formCallback input[type="text"], .formBuy input[type="text"] {
+    width: 100%;
+    display: block;
+    height: 56px;
+    font: 100% "Lato-Regular", sans-serif;
+    font-size: 14px;
+    -webkit-border-radius: 10em;
+            border-radius: 10em;
+    border: 1px solid #FFC5CE;
+    background: #fff;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-bottom: 30px;
+    -webkit-transition: border-color .2s linear, -webkit-box-shadow .2s linear;
+    transition: border-color .2s linear, -webkit-box-shadow .2s linear;
+    -o-transition: border-color .2s linear, box-shadow .2s linear;
+    transition: border-color .2s linear, box-shadow .2s linear;
+    transition: border-color .2s linear, box-shadow .2s linear, -webkit-box-shadow .2s linear; }
+    .formCallback input[type="text"]:focus, .formBuy input[type="text"]:focus {
+      -webkit-box-shadow: 0 0 2px #EC5A6F;
+              box-shadow: 0 0 2px #EC5A6F;
+      border-color: #EC5A6F; }
+
+.form-btn {
+  width: 196px;
+  display: block;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin: 0 auto;
+  -webkit-border-radius: 10em;
+          border-radius: 10em;
+  background: #EC5A6F;
+  border: none;
+  font: 100% "Lato-Bold", sans-serif;
+  font-size: 13px;
+  text-transform: uppercase;
+  color: #fff;
+  margin-top: 36px;
+  -webkit-transition: background .2s linear, -webkit-box-shadow .2s linear;
+  transition: background .2s linear, -webkit-box-shadow .2s linear;
+  -o-transition: box-shadow .2s linear, background .2s linear;
+  transition: box-shadow .2s linear, background .2s linear;
+  transition: box-shadow .2s linear, background .2s linear, -webkit-box-shadow .2s linear;
+  position: relative;
+  z-index: 4; }
+  .form-btn:hover {
+    -webkit-box-shadow: 0 0 7px #EC5A6F;
+            box-shadow: 0 0 7px #EC5A6F;
+    background: #EC4F65; }
+  .form-btn:active {
+    -webkit-box-shadow: 0 0 7px #fff inset;
+            box-shadow: 0 0 7px #fff inset; }
+
+.formSing {
+  max-width: 555px;
+  margin: 0 auto;
+  padding-top: 30px; }
+  .formSing input[name="code-sms"] {
+    width: 100%;
+    display: block;
+    height: 56px;
+    font: 100% "Lato-Regular", sans-serif;
+    font-size: 14px;
+    -webkit-border-radius: 10em;
+            border-radius: 10em;
+    border: 1px solid #FFC5CE;
+    background: #fff;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-bottom: 30px;
+    -webkit-transition: border-color .2s linear, -webkit-box-shadow .2s linear;
+    transition: border-color .2s linear, -webkit-box-shadow .2s linear;
+    -o-transition: border-color .2s linear, box-shadow .2s linear;
+    transition: border-color .2s linear, box-shadow .2s linear;
+    transition: border-color .2s linear, box-shadow .2s linear, -webkit-box-shadow .2s linear; }
+    .formSing input[name="code-sms"]:focus {
+      -webkit-box-shadow: 0 0 2px #EC5A6F;
+              box-shadow: 0 0 2px #EC5A6F;
+      border-color: #EC5A6F; }
+  .formSing input[name="phone-sing"] {
+    width: 67%;
+    margin-right: 3%;
+    display: inline-block;
+    height: 56px;
+    font: 100% "Lato-Regular", sans-serif;
+    font-size: 14px;
+    -webkit-border-radius: 10em;
+            border-radius: 10em;
+    border: 1px solid #FFC5CE;
+    background: #fff;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-bottom: 30px;
+    -webkit-transition: border-color .2s linear, -webkit-box-shadow .2s linear;
+    transition: border-color .2s linear, -webkit-box-shadow .2s linear;
+    -o-transition: border-color .2s linear, box-shadow .2s linear;
+    transition: border-color .2s linear, box-shadow .2s linear;
+    transition: border-color .2s linear, box-shadow .2s linear, -webkit-box-shadow .2s linear; }
+    .formSing input[name="phone-sing"]:focus {
+      -webkit-box-shadow: 0 0 2px #EC5A6F;
+              box-shadow: 0 0 2px #EC5A6F;
+      border-color: #EC5A6F; }
+  .formSing button[name="confirm"] {
+    width: 30%;
+    display: inline-block;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    -webkit-border-radius: 10em;
+            border-radius: 10em;
+    background: #fff;
+    border: 1px solid #FFC5CE;
+    font: 100% "Lato-Bold", sans-serif;
+    font-size: 13px;
+    text-transform: uppercase;
+    color: #333;
+    margin-bottom: 30px;
+    -webkit-transition: background .2s linear, color .2s linear;
+    -o-transition: background .2s linear, color .2s linear;
+    transition: background .2s linear, color .2s linear;
+    position: relative;
+    z-index: 4; }
+    .formSing button[name="confirm"]:hover {
+      background: #EC4F65;
+      color: #fff; }
+    .formSing button[name="confirm"]:active {
+      -webkit-box-shadow: 0 0 7px #fff inset;
+              box-shadow: 0 0 7px #fff inset; }
+
 @media (max-width: 1440px) {
   .floristGallery {
     height: 300px; }
@@ -2520,12 +2720,28 @@ a:focus {
   .infoDelivery span {
     margin-bottom: 15px;
     font-size: 14px;
-    line-height: 23px; } }
+    line-height: 23px; }
+  .callback, .sing {
+    padding: 32px 0; }
+  .formCallback {
+    padding-top: 15px; }
+  .formSing input[name="phone-sing"] {
+    width: 100%;
+    display: block;
+    margin-right: 0; }
+  .formSing button[name="confirm"] {
+    display: block;
+    margin: 0 auto;
+    width: 60%;
+    margin-bottom: 30px; } }
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width: 480px) {
   .intro-desc p {
     font-size: 15px; }
+  .mfp-close-btn-in .mfp-close {
+    top: 10px;
+    right: 10px; }
   .map {
     height: 350px; }
   .Lside {
@@ -2675,7 +2891,11 @@ a:focus {
   .address-bot {
     font-size: 16px;
     padding-top: 20px;
-    padding-bottom: 20px; } }
+    padding-bottom: 20px; }
+  .formSing button[name="confirm"] {
+    width: 100%; }
+  .formSing {
+    padding-top: 15px; } }
 
 /**/
 /* Custom, iPhone Retina */

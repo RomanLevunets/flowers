@@ -218,6 +218,15 @@ $(document).ready(function() {
             ]
         });
     }
+
+    $('.header-callback p a, .footer-right > a, .Lmenu li a, .ourSelect li a:last-child, .header-sing a').magnificPopup({
+        removalDelay: 250,
+        mainClass: 'mfp-fade'
+    });
+
+
+    $('input[name="phone-callback"], input[name="phone-sing"], input[name="phone-buy"]').mask("+7(999) 999-99-99");
+    $('input[name="time-callback"], input[name="time-buy"]').mask("99:99");
 });
 
 

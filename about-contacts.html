@@ -46,22 +46,22 @@
                 <div class="header-right">
                     <div class="header-sing">
                         <a href="#">доставка и оплата</a>
-                        <a href="#">Вход и регистрация</a>
+                        <a href="#sing">Вход и регистрация</a>
                     </div>
                     <div class="header-callback">
-                        <p>пн-пт с 8:00 до 21:00 <a href="#">Заказать обратный звонок</a></p>
+                        <p>пн-пт с 8:00 до 21:00 <a href="#callback">Заказать обратный звонок</a></p>
                     </div>
                 </div>
             </div>
             <div class="header-bot">
                 <nav>
                     <ul class="menu">
-                        <li class="active"><a href="index.html">Главная</a></li>
+                        <li><a href="index.html">Главная</a></li>
                         <li><a href="#">собрать букет</a></li>
                         <li><a href="#">готовые букеты</a></li>
                         <li><a href="#">подарки</a></li>
                         <li><a href="#">аксессуары</a></li>
-                        <li><a href="about.html">о нас</a></li>
+                        <li class="active"><a href="about.html">о нас</a></li>
                         <li><a href="#">
                             <svg width="20" height="20" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                                 <title>Group</title>
@@ -209,7 +209,7 @@
                     <div class="Ctop">
                         <ul class="Fmenu">
                             <li>
-                                <a href="#">Главная</a>
+                                <a href="index.html">Главная</a>
                             </li>
                             <li>
                                 <a href="">собрать букет</a>
@@ -231,7 +231,7 @@
                         </ul>
                         <ul class="Fmenu">
                             <li>
-                                <a href="#">О НАС</a>
+                                <a href="about.html">О НАС</a>
                             </li>
                             <li>
                                 <a href="">ДОСТАВКА И ОПЛАТА</a>
@@ -248,7 +248,7 @@
                 <div class="footer-right">
                     <p>г. Сургут ул. Профсоюзов 31/2</p>
                     <p>8 (3462) 490-890</p>
-                    <a href="#" class="footer-right-link">Заказать обратный звонок</a>
+                    <a href="#callback" class="footer-right-link">Заказать обратный звонок</a>
                     <ul class="social">
                         <li><a href="#"><i class="fa fa-vk" aria-hidden="true"></i></a></li>
                         <li><a href="#"><i class="fa fa-odnoklassniki" aria-hidden="true"></i></a></li>
@@ -271,9 +271,43 @@
             <li><a href="#">аксессуары</a></li>
             <li><a href="about.html">о нас</a></li>
             <li><a href="#">доставка и оплата</a></li>
-            <li><a href="#">Вход и регистрация</a></li>
-            <li><a href="#">Заказать обратный звонок</a></li>
+            <li><a href="#sing">Вход и регистрация</a></li>
+            <li><a href="#callback">Заказать обратный звонок</a></li>
         </ul>
+    </div>
+    <div class="hidden">
+        <div class="callback" id="callback">
+            <section class="section">
+                <div class="container">
+                    <h2 class="section-title">
+                        <span>Обратный звонок</span>
+                    </h2>
+                    <p class="section-desc">Оставьте свои котактные данные и мы свяжемся с вами в указанное время</p>
+                    <form action="/" class="formCallback">
+                        <input type="text" name="name-callback" placeholder="Ваше имя" required>
+                        <input type="text" name="phone-callback" placeholder="Ваш номер телефона" required>
+                        <input type="text" name="time-callback" placeholder="В какое время вам позвонить?">
+                        <input type="submit" name="send-callback" value="Отправить" class="form-btn">
+                    </form>
+                </div>
+            </section>
+        </div>
+        <div class="sing" id="sing">
+            <section class="section">
+                <div class="container">
+                    <h2 class="section-title">
+                        <span>Вход и регистрация</span>
+                    </h2>
+                    <p class="section-desc">Введите свой номер телефона и мы отправим вам СМС с кодом для авторизации</p>
+                    <form action="/" class="formSing">
+                        <input type="text" name="phone-sing" placeholder="Ваш номер телефона" required>
+                        <button name="confirm">Подтвердить</button>
+                        <input type="text" name="code-sms" placeholder="Введите код из СМС" required>
+                        <input type="submit" name="send-callback" value="Войти" class="form-btn">
+                    </form>
+                </div>
+            </section>
+        </div>
     </div>
 </div>
 
