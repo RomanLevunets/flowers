@@ -1,7 +1,7 @@
 $(document).ready(function() {
 
 
-    //slider
+    //sliders
     $('.intro-slider').slick({
         speed: 1000,
         prevArrow: '<div class="intro-prev"><p>Пред</p></div>',
@@ -138,7 +138,7 @@ $(document).ready(function() {
         loop: true,
         showNavArrows: true
     });
-    //florist gallery
+    //florist gallery fancy
     $('.floristGallery-item').fancybox({
         loop: true,
         showNavArrows: true
@@ -161,6 +161,7 @@ $(document).ready(function() {
         }
     });
 
+    //tabs active
     $('.ourNav li').click(function() {
         if (!$(this).hasClass('active')) {
             $('.ourNav li').removeClass('active');
@@ -176,7 +177,7 @@ $(document).ready(function() {
 
     });
 
-    //service item
+    //slider
     if(document.documentElement.clientWidth < 1200) {
         $('.ourContent').slick({
             speed: 500,
@@ -218,15 +219,17 @@ $(document).ready(function() {
             ]
         });
     }
-
+    //popUp
     $('.header-callback p a, .footer-right > a, .Lmenu li a, .ourSelect li a:last-child, .header-sing a').magnificPopup({
         removalDelay: 250,
         mainClass: 'mfp-fade'
     });
 
-
+    //mask
     $('input[name="phone-callback"], input[name="phone-sing"], input[name="phone-buy"]').mask("+7(999) 999-99-99");
     $('input[name="time-callback"], input[name="time-buy"]').mask("99:99");
+
+
 });
 
 
