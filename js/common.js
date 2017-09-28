@@ -100,6 +100,55 @@ $(document).ready(function() {
         ]
     });
 
+
+    $('.addItem').slick({
+        speed: 500,
+        infinite: false,
+        slidesToShow: 5,
+        slidesToScroll: 1,
+        prevArrow: '<div class="reviews-prev"></div>',
+        nextArrow: '<div class="reviews-next"></div>',
+        responsive: [
+            {
+                breakpoint: 1200,
+                settings: {
+                    slidesToShow: 4,
+                    slidesToScroll: 1,
+                    arrows: false
+                }
+            },
+            {
+                breakpoint: 992,
+                settings: {
+                    slidesToShow: 3,
+                    centerMode: true,
+                    slidesToScroll: 1,
+                    initialSlide: 2,
+                    arrows: false
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 1,
+                    centerMode: true,
+                    slidesToScroll: 1,
+                    initialSlide: 2,
+                    arrows: false
+                }
+            },
+            {
+                breakpoint: 345,
+                settings: {
+                    slidesToShow: 1,
+                    centerMode: false,
+                    slidesToScroll: 1,
+                    arrows: true
+                }
+            }
+        ]
+    });
+
     $('.ourInfo').slick({
         speed: 500,
         slidesToShow: 4,
@@ -138,6 +187,17 @@ $(document).ready(function() {
             }
         ]
     });
+
+    $('.card-fotorama').fotorama({
+        thumbsPreview: true,
+        width: '515',
+        transition: 'slide',
+        arrows: false,
+        nav: 'thumbs',
+        fit: 'cover',
+        margin: '10'
+    });
+
 
     $('.certificates-content').slick({
         speed: 500,
@@ -206,6 +266,43 @@ $(document).ready(function() {
         }
     });
 
+    //item select
+    $('.addItem-item > a').click(function(event) {
+            event.preventDefault();
+            $(this).parent().toggleClass('select');
+    });
+
+    //spiner card
+    $(".spin-up").click(function() {
+        var value = parseInt($(this).closest(".spinner-card").find("input").val());
+        if (value != 99){
+            $(this).closest(".spinner-card").find("input").val(value + 1);
+        }
+    });
+
+    $(".spin-down").click(function() {
+        var value = parseInt($(this).closest(".spinner-card").find("input").val());
+        if (value != 1)	{
+            $(this).closest(".spinner-card").find("input").val(value - 1);
+        }
+    });
+
+    //spiner global
+
+    $(".spin-up").click(function() {
+        var value = parseInt($(this).closest(".spinner-global").find("input").val());
+        if (value != 99){
+            $(this).closest(".spinner-global").find("input").val(value + 1);
+        }
+    });
+
+    $(".spin-down").click(function() {
+        var value = parseInt($(this).closest(".spinner-global").find("input").val());
+        if (value != 0)	{
+            $(this).closest(".spinner-global").find("input").val(value - 1);
+        }
+    });
+
     //tabs active
     $('.ourNav li').click(function() {
         if (!$(this).hasClass('active')) {
@@ -265,7 +362,7 @@ $(document).ready(function() {
         });
     }
     //popUp
-    $('.header-callback p a, .footer-right > a, .Lmenu li a, .ourSelect li a:last-child, .header-sing a').magnificPopup({
+    $('.header-callback p a, .footer-right > a, .Lmenu li a, .ourSelect li a:last-child, .header-sing a, .card-top a').magnificPopup({
         removalDelay: 250,
         mainClass: 'mfp-fade'
     });
