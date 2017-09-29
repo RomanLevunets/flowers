@@ -213,7 +213,7 @@ $(document).ready(function() {
                     initialSlide: 1,
                     centerMode: true,
                     slidesToScroll: 1,
-                    arrows: false,
+                    arrows: false
 
                 }
             },
@@ -232,7 +232,8 @@ $(document).ready(function() {
                     slidesToShow: 1,
                     initialSlide: 1,
                     centerMode: true,
-                    slidesToScroll: 1
+                    slidesToScroll: 1,
+                    arrows: false
                 }
             }
         ]
@@ -362,13 +363,13 @@ $(document).ready(function() {
         });
     }
     //popUp
-    $('.header-callback p a, .footer-right > a, .Lmenu li a, .ourSelect li a:last-child, .header-sing a, .card-top a').magnificPopup({
+    $('.header-callback p a, .footer-right > a, .Lmenu li a, .ourSelect li a:last-child, .header-sing a, .card-top a, .ordering-table td p a').magnificPopup({
         removalDelay: 250,
         mainClass: 'mfp-fade'
     });
 
     //mask
-    $('input[name="phone-callback"], input[name="phone-sing"], input[name="phone-buy"]').mask("+7(999) 999-99-99");
+    $('input[name="phone-callback"], input[name="phone-sing"], input[name="phone-buy"], #ordering-phone, #edit-phone').mask("+7(999) 999-99-99");
     $('input[name="time-callback"], input[name="time-buy"]').mask("99:99");
 
 
