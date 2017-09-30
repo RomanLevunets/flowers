@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Оформление заказа</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">
+</head>
+<body>
+<style>
+    html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block;vertical-align:baseline}audio:not([controls]){display:none;height:0}[hidden],template{display:none}a{background-color:transparent}b,strong{font-weight:bold}dfn{font-style:italic}h1{font-size:2em;margin:0.67em 0}mark{background:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-0.5em}sub{bottom:-0.25em}img{border:0}svg:not(:root){overflow:hidden}figure{margin:1em 40px}hr{-webkit-box-sizing:content-box;-moz-box-sizing:content-box;box-sizing:content-box;height:0}pre{overflow:auto}code,kbd,pre,samp{font-family:monospace, monospace;font-size:1em}button,input,optgroup,select,textarea{color:inherit;font:inherit;margin:0}button{overflow:visible}button,select{text-transform:none}button,html input[type="button"],input[type="reset"],input[type="submit"]{-webkit-appearance:button;cursor:pointer}button[disabled],html input[disabled]{cursor:default}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}input{line-height:normal}input[type="checkbox"],input[type="radio"]{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;padding:0}input[type="number"]::-webkit-inner-spin-button,input[type="number"]::-webkit-outer-spin-button{height:auto}input[type="search"]{-webkit-appearance:textfield;-webkit-box-sizing:content-box;-moz-box-sizing:content-box;box-sizing:content-box}input[type="search"]::-webkit-search-cancel-button,input[type="search"]::-webkit-search-decoration{-webkit-appearance:none}fieldset{border:1px solid #c0c0c0;margin:0 2px;padding:0.35em 0.625em 0.75em}legend{border:0;padding:0}textarea{overflow:auto}optgroup{font-weight:bold}table{border-collapse:collapse;border-spacing:0}td,th{padding:0}*{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}*:before,*:after{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}html{font-size:10px;-webkit-tap-highlight-color:rgba(0,0,0,0)}body{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:14px;line-height:1.42857143;color:#333;background-color:#fff}input,button,select,textarea{font-family:inherit;font-size:inherit;line-height:inherit}a{color:#337ab7;text-decoration:none}a:focus{outline:5px auto -webkit-focus-ring-color;outline-offset:-2px}figure{margin:0}img{vertical-align:middle}.img-responsive{display:block;max-width:100%;height:auto}.img-rounded{border-radius:6px}.img-thumbnail{padding:4px;line-height:1.42857143;background-color:#fff;border:1px solid #ddd;border-radius:4px;-webkit-transition:all .2s ease-in-out;-o-transition:all .2s ease-in-out;transition:all .2s ease-in-out;display:inline-block;max-width:100%;height:auto}.img-circle{border-radius:50%}hr{margin-top:20px;margin-bottom:20px;border:0;border-top:1px solid #eee}.sr-only{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);border:0}.sr-only-focusable:active,.sr-only-focusable:focus{position:static;width:auto;height:auto;margin:0;overflow:visible;clip:auto}[role="button"]{cursor:pointer}.container{margin-right:auto;margin-left:auto;padding-left:15px;padding-right:15px}@media (min-width:768px){.container{width:750px}}@media (min-width:992px){.container{width:970px}}@media (min-width:1200px){.container{width:1170px}}.container-fluid{margin-right:auto;margin-left:auto;padding-left:15px;padding-right:15px}.row{margin-left:-15px;margin-right:-15px}.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12{position:relative;min-height:1px;padding-left:15px;padding-right:15px}.col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12{float:left}.col-xs-12{width:100%}.col-xs-11{width:91.66666667%}.col-xs-10{width:83.33333333%}.col-xs-9{width:75%}.col-xs-8{width:66.66666667%}.col-xs-7{width:58.33333333%}.col-xs-6{width:50%}.col-xs-5{width:41.66666667%}.col-xs-4{width:33.33333333%}.col-xs-3{width:25%}.col-xs-2{width:16.66666667%}.col-xs-1{width:8.33333333%}.col-xs-pull-12{right:100%}.col-xs-pull-11{right:91.66666667%}.col-xs-pull-10{right:83.33333333%}.col-xs-pull-9{right:75%}.col-xs-pull-8{right:66.66666667%}.col-xs-pull-7{right:58.33333333%}.col-xs-pull-6{right:50%}.col-xs-pull-5{right:41.66666667%}.col-xs-pull-4{right:33.33333333%}.col-xs-pull-3{right:25%}.col-xs-pull-2{right:16.66666667%}.col-xs-pull-1{right:8.33333333%}.col-xs-pull-0{right:auto}.col-xs-push-12{left:100%}.col-xs-push-11{left:91.66666667%}.col-xs-push-10{left:83.33333333%}.col-xs-push-9{left:75%}.col-xs-push-8{left:66.66666667%}.col-xs-push-7{left:58.33333333%}.col-xs-push-6{left:50%}.col-xs-push-5{left:41.66666667%}.col-xs-push-4{left:33.33333333%}.col-xs-push-3{left:25%}.col-xs-push-2{left:16.66666667%}.col-xs-push-1{left:8.33333333%}.col-xs-push-0{left:auto}.col-xs-offset-12{margin-left:100%}.col-xs-offset-11{margin-left:91.66666667%}.col-xs-offset-10{margin-left:83.33333333%}.col-xs-offset-9{margin-left:75%}.col-xs-offset-8{margin-left:66.66666667%}.col-xs-offset-7{margin-left:58.33333333%}.col-xs-offset-6{margin-left:50%}.col-xs-offset-5{margin-left:41.66666667%}.col-xs-offset-4{margin-left:33.33333333%}.col-xs-offset-3{margin-left:25%}.col-xs-offset-2{margin-left:16.66666667%}.col-xs-offset-1{margin-left:8.33333333%}.col-xs-offset-0{margin-left:0}@media (min-width:768px){.col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12{float:left}.col-sm-12{width:100%}.col-sm-11{width:91.66666667%}.col-sm-10{width:83.33333333%}.col-sm-9{width:75%}.col-sm-8{width:66.66666667%}.col-sm-7{width:58.33333333%}.col-sm-6{width:50%}.col-sm-5{width:41.66666667%}.col-sm-4{width:33.33333333%}.col-sm-3{width:25%}.col-sm-2{width:16.66666667%}.col-sm-1{width:8.33333333%}.col-sm-pull-12{right:100%}.col-sm-pull-11{right:91.66666667%}.col-sm-pull-10{right:83.33333333%}.col-sm-pull-9{right:75%}.col-sm-pull-8{right:66.66666667%}.col-sm-pull-7{right:58.33333333%}.col-sm-pull-6{right:50%}.col-sm-pull-5{right:41.66666667%}.col-sm-pull-4{right:33.33333333%}.col-sm-pull-3{right:25%}.col-sm-pull-2{right:16.66666667%}.col-sm-pull-1{right:8.33333333%}.col-sm-pull-0{right:auto}.col-sm-push-12{left:100%}.col-sm-push-11{left:91.66666667%}.col-sm-push-10{left:83.33333333%}.col-sm-push-9{left:75%}.col-sm-push-8{left:66.66666667%}.col-sm-push-7{left:58.33333333%}.col-sm-push-6{left:50%}.col-sm-push-5{left:41.66666667%}.col-sm-push-4{left:33.33333333%}.col-sm-push-3{left:25%}.col-sm-push-2{left:16.66666667%}.col-sm-push-1{left:8.33333333%}.col-sm-push-0{left:auto}.col-sm-offset-12{margin-left:100%}.col-sm-offset-11{margin-left:91.66666667%}.col-sm-offset-10{margin-left:83.33333333%}.col-sm-offset-9{margin-left:75%}.col-sm-offset-8{margin-left:66.66666667%}.col-sm-offset-7{margin-left:58.33333333%}.col-sm-offset-6{margin-left:50%}.col-sm-offset-5{margin-left:41.66666667%}.col-sm-offset-4{margin-left:33.33333333%}.col-sm-offset-3{margin-left:25%}.col-sm-offset-2{margin-left:16.66666667%}.col-sm-offset-1{margin-left:8.33333333%}.col-sm-offset-0{margin-left:0}}@media (min-width:992px){.col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12{float:left}.col-md-12{width:100%}.col-md-11{width:91.66666667%}.col-md-10{width:83.33333333%}.col-md-9{width:75%}.col-md-8{width:66.66666667%}.col-md-7{width:58.33333333%}.col-md-6{width:50%}.col-md-5{width:41.66666667%}.col-md-4{width:33.33333333%}.col-md-3{width:25%}.col-md-2{width:16.66666667%}.col-md-1{width:8.33333333%}.col-md-pull-12{right:100%}.col-md-pull-11{right:91.66666667%}.col-md-pull-10{right:83.33333333%}.col-md-pull-9{right:75%}.col-md-pull-8{right:66.66666667%}.col-md-pull-7{right:58.33333333%}.col-md-pull-6{right:50%}.col-md-pull-5{right:41.66666667%}.col-md-pull-4{right:33.33333333%}.col-md-pull-3{right:25%}.col-md-pull-2{right:16.66666667%}.col-md-pull-1{right:8.33333333%}.col-md-pull-0{right:auto}.col-md-push-12{left:100%}.col-md-push-11{left:91.66666667%}.col-md-push-10{left:83.33333333%}.col-md-push-9{left:75%}.col-md-push-8{left:66.66666667%}.col-md-push-7{left:58.33333333%}.col-md-push-6{left:50%}.col-md-push-5{left:41.66666667%}.col-md-push-4{left:33.33333333%}.col-md-push-3{left:25%}.col-md-push-2{left:16.66666667%}.col-md-push-1{left:8.33333333%}.col-md-push-0{left:auto}.col-md-offset-12{margin-left:100%}.col-md-offset-11{margin-left:91.66666667%}.col-md-offset-10{margin-left:83.33333333%}.col-md-offset-9{margin-left:75%}.col-md-offset-8{margin-left:66.66666667%}.col-md-offset-7{margin-left:58.33333333%}.col-md-offset-6{margin-left:50%}.col-md-offset-5{margin-left:41.66666667%}.col-md-offset-4{margin-left:33.33333333%}.col-md-offset-3{margin-left:25%}.col-md-offset-2{margin-left:16.66666667%}.col-md-offset-1{margin-left:8.33333333%}.col-md-offset-0{margin-left:0}}@media (min-width:1200px){.col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12{float:left}.col-lg-12{width:100%}.col-lg-11{width:91.66666667%}.col-lg-10{width:83.33333333%}.col-lg-9{width:75%}.col-lg-8{width:66.66666667%}.col-lg-7{width:58.33333333%}.col-lg-6{width:50%}.col-lg-5{width:41.66666667%}.col-lg-4{width:33.33333333%}.col-lg-3{width:25%}.col-lg-2{width:16.66666667%}.col-lg-1{width:8.33333333%}.col-lg-pull-12{right:100%}.col-lg-pull-11{right:91.66666667%}.col-lg-pull-10{right:83.33333333%}.col-lg-pull-9{right:75%}.col-lg-pull-8{right:66.66666667%}.col-lg-pull-7{right:58.33333333%}.col-lg-pull-6{right:50%}.col-lg-pull-5{right:41.66666667%}.col-lg-pull-4{right:33.33333333%}.col-lg-pull-3{right:25%}.col-lg-pull-2{right:16.66666667%}.col-lg-pull-1{right:8.33333333%}.col-lg-pull-0{right:auto}.col-lg-push-12{left:100%}.col-lg-push-11{left:91.66666667%}.col-lg-push-10{left:83.33333333%}.col-lg-push-9{left:75%}.col-lg-push-8{left:66.66666667%}.col-lg-push-7{left:58.33333333%}.col-lg-push-6{left:50%}.col-lg-push-5{left:41.66666667%}.col-lg-push-4{left:33.33333333%}.col-lg-push-3{left:25%}.col-lg-push-2{left:16.66666667%}.col-lg-push-1{left:8.33333333%}.col-lg-push-0{left:auto}.col-lg-offset-12{margin-left:100%}.col-lg-offset-11{margin-left:91.66666667%}.col-lg-offset-10{margin-left:83.33333333%}.col-lg-offset-9{margin-left:75%}.col-lg-offset-8{margin-left:66.66666667%}.col-lg-offset-7{margin-left:58.33333333%}.col-lg-offset-6{margin-left:50%}.col-lg-offset-5{margin-left:41.66666667%}.col-lg-offset-4{margin-left:33.33333333%}.col-lg-offset-3{margin-left:25%}.col-lg-offset-2{margin-left:16.66666667%}.col-lg-offset-1{margin-left:8.33333333%}.col-lg-offset-0{margin-left:0}}.clearfix:before,.clearfix:after,.container:before,.container:after,.container-fluid:before,.container-fluid:after,.row:before,.row:after{content:" ";display:table}.clearfix:after,.container:after,.container-fluid:after,.row:after{clear:both}.center-block{display:block;margin-left:auto;margin-right:auto}.pull-right{float:right !important}.pull-left{float:left !important}.hide{display:none !important}.show{display:block !important}.invisible{visibility:hidden}.text-hide{font:0/0 a;color:transparent;text-shadow:none;background-color:transparent;border:0}.hidden{display:none !important}.affix{position:fixed}
+</style>
+<div class="wrapper">
+    <section class="section-header">
+        <div class="mobile-header">
+            <div class="burger">
+                <span class="burger__line"></span>
+                <span class="burger__line"></span>
+                <span class="burger__line"></span>
+                <span class="burger__line"></span>
+            </div>
+            <a href="index.html" class="mobile-logo">
+                <img src="img/svg/mobile-logo.svg" alt="mobile-logo">
+            </a>
+            <div class="mob-basket">
+                <a href="#">
+                    <img src="img/svg/basket.svg" alt="basket">
+                </a>
+                <span>2</span>
+            </div>
+        </div>
+        <header class="header">
+            <div class="header-top">
+                <div class="header-left">
+                    <a href="#">8 (3462) 490-890</a>
+                    <a href="#">zakaz@semcvetov.ru</a>
+                </div>
+                <a href="index.html" class="header-logo">
+                    <img src="img/logo.png" alt="logo">
+                </a>
+                <div class="header-right">
+                    <div class="header-sing">
+                        <a href="#">доставка и оплата</a>
+                        <a href="#sing">Вход и регистрация</a>
+                    </div>
+                    <div class="header-callback">
+                        <p>пн-пт с 8:00 до 21:00 <a href="#callback">Заказать обратный звонок</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="header-bot">
+                <nav>
+                    <ul class="menu">
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="#">собрать букет</a></li>
+                        <li><a href="#">готовые букеты</a></li>
+                        <li><a href="#">подарки</a></li>
+                        <li><a href="#">аксессуары</a></li>
+                        <li class="active"><a href="about.html">о нас</a></li>
+                        <li><a href="#">
+                            <svg width="20" height="20" viewBox="0 0 20 20" version="1.1"
+                                 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <title>Group</title>
+                                <desc>Created using Figma</desc>
+                                <g id="Canvas" transform="translate(-2038 -11222)">
+                                    <g id="Group">
+                                        <g id="Stroke 1180">
+                                            <use xlink:href="#path0_stroke" transform="translate(2039.51 11223.5)"/>
+                                        </g>
+                                        <g id="Stroke 1181">
+                                            <use xlink:href="#path1_stroke" transform="translate(2050.92 11234.9)"/>
+                                        </g>
+                                    </g>
+                                </g>
+                                <defs>
+                                    <path id="path0_stroke"
+                                          d="M 12.3699 6.65352C 12.3699 9.77176 9.8294 12.307 6.68493 12.307L 6.68493 14.307C 10.9251 14.307 14.3699 10.8852 14.3699 6.65352L 12.3699 6.65352ZM 6.68493 12.307C 3.54046 12.307 1 9.77176 1 6.65352L -1 6.65352C -1 10.8852 2.44478 14.307 6.68493 14.307L 6.68493 12.307ZM 1 6.65352C 1 3.53528 3.54046 1 6.68493 1L 6.68493 -1C 2.44478 -1 -1 2.42184 -1 6.65352L 1 6.65352ZM 6.68493 1C 9.8294 1 12.3699 3.53528 12.3699 6.65352L 14.3699 6.65352C 14.3699 2.42184 10.9251 -1 6.68493 -1L 6.68493 1Z"/>
+                                    <path id="path1_stroke"
+                                          d="M 0.705393 -0.708816C 0.313925 -1.09839 -0.319238 -1.09686 -0.708816 -0.705393C -1.09839 -0.313925 -1.09686 0.319238 -0.705393 0.708816L 0.705393 -0.708816ZM 4.96714 6.35396C 5.35861 6.74354 5.99177 6.742 6.38135 6.35054C 6.77093 5.95907 6.76939 5.3259 6.37793 4.93633L 4.96714 6.35396ZM -0.705393 0.708816L 4.96714 6.35396L 6.37793 4.93633L 0.705393 -0.708816L -0.705393 0.708816Z"/>
+                                </defs>
+                            </svg>
+                        </a></li>
+                        <li><a href="#">
+                            <svg width="22" height="26" viewBox="0 0 22 26" version="1.1"
+                                 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <title>Capa 1</title>
+                                <desc>Created using Figma</desc>
+                                <g id="Canvas" transform="translate(-8314 -16719)">
+                                    <rect x="8314" y="16719" width="22" height="26"/>
+                                    <clipPath id="clip-0" clip-rule="evenodd">
+                                        <path d="M 6831 16508L 8751 16508L 8751 17919L 6831 17919L 6831 16508Z"/>
+                                    </clipPath>
+                                    <g id="09_7Flowers_Poisk" clip-path="url(#clip-0)">
+                                        <path d="M 6831 16508L 8751 16508L 8751 17919L 6831 17919L 6831 16508Z"/>
+                                        <g id="HEAD">
+                                            <g id="HEAD">
+                                                <g id="Rectangle 34">
+                                                    <use xlink:href="#path0_fill" transform="translate(6831 16508)"
+                                                         fill="#F3F3F3"/>
+                                                </g>
+                                                <g id="Group">
+                                                    <g id="Group">
+                                                        <g id="Capa 1">
+                                                            <g id="Group">
+                                                                <g id="Vector">
+                                                                    <use xlink:href="#path1_fill"
+                                                                         transform="translate(8314.33 16719.1)"/>
+                                                                </g>
+                                                            </g>
+                                                        </g>
+                                                    </g>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </g>
+                                <defs>
+                                    <path id="path0_fill" d="M 0 0L 1920 0L 1920 255L 0 255L 0 0Z"/>
+                                    <path id="path1_fill"
+                                          d="M 20.978 24.8519L 19.6939 5.36351C 19.6657 4.93481 19.3081 4.60147 18.8765 4.60147L 15.2921 4.60147L 15.2921 4.07695C 15.2921 1.82895 13.4545 0 11.1959 0L 9.78716 0C 7.52855 0 5.69096 1.82895 5.69096 4.07695L 5.69096 4.60147L 2.10662 4.60147C 1.67498 4.60147 1.3174 4.93481 1.28915 5.36351L 0.00176838 24.8993C -0.013109 25.1243 0.0663899 25.3454 0.221324 25.51C 0.376259 25.6747 0.592669 25.768 0.819304 25.768L 20.1638 25.768C 20.1642 25.768 20.1646 25.768 20.1651 25.768C 20.6175 25.768 20.9843 25.4029 20.9843 24.9526C 20.9842 24.9186 20.9822 24.8849 20.978 24.8519ZM 7.32937 4.07695C 7.32937 2.7281 8.43187 1.63078 9.78709 1.63078L 11.1959 1.63078C 12.5511 1.63078 13.6536 2.7281 13.6536 4.07695L 13.6536 4.60147L 7.32937 4.60147L 7.32937 4.07695ZM 1.69399 24.1372L 2.87382 6.23232L 5.69089 6.23232L 5.69089 6.95991C 5.10792 7.25736 4.70781 7.86127 4.70781 8.5569C 4.70781 9.54607 5.5163 10.3508 6.51013 10.3508C 7.50397 10.3508 8.31246 9.54607 8.31246 8.5569C 8.31246 7.86127 7.91234 7.25736 7.32937 6.95991L 7.32937 6.23232L 13.6536 6.23232L 13.6536 6.95991C 13.0705 7.25736 12.6705 7.86127 12.6705 8.5569C 12.6705 9.54607 13.479 10.3508 14.4728 10.3508C 15.4666 10.3508 16.2751 9.54607 16.2751 8.5569C 16.2751 7.86127 15.875 7.25736 15.292 6.95991L 15.292 6.23232L 18.1091 6.23232L 19.289 24.1372L 1.69399 24.1372Z"/>
+                                </defs>
+                            </svg>
+
+                            <span>2</span>
+                        </a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+    </section>
+    <ul class="links">
+        <li><a href="index.html">Главная</a></li>
+        <li><a href="about.html">Личный кабинет</a></li>
+    </ul>
+    <section class="section-private">
+        <div class="container">
+            <div class="private">
+                <div class="private-user">
+                    <div class="private-user-img" style="background-image: url('img/user/photo-user2.jpg');"></div>
+                    <p class="private-user-name">Михаил Иванов</p>
+                    <p class="private-user-balance">Баланс: <span>1500</span> баллов</p>
+                    <a href="#"></a>
+                </div>
+                <div class="ournav-scr">
+                    <ul class="ourNav">
+                        <li><a href="#">редактирование профиля</a></li>
+                        <li><a href="#">история заказов</a></li>
+                        <li class="active"><a href="#">Мои заказы</a></li>
+                        <li ><a href="#">настройка оповещений</a></li>
+                    </ul>
+                </div>
+               <div class="private-order">
+                   <p>Мои заказы</p>
+                   <table class="tableOrder">
+                       <thead>
+                           <tr>
+                               <th>Наименование</th>
+                               <th>Цена</th>
+                               <th>Дата</th>
+                               <th></th>
+                           </tr>
+                       </thead>
+                       <tbody>
+                            <tr>
+                                <td data-title="Наименование">
+                                    <div class="tableOrder-img">
+                                        <img src="img/flowers/img1.jpg" alt="flowers1">
+                                    </div>
+                                    <p class="tableOrder-name">Ирисы фиолетовые</p>
+                                </td>
+                                <td data-title="Цена">
+                                    510 руб.
+                                </td>
+                                <td data-title="Дата">
+                                    08.07.2017
+                                </td>
+                                <td>
+                                    <a href="#">Повторить</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td data-title="Наименование">
+                                    <div class="tableOrder-img">
+                                        <img src="img/flowers/img2.jpg" alt="flowers1">
+                                    </div>
+                                    <p class="tableOrder-name">Пион  Sarah Bernhardt</p>
+                                </td>
+                                <td data-title="Цена">
+                                    55000 руб.
+                                </td>
+                                <td data-title="Дата">
+                                    08.07.2019
+                                </td>
+                                <td>
+                                    <a href="#">Повторить</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td data-title="Наименование">
+                                    <div class="tableOrder-img">
+                                        <div class="tableOrder-groupItem">
+                                            <img src="img/flowers/img3.jpg" alt="flowers3">
+                                        </div>
+                                        <div class="tableOrder-groupItem">
+                                            <img src="img/flowers/img4.jpg" alt="flowers4">
+                                        </div>
+                                        <div class="tableOrder-groupItem">
+                                            <img src="img/herbage/img1.jpg" alt="herbage1">
+                                        </div>
+                                        <div class="tableOrder-groupItem">
+                                            <img src="img/packaging/img1.jpg" alt="packaging1">
+                                        </div>
+                                    </div>
+                                    <p class="tableOrder-name">Цветочный набор №1<span class="active">Комплект из 4 товаров</span></p>
+                                </td>
+                                <td data-title="Цена">
+                                    55000 руб.
+                                </td>
+                                <td data-title="Дата">
+                                    08.07.2019
+                                </td>
+                                <td>
+                                    <a href="#">Повторить</a>
+                                </td>
+                            </tr>
+                       </tbody>
+                   </table>
+                   <table class="subTable">
+                       <tr>
+                           <td data-title="Наименование">
+                               <div class="tableOrder-img">
+                                   <img src="img/flowers/img3.jpg" alt="flowers3">
+                               </div>
+                               <p class="tableOrder-name">Пион  Sarah Bernhardt</p>
+                           </td>
+                           <td data-title="Цена">
+                               200 руб.
+                           </td>
+                           <td></td>
+                       </tr>
+                       <tr>
+                           <td data-title="Наименование">
+                               <div class="tableOrder-img">
+                                   <img src="img/flowers/img4.jpg" alt="flowers4">
+                               </div>
+                               <p class="tableOrder-name">Пион  Sarah Bernhardt</p>
+                           </td>
+                           <td data-title="Цена">
+                               200 руб.
+                           </td>
+                           <td></td>
+                       </tr>
+                       <tr>
+                           <td data-title="Наименование">
+                               <div class="tableOrder-img">
+                                   <img src="img/herbage/img1.jpg" alt="herbage1">
+                               </div>
+                               <p class="tableOrder-name">Зелень Рускус</p>
+                           </td>
+                           <td data-title="Цена">
+                               200 руб.
+                           </td>
+                           <td></td>
+                       </tr>
+                       <tr>
+                           <td data-title="Наименование">
+                               <div class="tableOrder-img">
+                                   <img src="img/packaging/img1.jpg" alt="packaging1">
+                               </div>
+                               <p class="tableOrder-name">Крафтовая бумага</p>
+                           </td>
+                           <td data-title="Цена">
+                               200 руб.
+                           </td>
+                           <td></td>
+                       </tr>
+                   </table>
+                   <table class="tableOrder">
+                       <tbody>
+                       <tr>
+                           <td data-title="Наименование">
+                               <div class="tableOrder-img">
+                                   <img src="img/flowers/img1.jpg" alt="flowers1">
+                               </div>
+                               <p class="tableOrder-name">Ирисы фиолетовые</p>
+                           </td>
+                           <td data-title="Цена">
+                               510 руб.
+                           </td>
+                           <td data-title="Дата">
+                               08.07.2017
+                           </td>
+                           <td>
+                               <a href="#">Повторить</a>
+                           </td>
+                       </tr>
+                       </tbody>
+                   </table>
+               </div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-left">
+                    <a href="index.html" class="footer-logo">
+                        <img src="img/logo.png" alt="logo">
+                    </a>
+                    <p>© 2017 “7 Цветов”.<br>
+                        All rigths reserved 2016.</p>
+                    <a href="#">Политика конфиденциальности</a>
+                </div>
+                <div class="footer-center">
+                    <div class="Ctop">
+                        <ul class="Fmenu">
+                            <li>
+                                <a href="index.html">Главная</a>
+                            </li>
+                            <li>
+                                <a href="">собрать букет</a>
+                            </li>
+                            <li>
+                                <a href="#">готовые букеты</a>
+                            </li>
+                        </ul>
+                        <ul class="Fmenu">
+                            <li>
+                                <a href="#">ПОДАРКИ</a>
+                            </li>
+                            <li>
+                                <a href="">АКСЕССУАРЫ</a>
+                            </li>
+                            <li>
+                                <a href="#">Акции</a>
+                            </li>
+                        </ul>
+                        <ul class="Fmenu">
+                            <li>
+                                <a href="about.html">О НАС</a>
+                            </li>
+                            <li>
+                                <a href="">ДОСТАВКА И ОПЛАТА</a>
+                            </li>
+                            <li>
+                                <a href="#">ЛИЧНЫЙ КАБИНЕТ</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="Cbot">
+                        <p>«Семь цветов» - молодая динамичная компания, которая находится на рынке более пяти лет. За
+                            эти пять лет мы стали опытнее, интереснее, современнее и каждый день мы стараемся
+                            совершенствоваться для Вас. В наших магазинах Вы найдете не только свежий цветок по приятной
+                            цене, но и получите качественное обслуживание от мастеров своего дела. </p>
+                    </div>
+                </div>
+                <div class="footer-right">
+                    <p>г. Сургут ул. Профсоюзов 31/2</p>
+                    <p>8 (3462) 490-890</p>
+                    <a href="#callback" class="footer-right-link">Заказать обратный звонок</a>
+                    <ul class="social">
+                        <li><a href="#"><i class="fa fa-vk" aria-hidden="true"></i></a></li>
+                        <li><a href="#"><i class="fa fa-odnoklassniki" aria-hidden="true"></i></a></li>
+                    </ul>
+                    <div class="footer-info">
+                        <span>Сделано с любовью</span>
+                        <span>5 углов</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="Lside ">
+        <p>Меню</p>
+        <ul class="Lmenu">
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="#">собрать букет</a></li>
+            <li><a href="#">готовые букеты</a></li>
+            <li><a href="#">подарки</a></li>
+            <li><a href="#">аксессуары</a></li>
+            <li><a href="about.html">о нас</a></li>
+            <li><a href="#">доставка и оплата</a></li>
+            <li><a href="#sing">Вход и регистрация</a></li>
+            <li><a href="#callback">Заказать обратный звонок</a></li>
+        </ul>
+    </div>
+    <div class="hidden">
+        <div class="callback" id="callback">
+            <section class="section">
+                <div class="container">
+                    <h2 class="section-title">
+                        <span>Обратный звонок</span>
+                    </h2>
+                    <p class="section-desc">Оставьте свои котактные данные и мы свяжемся с вами в указанное время</p>
+                    <form action="/" class="formCallback">
+                        <input type="text" name="name-callback" placeholder="Ваше имя" required>
+                        <input type="text" name="phone-callback" placeholder="Ваш номер телефона" required>
+                        <input type="text" name="time-callback" placeholder="В какое время вам позвонить?">
+                        <input type="submit" name="send-callback" value="Отправить" class="form-btn">
+                    </form>
+                </div>
+            </section>
+        </div>
+        <div class="sing" id="sing">
+            <section class="section">
+                <div class="container">
+                    <h2 class="section-title">
+                        <span>Вход и регистрация</span>
+                    </h2>
+                    <p class="section-desc">Введите свой номер телефона и мы отправим вам СМС с кодом для
+                        авторизации</p>
+                    <form action="/" class="formSing">
+                        <input type="text" name="phone-sing" placeholder="Ваш номер телефона" required>
+                        <button name="confirm">Подтвердить</button>
+                        <input type="text" name="code-sms" placeholder="Введите код из СМС" required>
+                        <input type="submit" name="send-callback" value="Войти" class="form-btn">
+                    </form>
+                </div>
+            </section>
+        </div>
+    </div>
+</div>
+
+
+<link href="css/libs.min.css" rel="stylesheet" property=stylesheet type="text/css">
+<link href="css/main.css" rel="stylesheet" property=stylesheet type="text/css">
+<script type="text/javascript" src="js/libs.min.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+</body>
+</html>

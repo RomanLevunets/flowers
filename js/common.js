@@ -312,6 +312,13 @@ $(document).ready(function() {
         }
     });
 
+    //
+
+    $('.tableOrder span').click(function() {
+            $('.tableOrder span').toggleClass('active');
+            $('.subTable').toggleClass('active');
+    });
+
     //burger animation
     $('.burger').click(function(){
         $('.burger__line').toggleClass('active-b');
