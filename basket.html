@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>О нас</title>
+    <title>Оформление заказа</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
@@ -80,94 +80,389 @@
     </section>
     <ul class="links">
         <li><a href="index.html">Главная</a></li>
-        <li><a href="about.html">О нас</a></li>
+        <li><a href="about.html">Личный кабинет</a></li>
     </ul>
-    <section class="section">
+    <section class="section-private section">
         <div class="container">
             <h2 class="section-title">
-                <span>О нас</span>
+                <span>Корзина</span>
             </h2>
             <p class="section-desc">Работаем для Вас</p>
-            <div class="ournav-scr">
-                <ul class="ourNav">
-                    <li><a href="about.html">О КОМПАНИИ</a></li>
-                    <li class="active"><a href="about-pay.html">Оплата И ДОСТАВКА</a></li>
-                    <li><a href="about-contacts.html">Контакты и адреса</a></li>
-                </ul>
-            </div>
-            <div class="infoDelivery">
-                    <p>Информация о доставке</p>
-                    <span>Мы не добавляем стоимость доставки к цене букета. Доставка по городу бесплатная. Доставка осуществляется с 9:00 до 21:00 с интервалом в два часа. Доставка на точное время +/- 10 минут.
-</span>
-                    <span>Доставка осуществляется на автомобилях, что гарантирует наилучшее качество цветочной продукции. Самостоятельно мы производим доставку по Сургуту. Доставка осуществляется при заказе от 700 рублей. Стомость доставки по области зависит от населенного пункта и сообщается нами при подтверждении заказа.</span>
-            </div>
-            <div class="row ourInfo">
-                <div class="ourInfo-item">
-                    <div class="ourInfo-desc">
-                        <p>Бесплатная доставка</p>
-                        <span>Круглосуточная бесплатная доставка</span>
-                    </div>
+            <div class="private basket">
+                <div class="private-order">
+                    <p>Мои заказы</p>
+                    <table class="tableOrder tableBasket">
+                        <thead>
+                        <tr>
+                            <th>Наименование</th>
+                            <th>Цена</th>
+                            <th>Кол-во</th>
+                            <th>Итого</th>
+                            <th></th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td data-title="Наименование">
+                                <div class="tableOrder-img">
+                                    <img src="img/flowers/img1.jpg" alt="flowers1">
+                                </div>
+                                <p class="tableOrder-name">Ирисы фиолетовые</p>
+                            </td>
+                            <td data-title="Цена">
+                                510 руб./шт
+                            </td>
+                            <td data-title="Кол-во">
+                                <div class="spinner-card" >
+                                    <div class="spin-down">-</div>
+                                    <input type="text" value="1">
+                                    <div class="spin-up">+</div>
+                                </div>
+                            </td>
+                            <td data-title="Итого">
+                                510 руб
+                            </td>
+                            <td>
+                                <div class="basket-remove">
+
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td data-title="Наименование">
+                                <div class="tableOrder-img">
+                                    <img src="img/flowers/img2.jpg" alt="flowers2">
+                                </div>
+                                <p class="tableOrder-name">Ирисы фиолетовые</p>
+                            </td>
+                            <td data-title="Цена">
+                                510 руб./шт
+                            </td>
+                            <td data-title="Кол-во">
+                                <div class="spinner-card" >
+                                    <div class="spin-down">-</div>
+                                        <input type="text" value="1">
+                                    <div class="spin-up">+</div>
+                                </div>
+                            </td>
+                            <td data-title="Итого">
+                                510 руб
+                            </td>
+                            <td>
+                                <div class="basket-remove"></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td data-title="Наименование">
+                                <div class="tableOrder-img">
+                                    <div class="tableOrder-groupItem">
+                                        <img src="img/flowers/img3.jpg" alt="flowers3">
+                                    </div>
+                                    <div class="tableOrder-groupItem">
+                                        <img src="img/flowers/img4.jpg" alt="flowers4">
+                                    </div>
+                                    <div class="tableOrder-groupItem">
+                                        <img src="img/herbage/img1.jpg" alt="herbage1">
+                                    </div>
+                                    <div class="tableOrder-groupItem">
+                                        <img src="img/packaging/img1.jpg" alt="packaging1">
+                                    </div>
+                                </div>
+                                <p class="tableOrder-name">Цветочный набор №1<span class="active">Комплект из 4 товаров</span></p>
+                            </td>
+                            <td data-title="Цена">
+                                510 руб./шт
+                            </td>
+                            <td data-title="Кол-во">
+                                <div class="spinner-card" >
+                                    <div class="spin-down">-</div>
+                                    <input type="text" value="1">
+                                    <div class="spin-up">+</div>
+                                </div>
+                            </td>
+                            <td data-title="Итого">
+                                510 руб
+                            </td>
+                            <td>
+                                <div class="basket-remove"></div>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <table class="subBasket subTable">
+                        <tr>
+                            <td data-title="Наименование">
+                                <div class="tableOrder-img">
+                                    <img src="img/flowers/img3.jpg" alt="flowers3">
+                                </div>
+                                <p class="tableOrder-name">Ирисы фиолетовые</p>
+                            </td>
+                            <td data-title="Цена">
+                                510 руб./шт
+                            </td>
+                            <td data-title="Кол-во">
+                                <div class="spinner-card" >
+                                    <div class="spin-down">-</div>
+                                    <input type="text" value="1">
+                                    <div class="spin-up">+</div>
+                                </div>
+                            </td>
+                            <td data-title="Итого">
+                                510 руб
+                            </td>
+                            <td>
+                                <div class="basket-remove">
+
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td data-title="Наименование">
+                                <div class="tableOrder-img">
+                                    <img src="img/flowers/img4.jpg" alt="flowers4">
+                                </div>
+                                <p class="tableOrder-name">Ирисы фиолетовые</p>
+                            </td>
+                            <td data-title="Цена">
+                                510 руб./шт
+                            </td>
+                            <td data-title="Кол-во">
+                                <div class="spinner-card" >
+                                    <div class="spin-down">-</div>
+                                    <input type="text" value="1">
+                                    <div class="spin-up">+</div>
+                                </div>
+                            </td>
+                            <td data-title="Итого">
+                                510 руб
+                            </td>
+                            <td>
+                                <div class="basket-remove">
+
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td data-title="Наименование" >
+                                <div class="tableOrder-img herbage" >
+                                    <img src="img/herbage/img1.jpg" alt="herbage1">
+                                </div>
+                                <p class="tableOrder-name">Ирисы фиолетовые</p>
+                            </td>
+                            <td data-title="Цена">
+                                510 руб./шт
+                            </td>
+                            <td data-title="Кол-во">
+                                <div class="spinner-card" >
+                                    <div class="spin-down herbage">-</div>
+                                    <input type="text" value="1" class="herbage">
+                                    <div class="spin-up herbage">+</div>
+                                </div>
+                            </td>
+                            <td data-title="Итого">
+                                510 руб
+                            </td>
+                            <td>
+                                <div class="basket-remove herbage">
+
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td data-title="Наименование">
+                                <div class="tableOrder-img packaging">
+                                    <img src="img/packaging/img1.jpg" alt="packaging1">
+                                </div>
+                                <p class="tableOrder-name">Ирисы фиолетовые</p>
+                            </td>
+                            <td data-title="Цена">
+                                510 руб./шт
+                            </td>
+                            <td data-title="Кол-во">
+                                <div class="spinner-card " >
+                                    <div class="spin-down packaging">-</div>
+                                    <input type="text" value="1" class="packaging">
+                                    <div class="spin-up packaging">+</div>
+                                </div>
+                            </td>
+                            <td data-title="Итого">
+                                510 руб
+                            </td>
+                            <td>
+                                <div class="basket-remove packaging">
+
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                    <table class="tableOrder tableBasket">
+                        <tbody>
+                        <tr>
+                            <td data-title="Наименование">
+                                <div class="tableOrder-img">
+                                    <div class="tableOrder-groupItem">
+                                        <img src="img/flowers/img3.jpg" alt="flowers3">
+                                    </div>
+                                    <div class="tableOrder-groupItem">
+                                        <img src="img/flowers/img4.jpg" alt="flowers4">
+                                    </div>
+                                    <div class="tableOrder-groupItem">
+                                        <img src="img/gifts/img1.jpg" alt="gifts-1">
+                                    </div>
+                                    <div class="tableOrder-groupItem">
+                                        <img src="img/packaging/img1.jpg" alt="packaging1">
+                                    </div>
+                                </div>
+                                <p class="tableOrder-name">Цветочный набор №1<span class="active">Комплект из 4 товаров</span></p>
+                            </td>
+                            <td data-title="Цена">
+                                510 руб./шт
+                            </td>
+                            <td data-title="Кол-во">
+                                <div class="spinner-card" >
+                                    <div class="spin-down">-</div>
+                                    <input type="text" value="1">
+                                    <div class="spin-up">+</div>
+                                </div>
+                            </td>
+                            <td data-title="Итого">
+                                510 руб
+                            </td>
+                            <td>
+                                <div class="basket-remove"></div>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <table class="subBasket subTable">
+                        <tr>
+                            <td data-title="Наименование">
+                                <div class="tableOrder-img">
+                                    <img src="img/flowers/img3.jpg" alt="flowers3">
+                                </div>
+                                <p class="tableOrder-name">Ирисы фиолетовые</p>
+                            </td>
+                            <td data-title="Цена">
+                                510 руб./шт
+                            </td>
+                            <td data-title="Кол-во">
+                                <div class="spinner-card" >
+                                    <div class="spin-down">-</div>
+                                    <input type="text" value="1">
+                                    <div class="spin-up">+</div>
+                                </div>
+                            </td>
+                            <td data-title="Итого">
+                                510 руб
+                            </td>
+                            <td>
+                                <div class="basket-remove">
+
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td data-title="Наименование">
+                                <div class="tableOrder-img">
+                                    <img src="img/flowers/img4.jpg" alt="flowers4">
+                                </div>
+                                <p class="tableOrder-name">Ирисы фиолетовые</p>
+                            </td>
+                            <td data-title="Цена">
+                                510 руб./шт
+                            </td>
+                            <td data-title="Кол-во">
+                                <div class="spinner-card" >
+                                    <div class="spin-down">-</div>
+                                    <input type="text" value="1">
+                                    <div class="spin-up">+</div>
+                                </div>
+                            </td>
+                            <td data-title="Итого">
+                                510 руб
+                            </td>
+                            <td>
+                                <div class="basket-remove">
+
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td data-title="Наименование" >
+                                <div class="tableOrder-img accessories" >
+                                    <img src="img/gifts/img1.jpg" alt="gifts-1">
+                                </div>
+                                <p class="tableOrder-name">Ирисы фиолетовые</p>
+                            </td>
+                            <td data-title="Цена">
+                                510 руб./шт
+                            </td>
+                            <td data-title="Кол-во">
+                                <div class="spinner-card" >
+                                    <div class="spin-down accessories">-</div>
+                                    <input type="text" value="1" class="accessories">
+                                    <div class="spin-up accessories">+</div>
+                                </div>
+                            </td>
+                            <td data-title="Итого">
+                                510 руб
+                            </td>
+                            <td>
+                                <div class="basket-remove accessories">
+
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td data-title="Наименование">
+                                <div class="tableOrder-img packaging">
+                                    <img src="img/packaging/img1.jpg" alt="packaging1">
+                                </div>
+                                <p class="tableOrder-name">Ирисы фиолетовые</p>
+                            </td>
+                            <td data-title="Цена">
+                                510 руб./шт
+                            </td>
+                            <td data-title="Кол-во">
+                                <div class="spinner-card " >
+                                    <div class="spin-down packaging">-</div>
+                                    <input type="text" value="1" class="packaging">
+                                    <div class="spin-up packaging">+</div>
+                                </div>
+                            </td>
+                            <td data-title="Итого">
+                                510 руб
+                            </td>
+                            <td>
+                                <div class="basket-remove packaging">
+
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
                 </div>
-                <div class="ourInfo-item ">
-                    <div class="ourInfo-desc">
-                        <p>Фото перед доставкой</p>
-                        <span>Отправляем на WhatsApp/ Telegram/Viber или почту</span>
+                <div class="ordering-bottom">
+                    <div class="ordering-total">
+                        <p>Итого: <span>12510 руб.</span></p>
                     </div>
-                </div>
-                <div class="ourInfo-item ">
-                    <div class="ourInfo-desc">
-                        <p>Подарочная упаковка</p>
-                        <span>Эксклюзивная подарочная коробка</span>
+                    <div class="coupon-code">
+                        <label for="coupon-code">
+                          <input type="text" name="coupon-code" id="coupon-code" placeholder="Введите код купона">
+                        </label>
                     </div>
-                </div>
-                <div class="ourInfo-item ">
-                    <div class="ourInfo-desc">
-                        <p>Удобная оплата</p>
-                        <span>Круглосуточная бесплатная доставка</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="section">
-        <div class="container">
-            <h2 class="section-title">
-                <span>Отзывы наших клиентов</span>
-            </h2>
-            <p class="section-desc">Они выбрали нас</p>
-            <div class="row reviews">
-                <div class="col-md-4">
-                    <div class="reviews-img" style="background-image: url('img/reviews/photo2.jpg');"></div>
-                </div>
-                <div class="col-md-8 reviews-content">
-                    <div class="reviews-txt">
-                        <p><span>“</span> Букет “Нежность” вызывает восторг и изумление!!!<br> Спасибо большое “Семи цветам” !</p>
-                        <span>Анна Иванова, Сургут</span>
-                    </div>
-                    <div class="reviews-others">
-                        <p>Другие отзывы:</p>
-                        <div class="reviews-slider">
-                            <div class="reviews-item">
-                                <a href="#" class="reviews-item-img" style="background-image: url('img/reviews/other-img1.jpg');"></a>
-                                <p>Букет “Любимой жене”</p>
-                            </div>
-                            <div class="reviews-item">
-                                <a href="#" class="reviews-item-img" style="background-image: url('img/reviews/other-img3.jpg');"></a>
-                                <p>Букет “Свадьба”</p>
-                            </div>
-                            <div class="reviews-item">
-                                <a href="#" class="reviews-item-img" style="background-image: url('img/reviews/other-img2.jpg');"></a>
-                                <p>Букет из белых роз</p>
-                            </div>
-                            <div class="reviews-item">
-                                <a href="#" class="reviews-item-img" style="background-image: url('img/reviews/other-img3.jpg');"></a>
-                                <p>Букет “Свадьба”</p>
-                            </div>
-                            <div class="reviews-item">
-                                <a href="#" class="reviews-item-img" style="background-image: url('img/reviews/other-img3.jpg');"></a>
-                                <p>Букет “Свадьба”</p>
-                            </div>
+                    <div class="basket-bot clearfix">
+                        <div class="basket-bonus filter">
+                            <input type="checkbox" name="bonus" id="bonus">
+                            <label for="bonus">Потратить <span>1500</span> бонусов</label>
                         </div>
+                        <ul class="issued-btn">
+                            <li>
+                                <a href="#">пересчитать</a>
+                            </li>
+                            <li>
+                                <a href="#">оформить заказ</a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -180,7 +475,7 @@
                     <a href="index.html" class="footer-logo">
                         <img src="img/logo.png" alt="logo">
                     </a>
-                    <p>© 2017  “7 Цветов”.<br>
+                    <p>© 2017 “7 Цветов”.<br>
                         All rigths reserved 2016.</p>
                     <a href="#">Политика конфиденциальности</a>
                 </div>
@@ -221,7 +516,10 @@
                         </ul>
                     </div>
                     <div class="Cbot">
-                        <p>«Семь цветов» - молодая динамичная компания, которая находится на рынке более пяти лет. За эти пять лет мы стали опытнее, интереснее, современнее и каждый день мы стараемся совершенствоваться для Вас. В наших магазинах Вы найдете не только свежий цветок по приятной цене, но и получите качественное обслуживание от мастеров своего дела. </p>
+                        <p>«Семь цветов» - молодая динамичная компания, которая находится на рынке более пяти лет. За
+                            эти пять лет мы стали опытнее, интереснее, современнее и каждый день мы стараемся
+                            совершенствоваться для Вас. В наших магазинах Вы найдете не только свежий цветок по приятной
+                            цене, но и получите качественное обслуживание от мастеров своего дела. </p>
                     </div>
                 </div>
                 <div class="footer-right">
@@ -277,7 +575,8 @@
                     <h2 class="section-title">
                         <span>Вход и регистрация</span>
                     </h2>
-                    <p class="section-desc">Введите свой номер телефона и мы отправим вам СМС с кодом для авторизации</p>
+                    <p class="section-desc">Введите свой номер телефона и мы отправим вам СМС с кодом для
+                        авторизации</p>
                     <form action="/" class="formSing">
                         <input type="text" name="phone-sing" placeholder="Ваш номер телефона" required>
                         <button name="confirm">Подтвердить</button>
@@ -291,21 +590,9 @@
 </div>
 
 
-
-
-<link href="css/libs.min.css" rel="stylesheet" property=stylesheet type="text/css" >
-<link href="css/main.css" rel="stylesheet" property=stylesheet type="text/css" >
+<link href="css/libs.min.css" rel="stylesheet" property=stylesheet type="text/css">
+<link href="css/main.css" rel="stylesheet" property=stylesheet type="text/css">
 <script type="text/javascript" src="js/libs.min.js"></script>
 <script type="text/javascript" src="js/common.js"></script>
 </body>
 </html>
-
-
-<!--<section class="section">-->
-<!--<div class="container">-->
-<!--<h2 class="section-title">-->
-<!--<span>Наши потрясающие цветы</span>-->
-<!--</h2>-->
-<!--<p class="section-desc">Лучшее для Вас</p>-->
-<!--</div>-->
-<!--</section>-->

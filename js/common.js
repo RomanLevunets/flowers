@@ -128,7 +128,7 @@ $(document).ready(function() {
                 }
             },
             {
-                breakpoint: 768,
+                breakpoint: 769,
                 settings: {
                     slidesToShow: 1,
                     centerMode: true,
@@ -205,6 +205,7 @@ $(document).ready(function() {
         slidesToScroll: 1,
         prevArrow: '<div class="reviews-prev"></div>',
         nextArrow: '<div class="reviews-next"></div>',
+        infinity: false,
         responsive: [
             {
                 breakpoint: 1200,
@@ -238,14 +239,8 @@ $(document).ready(function() {
             }
         ]
     });
-
-    //fancy box for certificates
-    $('.certificates-content a').fancybox({
-        loop: true,
-        showNavArrows: true
-    });
     //florist gallery fancy
-    $('.floristGallery-item').fancybox({
+    $('.floristGallery a').fancybox({
         loop: true,
         showNavArrows: true
     });
@@ -268,10 +263,24 @@ $(document).ready(function() {
     });
 
     //item select
-    $('.addItem-item > a').click(function(event) {
+    $('.addItem-item > a, .ourNav li a').click(function(event) {
             event.preventDefault();
             $(this).parent().toggleClass('select');
     });
+
+    $('.subscribe').on( 'submit', function (event) {
+        event.preventDefault();
+        $('.alert-subscribe').show();
+        function set() {
+            $('.alert-subscribe').hide();
+        }
+            setTimeout(set, 3000);
+            $('.subscribe input[type="email"]').val('');
+
+
+    });
+
+
 
     //spiner card
     $(".spin-up").click(function() {
@@ -313,11 +322,50 @@ $(document).ready(function() {
     });
 
     //
-
-    $('.tableOrder span').click(function() {
-            $('.tableOrder span').toggleClass('active');
-            $('.subTable').toggleClass('active');
+    $('.sort li').click(function() {
+        if (!$(this).hasClass('active')) {
+            $('.sort li').removeClass('active');
+            $(this).addClass('active');
+        }
     });
+    //accordion
+    $('.filter-category p').click(function () {
+        $(this).toggleClass('active');
+        $(this).next().slideToggle();
+    });
+
+    $('.tableOrder-name span').click(function () {
+        $(this).toggleClass('active');
+    });
+    //range
+    $(".f-range-ac").slider({
+        range: true,
+        min: 0,
+        max: 25000,
+        step: 50,
+        values: [ 150, 10000 ],
+        slide: function( event, ui ) {
+            $( ".range-value-ac" ).val( "От " + ui.values[ 0 ] + " до " + ui.values[ 1 ] + " руб");
+        }
+    });
+    $( ".range-value-ac" ).val( "От " + $(".f-range-ac").slider( "values", 0 ) +
+        " до " + $(".f-range-ac").slider( "values", 1 ) + " руб");
+
+
+    //
+    $(".f-range").slider({
+        range: true,
+        min: 0,
+        max: 30000,
+        step: 100,
+        values: [ 3000, 10000 ],
+        slide: function( event, ui ) {
+            $( ".range-value" ).val( "От " + ui.values[ 0 ] + " до " + ui.values[ 1 ] + " руб");
+        }
+    });
+    $( ".range-value" ).val( "От " + $(".f-range").slider( "values", 0 ) +
+        " до " + $(".f-range").slider( "values", 1 ) + " руб");
+
 
     //burger animation
     $('.burger').click(function(){
@@ -369,8 +417,40 @@ $(document).ready(function() {
             ]
         });
     }
+    if(document.documentElement.clientWidth < 992) {
+        $('.goods-content').slick({
+            speed: 500,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            infinite: false,
+            prevArrow: '<div class="reviews-prev"></div>',
+            nextArrow: '<div class="reviews-next"></div>',
+            responsive: [
+                {
+                    breakpoint: 768,
+                    settings: {
+                        slidesToShow: 1,
+                        initialSlide: 1,
+                        centerMode: false,
+                        slidesToScroll: 1,
+                        arrows: true,
+                    }
+                },
+
+                {
+                    breakpoint: 480,
+                    settings: {
+                        slidesToShow: 1,
+                        initialSlide: 1,
+                        centerMode: false,
+                        slidesToScroll: 1,
+                    }
+                }
+            ]
+        });
+    }
     //popUp
-    $('.header-callback p a, .footer-right > a, .Lmenu li a, .ourSelect li a:last-child, .header-sing a, .card-top a, .ordering-table td p a').magnificPopup({
+    $('.header-callback p a, .footer-right-callback, .Lmenu li a, .ourSelect li a:last-child, .header-sing a, .card-top a, .ordering-table td p a').magnificPopup({
         removalDelay: 250,
         mainClass: 'mfp-fade'
     });
@@ -378,6 +458,9 @@ $(document).ready(function() {
     //mask
     $('input[name="phone-callback"], input[name="phone-sing"], input[name="phone-buy"], #ordering-phone, #edit-phone').mask("+7(999) 999-99-99");
     $('input[name="time-callback"], input[name="time-buy"]').mask("99:99");
+
+
+
 
 
 });
