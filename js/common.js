@@ -106,6 +106,7 @@ $(document).ready(function() {
         infinite: false,
         slidesToShow: 5,
         slidesToScroll: 1,
+        draggable: false,
         prevArrow: '<div class="reviews-prev"></div>',
         nextArrow: '<div class="reviews-next"></div>',
         responsive: [
@@ -255,6 +256,14 @@ $(document).ready(function() {
     }item();
 
     //header menu active
+    $('.constructorNav li').click(function( even) {
+        even.preventDefault();
+        if (!$(this).hasClass('active')) {
+            $('.constructorNav li').removeClass('active');
+            $(this).addClass('active');
+        }
+    });
+
     $('.menu li').click(function() {
         if (!$(this).hasClass('active')) {
             $('.menu li').removeClass('active');
@@ -367,11 +376,47 @@ $(document).ready(function() {
         " до " + $(".f-range").slider( "values", 1 ) + " руб");
 
 
+
+
+    $(".b-range").slider({
+        range: "min",
+        min: 1,
+        max: 100,
+        value: 20,
+        slide: function( event, ui ) {
+            $( ".range-value-n" ).val( ui.value );
+        }
+    });
+    $( ".range-value-n" ).val($( ".b-range" ).slider( "value" ));
+
+
+    //
+    $('.addItem-btn').click(function () {
+        $(this).parents('.rotate').addClass('active');
+        $(this).parents('.addItem-item').siblings().find('.rotate').removeClass('active');
+
+    });
+    $('.buyFlowers .close-btn').click(function () {
+        $(this).parents('.rotate').removeClass('active');
+    });
+
+
+    $('.rotate-next .close-bth').click(function () {
+        $('.addItem-top').removeClass('active');
+    });
     //burger animation
     $('.burger').click(function(){
         $('.burger__line').toggleClass('active-b');
         $('.Lside').toggleClass('active');
         $('.wrapper').toggleClass('bg-active');
+
+    });
+
+    $('.burger__constructor').click(function(){
+        $('.burger__line_constructor').toggleClass('active');
+        $('.constructorNav').slideToggle();
+        // $('.Lside').toggleClass('active');
+        // $('.wrapper').toggleClass('bg-active');
 
     });
 

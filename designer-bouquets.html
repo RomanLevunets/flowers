@@ -1,0 +1,2211 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Конструктор букета</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">
+</head>
+<body>
+<style>
+    html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block;vertical-align:baseline}audio:not([controls]){display:none;height:0}[hidden],template{display:none}a{background-color:transparent}b,strong{font-weight:bold}dfn{font-style:italic}h1{font-size:2em;margin:0.67em 0}mark{background:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-0.5em}sub{bottom:-0.25em}img{border:0}svg:not(:root){overflow:hidden}figure{margin:1em 40px}hr{-webkit-box-sizing:content-box;-moz-box-sizing:content-box;box-sizing:content-box;height:0}pre{overflow:auto}code,kbd,pre,samp{font-family:monospace, monospace;font-size:1em}button,input,optgroup,select,textarea{color:inherit;font:inherit;margin:0}button{overflow:visible}button,select{text-transform:none}button,html input[type="button"],input[type="reset"],input[type="submit"]{-webkit-appearance:button;cursor:pointer}button[disabled],html input[disabled]{cursor:default}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}input{line-height:normal}input[type="checkbox"],input[type="radio"]{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;padding:0}input[type="number"]::-webkit-inner-spin-button,input[type="number"]::-webkit-outer-spin-button{height:auto}input[type="search"]{-webkit-appearance:textfield;-webkit-box-sizing:content-box;-moz-box-sizing:content-box;box-sizing:content-box}input[type="search"]::-webkit-search-cancel-button,input[type="search"]::-webkit-search-decoration{-webkit-appearance:none}fieldset{border:1px solid #c0c0c0;margin:0 2px;padding:0.35em 0.625em 0.75em}legend{border:0;padding:0}textarea{overflow:auto}optgroup{font-weight:bold}table{border-collapse:collapse;border-spacing:0}td,th{padding:0}*{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}*:before,*:after{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}html{font-size:10px;-webkit-tap-highlight-color:rgba(0,0,0,0)}body{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:14px;line-height:1.42857143;color:#333;background-color:#fff}input,button,select,textarea{font-family:inherit;font-size:inherit;line-height:inherit}a{color:#337ab7;text-decoration:none}a:focus{outline:5px auto -webkit-focus-ring-color;outline-offset:-2px}figure{margin:0}img{vertical-align:middle}.img-responsive{display:block;max-width:100%;height:auto}.img-rounded{border-radius:6px}.img-thumbnail{padding:4px;line-height:1.42857143;background-color:#fff;border:1px solid #ddd;border-radius:4px;-webkit-transition:all .2s ease-in-out;-o-transition:all .2s ease-in-out;transition:all .2s ease-in-out;display:inline-block;max-width:100%;height:auto}.img-circle{border-radius:50%}hr{margin-top:20px;margin-bottom:20px;border:0;border-top:1px solid #eee}.sr-only{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);border:0}.sr-only-focusable:active,.sr-only-focusable:focus{position:static;width:auto;height:auto;margin:0;overflow:visible;clip:auto}[role="button"]{cursor:pointer}.container{margin-right:auto;margin-left:auto;padding-left:15px;padding-right:15px}@media (min-width:768px){.container{width:750px}}@media (min-width:992px){.container{width:970px}}@media (min-width:1200px){.container{width:1170px}}.container-fluid{margin-right:auto;margin-left:auto;padding-left:15px;padding-right:15px}.row{margin-left:-15px;margin-right:-15px}.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12{position:relative;min-height:1px;padding-left:15px;padding-right:15px}.col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12{float:left}.col-xs-12{width:100%}.col-xs-11{width:91.66666667%}.col-xs-10{width:83.33333333%}.col-xs-9{width:75%}.col-xs-8{width:66.66666667%}.col-xs-7{width:58.33333333%}.col-xs-6{width:50%}.col-xs-5{width:41.66666667%}.col-xs-4{width:33.33333333%}.col-xs-3{width:25%}.col-xs-2{width:16.66666667%}.col-xs-1{width:8.33333333%}.col-xs-pull-12{right:100%}.col-xs-pull-11{right:91.66666667%}.col-xs-pull-10{right:83.33333333%}.col-xs-pull-9{right:75%}.col-xs-pull-8{right:66.66666667%}.col-xs-pull-7{right:58.33333333%}.col-xs-pull-6{right:50%}.col-xs-pull-5{right:41.66666667%}.col-xs-pull-4{right:33.33333333%}.col-xs-pull-3{right:25%}.col-xs-pull-2{right:16.66666667%}.col-xs-pull-1{right:8.33333333%}.col-xs-pull-0{right:auto}.col-xs-push-12{left:100%}.col-xs-push-11{left:91.66666667%}.col-xs-push-10{left:83.33333333%}.col-xs-push-9{left:75%}.col-xs-push-8{left:66.66666667%}.col-xs-push-7{left:58.33333333%}.col-xs-push-6{left:50%}.col-xs-push-5{left:41.66666667%}.col-xs-push-4{left:33.33333333%}.col-xs-push-3{left:25%}.col-xs-push-2{left:16.66666667%}.col-xs-push-1{left:8.33333333%}.col-xs-push-0{left:auto}.col-xs-offset-12{margin-left:100%}.col-xs-offset-11{margin-left:91.66666667%}.col-xs-offset-10{margin-left:83.33333333%}.col-xs-offset-9{margin-left:75%}.col-xs-offset-8{margin-left:66.66666667%}.col-xs-offset-7{margin-left:58.33333333%}.col-xs-offset-6{margin-left:50%}.col-xs-offset-5{margin-left:41.66666667%}.col-xs-offset-4{margin-left:33.33333333%}.col-xs-offset-3{margin-left:25%}.col-xs-offset-2{margin-left:16.66666667%}.col-xs-offset-1{margin-left:8.33333333%}.col-xs-offset-0{margin-left:0}@media (min-width:768px){.col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12{float:left}.col-sm-12{width:100%}.col-sm-11{width:91.66666667%}.col-sm-10{width:83.33333333%}.col-sm-9{width:75%}.col-sm-8{width:66.66666667%}.col-sm-7{width:58.33333333%}.col-sm-6{width:50%}.col-sm-5{width:41.66666667%}.col-sm-4{width:33.33333333%}.col-sm-3{width:25%}.col-sm-2{width:16.66666667%}.col-sm-1{width:8.33333333%}.col-sm-pull-12{right:100%}.col-sm-pull-11{right:91.66666667%}.col-sm-pull-10{right:83.33333333%}.col-sm-pull-9{right:75%}.col-sm-pull-8{right:66.66666667%}.col-sm-pull-7{right:58.33333333%}.col-sm-pull-6{right:50%}.col-sm-pull-5{right:41.66666667%}.col-sm-pull-4{right:33.33333333%}.col-sm-pull-3{right:25%}.col-sm-pull-2{right:16.66666667%}.col-sm-pull-1{right:8.33333333%}.col-sm-pull-0{right:auto}.col-sm-push-12{left:100%}.col-sm-push-11{left:91.66666667%}.col-sm-push-10{left:83.33333333%}.col-sm-push-9{left:75%}.col-sm-push-8{left:66.66666667%}.col-sm-push-7{left:58.33333333%}.col-sm-push-6{left:50%}.col-sm-push-5{left:41.66666667%}.col-sm-push-4{left:33.33333333%}.col-sm-push-3{left:25%}.col-sm-push-2{left:16.66666667%}.col-sm-push-1{left:8.33333333%}.col-sm-push-0{left:auto}.col-sm-offset-12{margin-left:100%}.col-sm-offset-11{margin-left:91.66666667%}.col-sm-offset-10{margin-left:83.33333333%}.col-sm-offset-9{margin-left:75%}.col-sm-offset-8{margin-left:66.66666667%}.col-sm-offset-7{margin-left:58.33333333%}.col-sm-offset-6{margin-left:50%}.col-sm-offset-5{margin-left:41.66666667%}.col-sm-offset-4{margin-left:33.33333333%}.col-sm-offset-3{margin-left:25%}.col-sm-offset-2{margin-left:16.66666667%}.col-sm-offset-1{margin-left:8.33333333%}.col-sm-offset-0{margin-left:0}}@media (min-width:992px){.col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12{float:left}.col-md-12{width:100%}.col-md-11{width:91.66666667%}.col-md-10{width:83.33333333%}.col-md-9{width:75%}.col-md-8{width:66.66666667%}.col-md-7{width:58.33333333%}.col-md-6{width:50%}.col-md-5{width:41.66666667%}.col-md-4{width:33.33333333%}.col-md-3{width:25%}.col-md-2{width:16.66666667%}.col-md-1{width:8.33333333%}.col-md-pull-12{right:100%}.col-md-pull-11{right:91.66666667%}.col-md-pull-10{right:83.33333333%}.col-md-pull-9{right:75%}.col-md-pull-8{right:66.66666667%}.col-md-pull-7{right:58.33333333%}.col-md-pull-6{right:50%}.col-md-pull-5{right:41.66666667%}.col-md-pull-4{right:33.33333333%}.col-md-pull-3{right:25%}.col-md-pull-2{right:16.66666667%}.col-md-pull-1{right:8.33333333%}.col-md-pull-0{right:auto}.col-md-push-12{left:100%}.col-md-push-11{left:91.66666667%}.col-md-push-10{left:83.33333333%}.col-md-push-9{left:75%}.col-md-push-8{left:66.66666667%}.col-md-push-7{left:58.33333333%}.col-md-push-6{left:50%}.col-md-push-5{left:41.66666667%}.col-md-push-4{left:33.33333333%}.col-md-push-3{left:25%}.col-md-push-2{left:16.66666667%}.col-md-push-1{left:8.33333333%}.col-md-push-0{left:auto}.col-md-offset-12{margin-left:100%}.col-md-offset-11{margin-left:91.66666667%}.col-md-offset-10{margin-left:83.33333333%}.col-md-offset-9{margin-left:75%}.col-md-offset-8{margin-left:66.66666667%}.col-md-offset-7{margin-left:58.33333333%}.col-md-offset-6{margin-left:50%}.col-md-offset-5{margin-left:41.66666667%}.col-md-offset-4{margin-left:33.33333333%}.col-md-offset-3{margin-left:25%}.col-md-offset-2{margin-left:16.66666667%}.col-md-offset-1{margin-left:8.33333333%}.col-md-offset-0{margin-left:0}}@media (min-width:1200px){.col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12{float:left}.col-lg-12{width:100%}.col-lg-11{width:91.66666667%}.col-lg-10{width:83.33333333%}.col-lg-9{width:75%}.col-lg-8{width:66.66666667%}.col-lg-7{width:58.33333333%}.col-lg-6{width:50%}.col-lg-5{width:41.66666667%}.col-lg-4{width:33.33333333%}.col-lg-3{width:25%}.col-lg-2{width:16.66666667%}.col-lg-1{width:8.33333333%}.col-lg-pull-12{right:100%}.col-lg-pull-11{right:91.66666667%}.col-lg-pull-10{right:83.33333333%}.col-lg-pull-9{right:75%}.col-lg-pull-8{right:66.66666667%}.col-lg-pull-7{right:58.33333333%}.col-lg-pull-6{right:50%}.col-lg-pull-5{right:41.66666667%}.col-lg-pull-4{right:33.33333333%}.col-lg-pull-3{right:25%}.col-lg-pull-2{right:16.66666667%}.col-lg-pull-1{right:8.33333333%}.col-lg-pull-0{right:auto}.col-lg-push-12{left:100%}.col-lg-push-11{left:91.66666667%}.col-lg-push-10{left:83.33333333%}.col-lg-push-9{left:75%}.col-lg-push-8{left:66.66666667%}.col-lg-push-7{left:58.33333333%}.col-lg-push-6{left:50%}.col-lg-push-5{left:41.66666667%}.col-lg-push-4{left:33.33333333%}.col-lg-push-3{left:25%}.col-lg-push-2{left:16.66666667%}.col-lg-push-1{left:8.33333333%}.col-lg-push-0{left:auto}.col-lg-offset-12{margin-left:100%}.col-lg-offset-11{margin-left:91.66666667%}.col-lg-offset-10{margin-left:83.33333333%}.col-lg-offset-9{margin-left:75%}.col-lg-offset-8{margin-left:66.66666667%}.col-lg-offset-7{margin-left:58.33333333%}.col-lg-offset-6{margin-left:50%}.col-lg-offset-5{margin-left:41.66666667%}.col-lg-offset-4{margin-left:33.33333333%}.col-lg-offset-3{margin-left:25%}.col-lg-offset-2{margin-left:16.66666667%}.col-lg-offset-1{margin-left:8.33333333%}.col-lg-offset-0{margin-left:0}}.clearfix:before,.clearfix:after,.container:before,.container:after,.container-fluid:before,.container-fluid:after,.row:before,.row:after{content:" ";display:table}.clearfix:after,.container:after,.container-fluid:after,.row:after{clear:both}.center-block{display:block;margin-left:auto;margin-right:auto}.pull-right{float:right !important}.pull-left{float:left !important}.hide{display:none !important}.show{display:block !important}.invisible{visibility:hidden}.text-hide{font:0/0 a;color:transparent;text-shadow:none;background-color:transparent;border:0}.hidden{display:none !important}.affix{position:fixed}
+</style>
+<div class="wrapper">
+    <section class="section-header">
+        <div class="mobile-header">
+            <div class="burger">
+                <span class="burger__line"></span>
+                <span class="burger__line"></span>
+                <span class="burger__line"></span>
+                <span class="burger__line"></span>
+            </div>
+            <a href="index.html" class="mobile-logo">
+                <img src="img/svg/mobile-logo.svg" alt="mobile-logo">
+            </a>
+            <div class="mob-basket">
+                <a href="#">
+                    <img src="img/svg/basket.svg" alt="basket">
+                </a>
+                <span>2</span>
+            </div>
+        </div>
+        <header class="header">
+            <div class="header-top">
+                <div class="header-left">
+                    <a href="#">8 (3462) 490-890</a>
+                    <a href="#">zakaz@semcvetov.ru</a>
+                </div>
+                <a href="index.html" class="header-logo">
+                    <img src="img/logo.png" alt="logo">
+                </a>
+                <div class="header-right">
+                    <div class="header-sing">
+                        <a href="#">доставка и оплата</a>
+                        <a href="#sing">Вход и регистрация</a>
+                    </div>
+                    <div class="header-callback">
+                        <p>пн-пт с 8:00 до 21:00 <a href="#callback">Заказать обратный звонок</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="header-bot">
+                <nav>
+                    <ul class="menu">
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="#">собрать букет</a></li>
+                        <li><a href="#">готовые букеты</a></li>
+                        <li><a href="#">подарки</a></li>
+                        <li><a href="#">аксессуары</a></li>
+                        <li><a href="about.html">о нас</a></li>
+                        <li>
+                            <a href="#">
+                                <img src="img/svg/header-search.svg" alt="header-search">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="img/svg/header-basket.svg" alt="header-basket">
+                                <span>2</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+    </section>
+    <ul class="links">
+        <li><a href="index.html">Главная</a></li>
+        <li><a href="#">Конструктор букета</a></li>
+    </ul>
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">
+                <span>Конструктор букета</span>
+            </h2>
+            <p class="section-desc">Работаем для Вас</p>
+            <div class="scene-1-1 constructor">
+                <div class="constructor-wrap">
+                    <div class="constructor-block">
+                        <div class="constructor-toggle">
+                            <div class="burger__constructor">
+                                <span class="burger__line_constructor"></span>
+                                <span class="burger__line_constructor"></span>
+                                <span class="burger__line_constructor"></span>
+                                <span class="burger__line_constructor"></span>
+                            </div>
+                            <p>Меню</p>
+                        </div>
+                        <ul class="constructorNav">
+                            <li class="active">
+                                <a href="#" class="n-all">все цветы</a>
+                            </li>
+                            <li >
+                                <a href="#" class="n-alstroemeria">альстромерия</a>
+                            </li>
+                            <li>
+                                <a href="#" class="n-gerbera">гербера</a>
+                            </li>
+                            <li>
+                                <a href="#" class="n-iris">ирис</a>
+                            </li>
+                            <li>
+                                <a href="#" class="n-lilly">лилия</a>
+                            </li>
+                            <li>
+                                <a href="#" class="n-rose">розы</a>
+                            </li>
+                            <li>
+                                <a href="#" class="n-tulips">тюльпаны</a>
+                            </li>
+                            <li>
+                                <a href="#" class="n-peon">пионы</a>
+                            </li>
+                            <li>
+                                <a href="#" class="n-chrysanthemums">хризантемы</a>
+                            </li>
+                            <li>
+                                <a href="#" class="n-herb">зелень</a>
+                            </li>
+                            <li>
+                                <a href="#" class="n-pack">упаковка</a>
+                            </li>
+                            <li>
+                                <a href="#" class="n-access">аксессуары</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="addItem">
+                        <div class="addItem-item">
+                            <div class="addItem-top">
+                                <div class="addItem-img">
+                                    <img src="img/flowers/img1.jpg" alt="flowers-img-1">
+                                </div>
+                                <div class="addItem-desc">
+                                    <h5>Медведь Teddy Brown</h5>
+                                    <p><span>150</span> руб./шт.</p>
+                                    <div class="spinner-global" >
+                                        <p class="spin-down">-</p>
+                                        <input type="text" value="0">
+                                        <p class="spin-up">+</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#">добавить в букет</a>
+                        </div>
+                        <div class="addItem-item select">
+                            <div class="addItem-top">
+                                <div class="addItem-img">
+                                    <img src="img/flowers/img2.jpg" alt="flowers-img-2">
+                                </div>
+                                <div class="addItem-desc">
+                                    <h5>Медведь Teddy Brown</h5>
+                                    <p><span>150</span> руб./шт.</p>
+                                    <div class="spinner-global" >
+                                        <p class="spin-down">-</p>
+                                        <input type="text" value="1">
+                                        <p class="spin-up">+</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#">добавить в букет</a>
+                        </div>
+                        <div class="addItem-item">
+                            <div class="addItem-top">
+                                <div class="addItem-img">
+                                    <img src="img/flowers/img3.jpg" alt="flowers-img-3">
+                                </div>
+                                <div class="addItem-desc">
+                                    <h5>Медведь Teddy Brown</h5>
+                                    <p><span>150</span> руб./шт.</p>
+                                    <div class="spinner-global" >
+                                        <p class="spin-down">-</p>
+                                        <input type="text" value="0">
+                                        <p class="spin-up">+</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#">добавить в букет</a>
+                        </div>
+                        <div class="addItem-item">
+                            <div class="addItem-top">
+                                <div class="addItem-img">
+                                    <img src="img/flowers/img4.jpg" alt="flowers-img-4">
+                                </div>
+                                <div class="addItem-desc">
+                                    <h5>Медведь Teddy Brown</h5>
+                                    <p><span>150</span> руб./шт.</p>
+                                    <div class="spinner-global" >
+                                        <p class="spin-down">-</p>
+                                        <input type="text" value="0">
+                                        <p class="spin-up">+</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#">добавить в букет</a>
+                        </div>
+                        <div class="addItem-item">
+                            <div class="addItem-top">
+                                <div class="addItem-img">
+                                    <img src="img/flowers/img2.jpg" alt="flowers-img-2">
+                                </div>
+                                <div class="addItem-desc">
+                                    <h5>Медведь Teddy Brown</h5>
+                                    <p><span>150</span> руб./шт.</p>
+                                    <div class="spinner-global" >
+                                        <p class="spin-down">-</p>
+                                        <input type="text" value="0">
+                                        <p class="spin-up">+</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#">добавить в букет</a>
+                        </div>
+                        <div class="addItem-item">
+                            <div class="addItem-top">
+                                <div class="addItem-img">
+                                    <img src="img/flowers/img3.jpg" alt="flowers-img-3">
+                                </div>
+                                <div class="addItem-desc">
+                                    <h5>Медведь Teddy Brown</h5>
+                                    <p><span>150</span> руб./шт.</p>
+                                    <div class="spinner-global" >
+                                        <p class="spin-down">-</p>
+                                        <input type="text" value="0">
+                                        <p class="spin-up">+</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#">добавить в букет</a>
+                        </div>
+                    </div>
+                    <div class="futureBouquet">
+                        <ul class="futureTop">
+                            <li>
+                                <a href="#">цветы пачками</a>
+                            </li>
+                            <li>
+                                Ваш будущий букет
+                            </li>
+                            <li>
+                                <a href="#">Советы флориста</a>
+                            </li>
+                        </ul>
+                        <div class="futureContent">
+                            <div class="futureContent-item">
+                                <div class="futureTemplate f-flowers">
+                                    <p>Цветы</p>
+                                    <a href="#">+</a>
+                                </div>
+                            </div>
+                            <div class="futureContent-item">
+                                <div class="futureTemplate f-herb">
+                                    <p>Зелень</p>
+                                    <a href="#">+</a>
+                                </div>
+                            </div>
+                            <div class="futureContent-item ">
+                                <div class="futureTemplate f-pack">
+                                    <p>Упаковка</p>
+                                    <a href="#">+</a>
+                                </div>
+                            </div>
+                            <div class="futureContent-item ">
+                                <div class="futureTemplate f-access">
+                                    <p>Аксессуары</p>
+                                    <a href="#">+</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="futureLast">
+                        <p>Ваш букет соберет наш профессиональный флорист</p>
+                    </div>
+                </div>
+            </div>
+            <div class="scene-1-2 constructor">
+                <div class="constructor-wrap">
+                    <div class="constructor-block">
+                        <div class="constructor-toggle">
+                            <div class="burger__constructor">
+                                <span class="burger__line_constructor"></span>
+                                <span class="burger__line_constructor"></span>
+                                <span class="burger__line_constructor"></span>
+                                <span class="burger__line_constructor"></span>
+                            </div>
+                            <p>Меню</p>
+                        </div>
+                        <ul class="constructorNav">
+                            <li class="active">
+                                <a href="#" class="n-all">все цветы</a>
+                            </li>
+                            <li >
+                                <a href="#" class="n-alstroemeria">альстромерия</a>
+                            </li>
+                            <li>
+                                <a href="#" class="n-gerbera">гербера</a>
+                            </li>
+                            <li>
+                                <a href="#" class="n-iris">ирис</a>
+                            </li>
+                            <li>
+                                <a href="#" class="n-lilly">лилия</a>
+                            </li>
+                            <li>
+                                <a href="#" class="n-rose">розы</a>
+                            </li>
+                            <li>
+                                <a href="#" class="n-tulips">тюльпаны</a>
+                            </li>
+                            <li>
+                                <a href="#" class="n-peon">пионы</a>
+                            </li>
+                            <li>
+                                <a href="#" class="n-chrysanthemums">хризантемы</a>
+                            </li>
+                            <li>
+                                <a href="#" class="n-herb">зелень</a>
+                            </li>
+                            <li>
+                                <a href="#" class="n-pack">упаковка</a>
+                            </li>
+                            <li>
+                                <a href="#" class="n-access">аксессуары</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="addItem">
+                        <div class="addItem-item">
+                            <div class="addItem-top">
+                                <div class="addItem-img">
+                                    <img src="img/flowers/img1.jpg" alt="flowers-img-1">
+                                </div>
+                                <div class="addItem-desc">
+                                    <h5>Медведь Teddy Brown</h5>
+                                    <p><span>150</span> руб./шт.</p>
+                                    <div class="spinner-global" >
+                                        <p class="spin-down">-</p>
+                                        <input type="text" value="0">
+                                        <p class="spin-up">+</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#">добавить в букет</a>
+                        </div>
+                        <div class="addItem-item select">
+                            <div class="addItem-top">
+                                <div class="addItem-img">
+                                    <img src="img/flowers/img2.jpg" alt="flowers-img-2">
+                                </div>
+                                <div class="addItem-desc">
+                                    <h5>Медведь Teddy Brown</h5>
+                                    <p><span>150</span> руб./шт.</p>
+                                    <div class="spinner-global" >
+                                        <p class="spin-down">-</p>
+                                        <input type="text" value="1">
+                                        <p class="spin-up">+</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#">добавить в букет</a>
+                        </div>
+                        <div class="addItem-item">
+                            <div class="addItem-top">
+                                <div class="addItem-img">
+                                    <img src="img/flowers/img3.jpg" alt="flowers-img-3">
+                                </div>
+                                <div class="addItem-desc">
+                                    <h5>Медведь Teddy Brown</h5>
+                                    <p><span>150</span> руб./шт.</p>
+                                    <div class="spinner-global" >
+                                        <p class="spin-down">-</p>
+                                        <input type="text" value="0">
+                                        <p class="spin-up">+</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#">добавить в букет</a>
+                        </div>
+                        <div class="addItem-item">
+                            <div class="addItem-top">
+                                <div class="addItem-img">
+                                    <img src="img/flowers/img4.jpg" alt="flowers-img-4">
+                                </div>
+                                <div class="addItem-desc">
+                                    <h5>Медведь Teddy Brown</h5>
+                                    <p><span>150</span> руб./шт.</p>
+                                    <div class="spinner-global" >
+                                        <p class="spin-down">-</p>
+                                        <input type="text" value="0">
+                                        <p class="spin-up">+</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#">добавить в букет</a>
+                        </div>
+                        <div class="addItem-item">
+                            <div class="addItem-top">
+                                <div class="addItem-img">
+                                    <img src="img/flowers/img2.jpg" alt="flowers-img-2">
+                                </div>
+                                <div class="addItem-desc">
+                                    <h5>Медведь Teddy Brown</h5>
+                                    <p><span>150</span> руб./шт.</p>
+                                    <div class="spinner-global" >
+                                        <p class="spin-down">-</p>
+                                        <input type="text" value="0">
+                                        <p class="spin-up">+</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#">добавить в букет</a>
+                        </div>
+                        <div class="addItem-item">
+                            <div class="addItem-top">
+                                <div class="addItem-img">
+                                    <img src="img/flowers/img3.jpg" alt="flowers-img-3">
+                                </div>
+                                <div class="addItem-desc">
+                                    <h5>Медведь Teddy Brown</h5>
+                                    <p><span>150</span> руб./шт.</p>
+                                    <div class="spinner-global" >
+                                        <p class="spin-down">-</p>
+                                        <input type="text" value="0">
+                                        <p class="spin-up">+</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#">добавить в букет</a>
+                        </div>
+                    </div>
+                    <div class="futureBouquet">
+                        <ul class="futureTop">
+                            <li>
+                                <a href="#">цветы пачками</a>
+                            </li>
+                            <li>
+                                Ваш будущий букет
+                            </li>
+                            <li>
+                                <a href="#">Советы флориста</a>
+                            </li>
+                        </ul>
+                        <div class="futureBlock">
+                            <div class="futureContent">
+                                <div class="futureContent-item select f-flowers">
+                                    <div class="futureTemplate">
+                                        <p>Цветы</p>
+                                        <a href="#">+</a>
+                                        <img src="img/flowers/img3.jpg" alt="peon1">
+                                        <span class="close-btn"></span>
+                                    </div>
+                                    <div class="addItem-desc">
+                                        <h5>Пион розовый</h5>
+                                        <div class="spinner-global" >
+                                            <p class="spin-down">-</p>
+                                                <input type="text" value="0">
+                                            <p class="spin-up">+</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="futureContent-item">
+                                    <div class="futureTemplate f-herb">
+                                        <p>Зелень</p>
+                                        <a href="#">+</a>
+                                    </div>
+                                </div>
+                                <div class="futureContent-item ">
+                                    <div class="futureTemplate f-pack">
+                                        <p>Упаковка</p>
+                                        <a href="#">+</a>
+                                    </div>
+                                </div>
+                                <div class="futureContent-item ">
+                                    <div class="futureTemplate f-access">
+                                        <p>Аксессуары</p>
+                                        <a href="#">+</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="composition">
+                                <p class="composition-title">Состав букета</p>
+                                <div class="composition-txt">
+                                    <p class="composition-txt-flowers">Цветы: </p><span> Пион розовый - 1 шт.</span>
+                                </div>
+                                <div class="composition-price">
+                                    <p>Стоимость Вашего букета: <span>850 руб. </span> </p>
+                                    <a href="#">ЗАКАЗАТЬ БУКЕТ</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="futureLast">
+                        <p>Ваш букет соберет наш профессиональный флорист</p>
+                    </div>
+                </div>
+            </div>
+            <div class="scene-1-3 constructor">
+                <div class="constructor-wrap">
+                    <div class="constructor-block">
+                        <div class="constructor-toggle">
+                            <div class="burger__constructor">
+                                <span class="burger__line_constructor"></span>
+                                <span class="burger__line_constructor"></span>
+                                <span class="burger__line_constructor"></span>
+                                <span class="burger__line_constructor"></span>
+                            </div>
+                            <p>Меню</p>
+                        </div>
+                        <ul class="constructorNav">
+                            <li class="active">
+                                <a href="#" class="n-all">все цветы</a>
+                            </li>
+                            <li >
+                                <a href="#" class="n-alstroemeria">альстромерия</a>
+                            </li>
+                            <li>
+                                <a href="#" class="n-gerbera">гербера</a>
+                            </li>
+                            <li>
+                                <a href="#" class="n-iris">ирис</a>
+                            </li>
+                            <li>
+                                <a href="#" class="n-lilly">лилия</a>
+                            </li>
+                            <li>
+                                <a href="#" class="n-rose">розы</a>
+                            </li>
+                            <li>
+                                <a href="#" class="n-tulips">тюльпаны</a>
+                            </li>
+                            <li>
+                                <a href="#" class="n-peon">пионы</a>
+                            </li>
+                            <li>
+                                <a href="#" class="n-chrysanthemums">хризантемы</a>
+                            </li>
+                            <li>
+                                <a href="#" class="n-herb">зелень</a>
+                            </li>
+                            <li>
+                                <a href="#" class="n-pack">упаковка</a>
+                            </li>
+                            <li>
+                                <a href="#" class="n-access">аксессуары</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="addItem">
+                        <div class="addItem-item">
+                            <div class="addItem-top">
+                                <div class="addItem-img">
+                                    <img src="img/flowers/peon-white.jpg" alt="peon-white">
+                                </div>
+                                <div class="addItem-desc">
+                                    <h5>Пион белый</h5>
+                                    <p><span>150</span> руб./шт.</p>
+                                    <div class="spinner-global" >
+                                        <p class="spin-down">-</p>
+                                        <input type="text" value="0">
+                                        <p class="spin-up">+</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#">добавить в букет</a>
+                        </div>
+                        <div class="addItem-item select">
+                            <div class="addItem-top">
+                                <div class="addItem-img">
+                                    <img src="img/flowers/img4.jpg" alt="flowers-img-4">
+                                </div>
+                                <div class="addItem-desc">
+                                    <h5>Пион Sarah Bernhardt</h5>
+                                    <p><span>150</span> руб./шт.</p>
+                                    <div class="spinner-global" >
+                                        <p class="spin-down">-</p>
+                                        <input type="text" value="1">
+                                        <p class="spin-up">+</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#">добавить в букет</a>
+                        </div>
+                        <div class="addItem-item">
+                            <div class="addItem-top">
+                                <div class="addItem-img">
+                                    <img src="img/flowers/img3.jpg" alt="flowers-img-3">
+                                </div>
+                                <div class="addItem-desc">
+                                    <h5>Пион розовый</h5>
+                                    <p><span>150</span> руб./шт.</p>
+                                    <div class="spinner-global" >
+                                        <p class="spin-down">-</p>
+                                        <input type="text" value="0">
+                                        <p class="spin-up">+</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#">добавить в букет</a>
+                        </div>
+                        <div class="addItem-item">
+                            <div class="addItem-top">
+                                <div class="addItem-img">
+                                    <img src="img/flowers/img4.jpg" alt="flowers-img-4">
+                                </div>
+                                <div class="addItem-desc">
+                                    <h5>Пион Sarah Bernhardt</h5>
+                                    <p><span>150</span> руб./шт.</p>
+                                    <div class="spinner-global" >
+                                        <p class="spin-down">-</p>
+                                        <input type="text" value="0">
+                                        <p class="spin-up">+</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#">добавить в букет</a>
+                        </div>
+                    </div>
+                    <div class="futureBouquet">
+                        <ul class="futureTop">
+                            <li>
+                                <a href="#">цветы пачками</a>
+                            </li>
+                            <li>
+                                Ваш будущий букет
+                            </li>
+                            <li>
+                                <a href="#">Советы флориста</a>
+                            </li>
+                        </ul>
+                        <div class="futureBlock">
+                            <div class="futureContent">
+                                <div class="futureContent-item select f-flowers">
+                                    <div class="futureTemplate ">
+                                        <p>Цветы</p>
+                                        <a href="#">+</a>
+                                        <img src="img/flowers/img3.jpg" alt="peon1">
+                                        <span class="close-btn"></span>
+                                    </div>
+                                    <div class="addItem-desc">
+                                        <h5>Пион розовый</h5>
+                                        <div class="spinner-global" >
+                                            <p class="spin-down">-</p>
+                                            <input type="text" value="0">
+                                            <p class="spin-up">+</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="futureContent-item">
+                                    <div class="futureTemplate f-herb">
+                                        <p>Зелень</p>
+                                        <a href="#">+</a>
+                                    </div>
+                                </div>
+                                <div class="futureContent-item ">
+                                    <div class="futureTemplate f-pack">
+                                        <p>Упаковка</p>
+                                        <a href="#">+</a>
+                                    </div>
+                                </div>
+                                <div class="futureContent-item ">
+                                    <div class="futureTemplate f-access">
+                                        <p>Аксессуары</p>
+                                        <a href="#">+</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="composition">
+                                <p class="composition-title">Состав букета</p>
+                                <div class="composition-txt">
+                                    <p class="composition-txt-flowers">Цветы: </p><span> Пион розовый - 1 шт.</span>
+                                </div>
+                                <div class="composition-price">
+                                    <p>Стоимость Вашего букета: <span>850 руб. </span> </p>
+                                    <a href="#">ЗАКАЗАТЬ БУКЕТ</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="futureLast">
+                        <p>Ваш букет соберет наш профессиональный флорист</p>
+                    </div>
+                </div>
+            </div>
+            <div class="scene-1-4 constructor">
+                <div class="constructor-wrap">
+                    <div class="constructor-block">
+                        <div class="constructor-toggle">
+                            <div class="burger__constructor">
+                                <span class="burger__line_constructor"></span>
+                                <span class="burger__line_constructor"></span>
+                                <span class="burger__line_constructor"></span>
+                                <span class="burger__line_constructor"></span>
+                            </div>
+                            <p>Меню</p>
+                        </div>
+                        <ul class="constructorNav">
+                            <li class="active">
+                                <a href="#" class="n-all">все цветы</a>
+                            </li>
+                            <li >
+                                <a href="#" class="n-alstroemeria">альстромерия</a>
+                            </li>
+                            <li>
+                                <a href="#" class="n-gerbera">гербера</a>
+                            </li>
+                            <li>
+                                <a href="#" class="n-iris">ирис</a>
+                            </li>
+                            <li>
+                                <a href="#" class="n-lilly">лилия</a>
+                            </li>
+                            <li>
+                                <a href="#" class="n-rose">розы</a>
+                            </li>
+                            <li>
+                                <a href="#" class="n-tulips">тюльпаны</a>
+                            </li>
+                            <li>
+                                <a href="#" class="n-peon">пионы</a>
+                            </li>
+                            <li>
+                                <a href="#" class="n-chrysanthemums">хризантемы</a>
+                            </li>
+                            <li>
+                                <a href="#" class="n-herb">зелень</a>
+                            </li>
+                            <li>
+                                <a href="#" class="n-pack">упаковка</a>
+                            </li>
+                            <li>
+                                <a href="#" class="n-access">аксессуары</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="addItem">
+                        <div class="addItem-item">
+                            <div class="addItem-top">
+                                <div class="addItem-img">
+                                    <img src="img/flowers/img1.jpg" alt="flowers-img-1">
+                                </div>
+                                <div class="addItem-desc">
+                                    <h5>Медведь Teddy Brown</h5>
+                                    <p><span>150</span> руб./шт.</p>
+                                    <div class="spinner-global" >
+                                        <p class="spin-down">-</p>
+                                        <input type="text" value="0">
+                                        <p class="spin-up">+</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#">добавить в букет</a>
+                        </div>
+                        <div class="addItem-item select">
+                            <div class="addItem-top">
+                                <div class="addItem-img">
+                                    <img src="img/flowers/img2.jpg" alt="flowers-img-2">
+                                </div>
+                                <div class="addItem-desc">
+                                    <h5>Медведь Teddy Brown</h5>
+                                    <p><span>150</span> руб./шт.</p>
+                                    <div class="spinner-global" >
+                                        <p class="spin-down">-</p>
+                                        <input type="text" value="1">
+                                        <p class="spin-up">+</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#">добавить в букет</a>
+                        </div>
+                        <div class="addItem-item item-pack">
+                            <div class="addItem-top">
+                                <div class="addItem-img">
+                                    <img src="img/packaging/img1.jpg" alt="packaging1">
+                                </div>
+                                <div class="addItem-desc">
+                                    <h5>Медведь Teddy Brown</h5>
+                                    <p><span>150</span> руб./шт.</p>
+                                    <div class="spinner-global" >
+                                        <p class="spin-down">-</p>
+                                        <input type="text" value="0">
+                                        <p class="spin-up">+</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#">добавить в букет</a>
+                        </div>
+                        <div class="addItem-item item-herb">
+                            <div class="addItem-top">
+                                <div class="addItem-img">
+                                    <img src="img/herbage/img1.jpg" alt="herbage1">
+                                </div>
+                                <div class="addItem-desc">
+                                    <h5>Медведь Teddy Brown</h5>
+                                    <p><span>150</span> руб./шт.</p>
+                                    <div class="spinner-global" >
+                                        <p class="spin-down">-</p>
+                                        <input type="text" value="0">
+                                        <p class="spin-up">+</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#">добавить в букет</a>
+                        </div>
+                        <div class="addItem-item item-access">
+                            <div class="addItem-top">
+                                <div class="addItem-img">
+                                    <img src="img/gifts/img1.jpg" alt="gifts1">
+                                </div>
+                                <div class="addItem-desc">
+                                    <h5>Медведь Teddy Brown</h5>
+                                    <p><span>150</span> руб./шт.</p>
+                                    <div class="spinner-global" >
+                                        <p class="spin-down">-</p>
+                                        <input type="text" value="0">
+                                        <p class="spin-up">+</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#">добавить в букет</a>
+                        </div>
+                        <div class="addItem-item">
+                            <div class="addItem-top">
+                                <div class="addItem-img">
+                                    <img src="img/flowers/img3.jpg" alt="flowers-img-3">
+                                </div>
+                                <div class="addItem-desc">
+                                    <h5>Медведь Teddy Brown</h5>
+                                    <p><span>150</span> руб./шт.</p>
+                                    <div class="spinner-global" >
+                                        <p class="spin-down">-</p>
+                                        <input type="text" value="0">
+                                        <p class="spin-up">+</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#">добавить в букет</a>
+                        </div>
+                    </div>
+                    <div class="futureBouquet">
+                        <ul class="futureTop">
+                            <li>
+                                <a href="#">цветы пачками</a>
+                            </li>
+                            <li>
+                                Ваш будущий букет
+                            </li>
+                            <li>
+                                <a href="#">Советы флориста</a>
+                            </li>
+                        </ul>
+                        <div class="futureBlock">
+                            <div class="futureContent">
+                                <div class="futureContent-item select f-flowers">
+                                    <div class="futureTemplate ">
+                                        <p>Цветы</p>
+                                        <a href="#">+</a>
+                                        <img src="img/flowers/img3.jpg" alt="peon1">
+                                        <span class="close-btn"></span>
+                                    </div>
+                                    <div class="addItem-desc">
+                                        <h5>Пион розовый</h5>
+                                        <div class="spinner-global" >
+                                            <p class="spin-down">-</p>
+                                            <input type="text" value="0">
+                                            <p class="spin-up">+</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="futureContent-item select f-flowers">
+                                    <div class="futureTemplate ">
+                                        <p>Цветы</p>
+                                        <a href="#">+</a>
+                                        <img src="img/flowers/img4.jpg" alt="peon4">
+                                        <span class="close-btn"></span>
+                                    </div>
+                                    <div class="addItem-desc">
+                                        <h5>Пион розовый</h5>
+                                        <div class="spinner-global" >
+                                            <p class="spin-down">-</p>
+                                            <input type="text" value="0">
+                                            <p class="spin-up">+</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="futureContent-item select f-herb">
+                                    <div class="futureTemplate">
+                                        <p>Зелень</p>
+                                        <a href="#">+</a>
+                                        <img src="img/herbage/img1.jpg" alt="herbage1">
+                                        <span class="close-btn"></span>
+                                    </div>
+                                    <div class="addItem-desc">
+                                        <h5>Рускус</h5>
+                                        <div class="spinner-global" >
+                                            <p class="spin-down">-</p>
+                                            <input type="text" value="0">
+                                            <p class="spin-up">+</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="futureContent-item select f-pack">
+                                    <div class="futureTemplate f-pack">
+                                        <p>Упаковка</p>
+                                        <a href="#">+</a>
+                                        <img src="img/packaging/img1.jpg" alt="packaging1">
+                                        <span class="close-btn"></span>
+                                    </div>
+                                    <div class="addItem-desc">
+                                        <h5>Крафтовая бумага</h5>
+                                        <div class="spinner-global" >
+                                            <p class="spin-down">-</p>
+                                            <input type="text" value="0">
+                                            <p class="spin-up">+</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="futureContent-item select f-access">
+                                    <div class="futureTemplate f-access">
+                                        <p>Аксессуары</p>
+                                        <a href="#">+</a>
+                                        <img src="img/gifts/img1.jpg" alt="gifts1">
+                                        <span class="close-btn"></span>
+                                    </div>
+                                    <div class="addItem-desc">
+                                        <h5>Медведь Love</h5>
+                                        <div class="spinner-global" >
+                                            <p class="spin-down">-</p>
+                                            <input type="text" value="0">
+                                            <p class="spin-up">+</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="composition">
+                                <p class="composition-title">Состав букета</p>
+                                <div class="composition-txt">
+                                    <p class="composition-txt-flowers">Цветы: </p>
+                                    <span> Пион розовый - 1 шт,</span>
+                                    <span> Пион розовый - 2 шт.</span>
+                                    <p class="composition-txt-pack">Упаковка: </p>
+                                    <span>бумага крафтовая - 1шт.</span>
+                                    <p class="composition-txt-herb">Зелень: </p>
+                                    <span>рускус - 1шт.</span>
+                                    <p class="composition-txt-access">Аксессуары: </p>
+                                    <span>Мишка Love - 1шт.</span>
+                                </div>
+                                <div class="composition-price">
+                                    <p>Стоимость Вашего букета: <span>5850 руб.</span><span class="f-delivery">*доставка бесплатна</span> </p>
+                                    <a href="#">ЗАКАЗАТЬ БУКЕТ</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="futureLast">
+                        <p>Ваш букет соберет наш профессиональный флорист</p>
+                    </div>
+                </div>
+            </div>
+            <div class="scene-2-1 constructor">
+                <div class="constructor-wrap">
+                    <div class="constructor-block">
+                        <div class="constructor-toggle">
+                            <div class="burger__constructor">
+                                <span class="burger__line_constructor"></span>
+                                <span class="burger__line_constructor"></span>
+                                <span class="burger__line_constructor"></span>
+                                <span class="burger__line_constructor"></span>
+                            </div>
+                            <p>Меню</p>
+                        </div>
+                        <ul class="constructorNav">
+                            <li class="active">
+                                <a href="#" class="n-all">все цветы</a>
+                            </li>
+                            <li >
+                                <a href="#" class="n-alstroemeria">альстромерия</a>
+                            </li>
+                            <li>
+                                <a href="#" class="n-gerbera">гербера</a>
+                            </li>
+                            <li>
+                                <a href="#" class="n-iris">ирис</a>
+                            </li>
+                            <li>
+                                <a href="#" class="n-lilly">лилия</a>
+                            </li>
+                            <li>
+                                <a href="#" class="n-rose">розы</a>
+                            </li>
+                            <li>
+                                <a href="#" class="n-tulips">тюльпаны</a>
+                            </li>
+                            <li>
+                                <a href="#" class="n-peon">пионы</a>
+                            </li>
+                            <li>
+                                <a href="#" class="n-chrysanthemums">хризантемы</a>
+                            </li>
+                            <li>
+                                <a href="#" class="n-herb">зелень</a>
+                            </li>
+                            <li>
+                                <a href="#" class="n-pack">упаковка</a>
+                            </li>
+                            <li>
+                                <a href="#" class="n-access">аксессуары</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="addItem">
+                        <div class="addItem-item item-pack">
+                            <div class="addItem-top">
+                                <div class="addItem-img">
+                                    <img src="img/packaging/img1.jpg" alt="packaging1">
+                                </div>
+                                <div class="addItem-desc">
+                                    <h5>Крафтовая бумага</h5>
+                                    <p><span>150</span> руб./шт.</p>
+                                    <div class="spinner-global" >
+                                        <p class="spin-down">-</p>
+                                        <input type="text" value="0">
+                                        <p class="spin-up">+</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#">добавить в букет</a>
+                        </div>
+                        <div class="addItem-item item-pack">
+                            <div class="addItem-top">
+                                <div class="addItem-img">
+                                    <img src="img/packaging/img2.jpg" alt="packaging2">
+                                </div>
+                                <div class="addItem-desc">
+                                    <h5>Сетка</h5>
+                                    <p><span>150</span> руб./шт.</p>
+                                    <div class="spinner-global" >
+                                        <p class="spin-down">-</p>
+                                            <input type="text" value="0">
+                                        <p class="spin-up">+</p>
+                                    </div>
+                                </div>
+                                <div class="select-color">
+                                    <form action="/" class="form-color color">
+                                        <p>Выберите цвет</p>
+                                        <div class="color-content">
+                                            <input type="checkbox" name="c-yellow" id="c-yellow">
+                                            <label for="c-yellow" class="c-yellow"></label>
+                                            <input type="checkbox" name="c-Lpink" id="c-Lpink">
+                                            <label for="c-Lpink" class="c-Lpink"></label>
+                                            <input type="checkbox" name="c-pink" id="c-pink">
+                                            <label for="c-pink" class="c-pink"></label>
+                                            <input type="checkbox" name="c-white" id="c-white">
+                                            <label for="c-white" class="c-white"></label>
+                                            <input type="checkbox" name="c-red" id="c-red">
+                                            <label for="c-red" class="c-red"></label>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <a href="#">добавить в букет</a>
+                        </div>
+                        <div class="addItem-item item-pack">
+                            <div class="addItem-top">
+                                <div class="addItem-img">
+                                    <img src="img/packaging/img3.jpg" alt="packaging3">
+                                </div>
+                                <div class="addItem-desc">
+                                    <h5>Полисилк</h5>
+                                    <p><span>150</span> руб./шт.</p>
+                                    <div class="spinner-global" >
+                                        <p class="spin-down">-</p>
+                                        <input type="text" value="0">
+                                        <p class="spin-up">+</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#">добавить в букет</a>
+                        </div>
+                        <div class="addItem-item item-pack">
+                            <div class="addItem-top">
+                                <div class="addItem-img">
+                                    <img src="img/packaging/img4.jpg" alt="packaging4">
+                                </div>
+                                <div class="addItem-desc">
+                                    <h5>Шляпная коробка</h5>
+                                    <p><span>150</span> руб./шт.</p>
+                                    <div class="spinner-global" >
+                                        <p class="spin-down">-</p>
+                                        <input type="text" value="0">
+                                        <p class="spin-up">+</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#">добавить в букет</a>
+                        </div>
+                        <div class="addItem-item item-pack">
+                            <div class="addItem-top">
+                                <div class="addItem-img">
+                                    <img src="img/packaging/img2.jpg" alt="packaging2">
+                                </div>
+                                <div class="addItem-desc">
+                                    <h5>Сетка</h5>
+                                    <p><span>150</span> руб./шт.</p>
+                                    <div class="spinner-global" >
+                                        <p class="spin-down">-</p>
+                                        <input type="text" value="0">
+                                        <p class="spin-up">+</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#">добавить в букет</a>
+                        </div>
+                        <div class="addItem-item item-pack">
+                            <div class="addItem-top">
+                                <div class="addItem-img">
+                                    <img src="img/packaging/img3.jpg" alt="packaging3">
+                                </div>
+                                <div class="addItem-desc">
+                                    <h5>Полисилк</h5>
+                                    <p><span>150</span> руб./шт.</p>
+                                    <div class="spinner-global" >
+                                        <p class="spin-down">-</p>
+                                        <input type="text" value="0">
+                                        <p class="spin-up">+</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#">добавить в букет</a>
+                        </div>
+                    </div>
+                    <div class="futureBouquet">
+                        <ul class="futureTop">
+                            <li>
+                                <a href="#">цветы пачками</a>
+                            </li>
+                            <li>
+                                Ваш будущий букет
+                            </li>
+                            <li>
+                                <a href="#">Советы флориста</a>
+                            </li>
+                        </ul>
+                        <div class="futureBlock">
+                            <div class="futureContent">
+                                <div class="futureContent-item select f-flowers">
+                                    <div class="futureTemplate">
+                                        <p>Цветы</p>
+                                        <a href="#">+</a>
+                                        <img src="img/flowers/img3.jpg" alt="peon1">
+                                        <span class="close-btn"></span>
+                                    </div>
+                                    <div class="addItem-desc">
+                                        <h5>Пион розовый</h5>
+                                        <div class="spinner-global" >
+                                            <p class="spin-down">-</p>
+                                            <input type="text" value="0">
+                                            <p class="spin-up">+</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="futureContent-item">
+                                    <div class="futureTemplate f-herb">
+                                        <p>Зелень</p>
+                                        <a href="#">+</a>
+                                    </div>
+                                </div>
+                                <div class="futureContent-item select f-pack">
+                                    <div class="futureTemplate f-pack">
+                                        <p>Упаковка</p>
+                                        <a href="#">+</a>
+                                        <img src="img/packaging/img1.jpg" alt="packaging1">
+                                        <span class="close-btn"></span>
+                                    </div>
+                                    <div class="addItem-desc">
+                                        <h5>Крафтовая бумага</h5>
+                                        <div class="spinner-global" >
+                                            <p class="spin-down">-</p>
+                                            <input type="text" value="0">
+                                            <p class="spin-up">+</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="futureContent-item ">
+                                    <div class="futureTemplate f-access">
+                                        <p>Аксессуары</p>
+                                        <a href="#">+</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="composition">
+                                <p class="composition-title">Состав букета</p>
+                                <div class="composition-txt">
+                                    <p class="composition-txt-flowers">Цветы: </p>
+                                    <span> Пион розовый - 1 шт.</span>
+                                    <p class="composition-txt-pack">Упаковка: </p>
+                                    <span> Крафтовая бумага - 1 шт.</span>
+                                </div>
+                                <div class="composition-price">
+                                    <p>Стоимость Вашего букета: <span>850 руб. </span> </p>
+                                    <a href="#">ЗАКАЗАТЬ БУКЕТ</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="futureLast">
+                        <p>Ваш букет соберет наш профессиональный флорист</p>
+                    </div>
+                </div>
+            </div>
+            <div class="scene-3-1 constructor">
+                <div class="constructor-wrap">
+                    <div class="constructor-block">
+                        <div class="constructor-toggle">
+                            <div class="burger__constructor">
+                                <span class="burger__line_constructor"></span>
+                                <span class="burger__line_constructor"></span>
+                                <span class="burger__line_constructor"></span>
+                                <span class="burger__line_constructor"></span>
+                            </div>
+                            <p>Меню</p>
+                        </div>
+                        <ul class="constructorNav">
+                            <li class="active">
+                                <a href="#" class="n-all">все цветы</a>
+                            </li>
+                            <li >
+                                <a href="#" class="n-alstroemeria">альстромерия</a>
+                            </li>
+                            <li>
+                                <a href="#" class="n-gerbera">гербера</a>
+                            </li>
+                            <li>
+                                <a href="#" class="n-iris">ирис</a>
+                            </li>
+                            <li>
+                                <a href="#" class="n-lilly">лилия</a>
+                            </li>
+                            <li>
+                                <a href="#" class="n-rose">розы</a>
+                            </li>
+                            <li>
+                                <a href="#" class="n-tulips">тюльпаны</a>
+                            </li>
+                            <li>
+                                <a href="#" class="n-peon">пионы</a>
+                            </li>
+                            <li>
+                                <a href="#" class="n-chrysanthemums">хризантемы</a>
+                            </li>
+                            <li>
+                                <a href="#" class="n-herb">зелень</a>
+                            </li>
+                            <li>
+                                <a href="#" class="n-pack">упаковка</a>
+                            </li>
+                            <li>
+                                <a href="#" class="n-access">аксессуары</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="addItem">
+                        <div class="addItem-item">
+                            <div class="addItem-top">
+                                <div class="rotate">
+                                    <div class="rotate-prev">
+                                        <div class="addItem-img">
+                                            <img src="img/flowers/img1.jpg" alt="flowers-img-1">
+                                        </div>
+                                        <div class="addItem-desc">
+                                            <h5>Ирис Classic</h5>
+                                            <p><span>150</span> руб./шт.</p>
+                                            <div class="addItem-btn"></div>
+                                        </div>
+                                    </div>
+                                    <div class="rotate-next">
+                                        <form action="/" class="buyFlowers">
+                                            <span class="close-btn"></span>
+                                            <div class="buyFlowers-item">
+                                                <p>Количество пачек</p>
+                                                <div class="b-range"></div>
+                                                <div class="number-range">
+                                                    <input type="text" class="range-value-n">
+                                                    <span>100</span>
+                                                </div>
+                                            </div>
+                                            <div class="buyFlowers-item">
+                                                <p>Количество штук в пачке</p>
+                                                <input type="checkbox" id="number10" name="number">
+                                                <label for="number10">10</label>
+                                                <input type="checkbox" id="number15" name="number">
+                                                <label for="number15">15</label>
+                                                <input type="checkbox" id="number25" name="number">
+                                                <label for="number25">25</label>
+                                            </div>
+                                            <div class="buyFlowers-item">
+                                                <p>Итого:</p>
+                                                <div class="buyFlowers-total">
+                                                    <p>15 роз - <span> 1 800 руб.</span></p>
+                                                    <p>20 пачек - <span class="buyFlowers-total-b">36 000 руб.</span></p>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#">добавить в букет</a>
+                        </div>
+                        <div class="addItem-item">
+                            <div class="addItem-top">
+                                <div class="rotate">
+                                    <div class="rotate-prev">
+                                        <div class="addItem-img">
+                                            <img src="img/flowers/img2.jpg" alt="flowers-img-2">
+                                        </div>
+                                        <div class="addItem-desc">
+                                            <h5>Гербера Ultra</h5>
+                                            <p><span>150</span> руб./шт.</p>
+                                            <div class="addItem-btn"></div>
+                                        </div>
+                                    </div>
+                                    <div class="rotate-next">
+                                        <form action="/" class="buyFlowers">
+                                            <span class="close-btn"></span>
+                                            <div class="buyFlowers-item">
+                                                <p>Количество пачек</p>
+                                                <div class="b-range"></div>
+                                                <div class="number-range">
+                                                    <input type="text" class="range-value-n">
+                                                    <span>100</span>
+                                                </div>
+                                            </div>
+                                            <div class="buyFlowers-item">
+                                                <p>Количество штук в пачке</p>
+                                                <input type="checkbox" id="number10" name="number">
+                                                <label for="number10">10</label>
+                                                <input type="checkbox" id="number15" name="number">
+                                                <label for="number15">15</label>
+                                                <input type="checkbox" id="number25" name="number">
+                                                <label for="number25">25</label>
+                                            </div>
+                                            <div class="buyFlowers-item">
+                                                <p>Итого:</p>
+                                                <div class="buyFlowers-total">
+                                                    <p>15 роз - <span> 1 800 руб.</span></p>
+                                                    <p>20 пачек - <span class="buyFlowers-total-b">36 000 руб.</span></p>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#">добавить в букет</a>
+                        </div>
+                        <div class="addItem-item">
+                            <div class="addItem-top">
+                                <div class="rotate">
+                                    <div class="rotate-prev">
+                                        <div class="addItem-img">
+                                            <img src="img/flowers/img3.jpg" alt="flowers-img-3">
+                                        </div>
+                                        <div class="addItem-desc">
+                                            <h5>Пион Розовый</h5>
+                                            <p><span>150</span> руб./шт.</p>
+                                            <div class="addItem-btn"></div>
+                                        </div>
+                                    </div>
+                                    <div class="rotate-next">
+                                        <form action="/" class="buyFlowers">
+                                            <span class="close-btn"></span>
+                                            <div class="buyFlowers-item">
+                                                <p>Количество пачек</p>
+                                                <div class="b-range"></div>
+                                                <div class="number-range">
+                                                    <input type="text" class="range-value-n">
+                                                    <span>100</span>
+                                                </div>
+                                            </div>
+                                            <div class="buyFlowers-item">
+                                                <p>Количество штук в пачке</p>
+                                                <input type="checkbox" id="number10" name="number">
+                                                <label for="number10">10</label>
+                                                <input type="checkbox" id="number15" name="number">
+                                                <label for="number15">15</label>
+                                                <input type="checkbox" id="number25" name="number">
+                                                <label for="number25">25</label>
+                                            </div>
+                                            <div class="buyFlowers-item">
+                                                <p>Итого:</p>
+                                                <div class="buyFlowers-total">
+                                                    <p>15 роз - <span> 1 800 руб.</span></p>
+                                                    <p>20 пачек - <span class="buyFlowers-total-b">36 000 руб.</span></p>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#">добавить в букет</a>
+                        </div>
+                        <div class="addItem-item">
+                            <div class="addItem-top">
+                                <div class="rotate">
+                                    <div class="rotate-prev">
+                                        <div class="addItem-img">
+                                            <img src="img/flowers/img4.jpg" alt="flowers-img-4">
+                                        </div>
+                                        <div class="addItem-desc">
+                                            <h5>Пион Sarah Bernhardt</h5>
+                                            <p><span>150</span> руб./шт.</p>
+                                            <div class="addItem-btn"></div>
+                                        </div>
+                                    </div>
+                                    <div class="rotate-next">
+                                        <form action="/" class="buyFlowers">
+                                            <span class="close-btn"></span>
+                                            <div class="buyFlowers-item">
+                                                <p>Количество пачек</p>
+                                                <div class="b-range"></div>
+                                                <div class="number-range">
+                                                    <input type="text" class="range-value-n">
+                                                    <span>100</span>
+                                                </div>
+                                            </div>
+                                            <div class="buyFlowers-item">
+                                                <p>Количество штук в пачке</p>
+                                                <input type="checkbox" id="number10" name="number">
+                                                <label for="number10">10</label>
+                                                <input type="checkbox" id="number15" name="number">
+                                                <label for="number15">15</label>
+                                                <input type="checkbox" id="number25" name="number">
+                                                <label for="number25">25</label>
+                                            </div>
+                                            <div class="buyFlowers-item">
+                                                <p>Итого:</p>
+                                                <div class="buyFlowers-total">
+                                                    <p>15 роз - <span> 1 800 руб.</span></p>
+                                                    <p>20 пачек - <span class="buyFlowers-total-b">36 000 руб.</span></p>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#">добавить в букет</a>
+                        </div>
+                        <div class="addItem-item">
+                            <div class="addItem-top">
+                                <div class="rotate">
+                                    <div class="rotate-prev">
+                                        <div class="addItem-img">
+                                            <img src="img/flowers/rose-1.jpg" alt="flowers-rose-1">
+                                        </div>
+                                        <div class="addItem-desc">
+                                            <h5>Роза Pink</h5>
+                                            <p><span>150</span> руб./шт.</p>
+                                            <div class="addItem-btn"></div>
+                                        </div>
+                                    </div>
+                                    <div class="rotate-next">
+                                        <form action="/" class="buyFlowers">
+                                            <span class="close-btn"></span>
+                                            <div class="buyFlowers-item">
+                                                <p>Количество пачек</p>
+                                                <div class="b-range"></div>
+                                                <div class="number-range">
+                                                    <input type="text" class="range-value-n">
+                                                    <span>100</span>
+                                                </div>
+                                            </div>
+                                            <div class="buyFlowers-item">
+                                                <p>Количество штук в пачке</p>
+                                                <input type="checkbox" id="number10" name="number">
+                                                <label for="number10">10</label>
+                                                <input type="checkbox" id="number15" name="number">
+                                                <label for="number15">15</label>
+                                                <input type="checkbox" id="number25" name="number">
+                                                <label for="number25">25</label>
+                                            </div>
+                                            <div class="buyFlowers-item">
+                                                <p>Итого:</p>
+                                                <div class="buyFlowers-total">
+                                                    <p>15 роз - <span> 1 800 руб.</span></p>
+                                                    <p>20 пачек - <span class="buyFlowers-total-b">36 000 руб.</span></p>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#">добавить в букет</a>
+                        </div>
+                        <div class="addItem-item">
+                            <div class="addItem-top">
+                                <div class="rotate">
+                                    <div class="rotate-prev">
+                                        <div class="addItem-img">
+                                            <img src="img/flowers/peon-white.jpg" alt="peon-white">
+                                        </div>
+                                        <div class="addItem-desc">
+                                            <h5>Медведь Teddy Brown</h5>
+                                            <p><span>150</span> руб./шт.</p>
+                                            <div class="addItem-btn"></div>
+                                        </div>
+                                    </div>
+                                    <div class="rotate-next">
+                                        <form action="/" class="buyFlowers">
+                                            <span class="close-btn"></span>
+                                            <div class="buyFlowers-item">
+                                                <p>Количество пачек</p>
+                                                <div class="b-range"></div>
+                                                <div class="number-range">
+                                                    <input type="text" class="range-value-n">
+                                                    <span>100</span>
+                                                </div>
+                                            </div>
+                                            <div class="buyFlowers-item">
+                                                <p>Количество штук в пачке</p>
+                                                <input type="checkbox" id="number10" name="number">
+                                                <label for="number10">10</label>
+                                                <input type="checkbox" id="number15" name="number">
+                                                <label for="number15">15</label>
+                                                <input type="checkbox" id="number25" name="number">
+                                                <label for="number25">25</label>
+                                            </div>
+                                            <div class="buyFlowers-item">
+                                                <p>Итого:</p>
+                                                <div class="buyFlowers-total">
+                                                    <p>15 роз - <span> 1 800 руб.</span></p>
+                                                    <p>20 пачек - <span class="buyFlowers-total-b">36 000 руб.</span></p>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#">добавить в букет</a>
+                        </div>
+                    </div>
+                    <div class="futureBouquet">
+                        <ul class="futureTop">
+                            <li>
+                                <a href="#">цветы пачками</a>
+                            </li>
+                            <li>
+                                Ваш будущий букет
+                            </li>
+                            <li>
+                                <a href="#">Советы флориста</a>
+                            </li>
+                        </ul>
+                        <div class="futureBlock">
+                            <div class="futureContent">
+                                <div class="futureContent-item select f-flowers">
+                                    <div class="futureTemplate">
+                                        <p>Цветы</p>
+                                        <a href="#">+</a>
+                                        <img src="img/flowers/rose-1.jpg" alt="rose-1">
+                                        <span class="close-btn"></span>
+                                        <span class="future-edit"></span>
+                                    </div>
+                                    <div class="addItem-desc">
+                                        <h5>Роза Pink</h5>
+                                        <span class="addItem-price">36 000 руб.</span>
+                                        <span class="addItem-number">20 пачек</span>
+                                    </div>
+                                </div>
+                                <div class="futureContent-item">
+                                    <div class="futureTemplate f-herb">
+                                        <p>Зелень</p>
+                                        <a href="#">+</a>
+                                    </div>
+                                </div>
+                                <div class="futureContent-item ">
+                                    <div class="futureTemplate f-pack">
+                                        <p>Упаковка</p>
+                                        <a href="#">+</a>
+                                    </div>
+                                </div>
+                                <div class="futureContent-item ">
+                                    <div class="futureTemplate f-access">
+                                        <p>Аксессуары</p>
+                                        <a href="#">+</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="composition">
+                                <p class="composition-title">Состав букета</p>
+                                <div class="composition-txt">
+                                    <p class="composition-txt-flowers">Цветы: </p><span> Пион розовый - 1 шт.</span>
+                                </div>
+                                <div class="composition-price">
+                                    <p>Стоимость Вашего букета: <span>850 руб. </span> </p>
+                                    <a href="#">ЗАКАЗАТЬ БУКЕТ</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="futureLast">
+                        <p>Ваш букет соберет наш профессиональный флорист</p>
+                    </div>
+                </div>
+            </div>
+            <div class="scene-3-1 constructor">
+                <div class="constructor-wrap">
+                    <div class="constructor-block">
+                        <div class="constructor-toggle">
+                            <div class="burger__constructor">
+                                <span class="burger__line_constructor"></span>
+                                <span class="burger__line_constructor"></span>
+                                <span class="burger__line_constructor"></span>
+                                <span class="burger__line_constructor"></span>
+                            </div>
+                            <p>Меню</p>
+                        </div>
+                        <ul class="constructorNav">
+                            <li class="active">
+                                <a href="#" class="n-all">все цветы</a>
+                            </li>
+                            <li >
+                                <a href="#" class="n-alstroemeria">альстромерия</a>
+                            </li>
+                            <li>
+                                <a href="#" class="n-gerbera">гербера</a>
+                            </li>
+                            <li>
+                                <a href="#" class="n-iris">ирис</a>
+                            </li>
+                            <li>
+                                <a href="#" class="n-lilly">лилия</a>
+                            </li>
+                            <li>
+                                <a href="#" class="n-rose">розы</a>
+                            </li>
+                            <li>
+                                <a href="#" class="n-tulips">тюльпаны</a>
+                            </li>
+                            <li>
+                                <a href="#" class="n-peon">пионы</a>
+                            </li>
+                            <li>
+                                <a href="#" class="n-chrysanthemums">хризантемы</a>
+                            </li>
+                            <li>
+                                <a href="#" class="n-herb">зелень</a>
+                            </li>
+                            <li>
+                                <a href="#" class="n-pack">упаковка</a>
+                            </li>
+                            <li>
+                                <a href="#" class="n-access">аксессуары</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="addItem">
+                        <div class="addItem-item">
+                            <div class="addItem-top">
+                                <div class="rotate">
+                                    <div class="rotate-prev">
+                                        <div class="addItem-img">
+                                            <img src="img/flowers/img1.jpg" alt="flowers-img-1">
+                                        </div>
+                                        <div class="addItem-desc">
+                                            <h5>Ирис Classic</h5>
+                                            <p><span>150</span> руб./шт.</p>
+                                            <div class="addItem-btn"></div>
+                                        </div>
+                                    </div>
+                                    <div class="rotate-next">
+                                        <form action="/" class="buyFlowers">
+                                            <span class="close-btn"></span>
+                                            <div class="buyFlowers-item">
+                                                <p>Количество пачек</p>
+                                                <div class="b-range"></div>
+                                                <div class="number-range">
+                                                    <input type="text" class="range-value-n">
+                                                    <span>100</span>
+                                                </div>
+                                            </div>
+                                            <div class="buyFlowers-item">
+                                                <p>Количество штук в пачке</p>
+                                                <input type="checkbox" id="number10" name="number">
+                                                <label for="number10">10</label>
+                                                <input type="checkbox" id="number15" name="number">
+                                                <label for="number15">15</label>
+                                                <input type="checkbox" id="number25" name="number">
+                                                <label for="number25">25</label>
+                                            </div>
+                                            <div class="buyFlowers-item">
+                                                <p>Итого:</p>
+                                                <div class="buyFlowers-total">
+                                                    <p>15 роз - <span> 1 800 руб.</span></p>
+                                                    <p>20 пачек - <span class="buyFlowers-total-b">36 000 руб.</span></p>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#">добавить в букет</a>
+                        </div>
+                        <div class="addItem-item">
+                            <div class="addItem-top">
+                                <div class="rotate">
+                                    <div class="rotate-prev">
+                                        <div class="addItem-img">
+                                            <img src="img/flowers/img2.jpg" alt="flowers-img-2">
+                                        </div>
+                                        <div class="addItem-desc">
+                                            <h5>Гербера Ultra</h5>
+                                            <p><span>150</span> руб./шт.</p>
+                                            <div class="addItem-btn"></div>
+                                        </div>
+                                    </div>
+                                    <div class="rotate-next">
+                                        <form action="/" class="buyFlowers">
+                                            <span class="close-btn"></span>
+                                            <div class="buyFlowers-item">
+                                                <p>Количество пачек</p>
+                                                <div class="b-range"></div>
+                                                <div class="number-range">
+                                                    <input type="text" class="range-value-n">
+                                                    <span>100</span>
+                                                </div>
+                                            </div>
+                                            <div class="buyFlowers-item">
+                                                <p>Количество штук в пачке</p>
+                                                <input type="checkbox" id="number10" name="number">
+                                                <label for="number10">10</label>
+                                                <input type="checkbox" id="number15" name="number">
+                                                <label for="number15">15</label>
+                                                <input type="checkbox" id="number25" name="number">
+                                                <label for="number25">25</label>
+                                            </div>
+                                            <div class="buyFlowers-item">
+                                                <p>Итого:</p>
+                                                <div class="buyFlowers-total">
+                                                    <p>15 роз - <span> 1 800 руб.</span></p>
+                                                    <p>20 пачек - <span class="buyFlowers-total-b">36 000 руб.</span></p>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#">добавить в букет</a>
+                        </div>
+                        <div class="addItem-item">
+                            <div class="addItem-top">
+                                <div class="rotate">
+                                    <div class="rotate-prev">
+                                        <div class="addItem-img">
+                                            <img src="img/flowers/img3.jpg" alt="flowers-img-3">
+                                        </div>
+                                        <div class="addItem-desc">
+                                            <h5>Пион Розовый</h5>
+                                            <p><span>150</span> руб./шт.</p>
+                                            <div class="addItem-btn"></div>
+                                        </div>
+                                    </div>
+                                    <div class="rotate-next">
+                                        <form action="/" class="buyFlowers">
+                                            <span class="close-btn"></span>
+                                            <div class="buyFlowers-item">
+                                                <p>Количество пачек</p>
+                                                <div class="b-range"></div>
+                                                <div class="number-range">
+                                                    <input type="text" class="range-value-n">
+                                                    <span>100</span>
+                                                </div>
+                                            </div>
+                                            <div class="buyFlowers-item">
+                                                <p>Количество штук в пачке</p>
+                                                <input type="checkbox" id="number10" name="number">
+                                                <label for="number10">10</label>
+                                                <input type="checkbox" id="number15" name="number">
+                                                <label for="number15">15</label>
+                                                <input type="checkbox" id="number25" name="number">
+                                                <label for="number25">25</label>
+                                            </div>
+                                            <div class="buyFlowers-item">
+                                                <p>Итого:</p>
+                                                <div class="buyFlowers-total">
+                                                    <p>15 роз - <span> 1 800 руб.</span></p>
+                                                    <p>20 пачек - <span class="buyFlowers-total-b">36 000 руб.</span></p>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#">добавить в букет</a>
+                        </div>
+                        <div class="addItem-item">
+                            <div class="addItem-top">
+                                <div class="rotate">
+                                    <div class="rotate-prev">
+                                        <div class="addItem-img">
+                                            <img src="img/flowers/img4.jpg" alt="flowers-img-4">
+                                        </div>
+                                        <div class="addItem-desc">
+                                            <h5>Пион Sarah Bernhardt</h5>
+                                            <p><span>150</span> руб./шт.</p>
+                                            <div class="addItem-btn"></div>
+                                        </div>
+                                    </div>
+                                    <div class="rotate-next">
+                                        <form action="/" class="buyFlowers">
+                                            <span class="close-btn"></span>
+                                            <div class="buyFlowers-item">
+                                                <p>Количество пачек</p>
+                                                <div class="b-range"></div>
+                                                <div class="number-range">
+                                                    <input type="text" class="range-value-n">
+                                                    <span>100</span>
+                                                </div>
+                                            </div>
+                                            <div class="buyFlowers-item">
+                                                <p>Количество штук в пачке</p>
+                                                <input type="checkbox" id="number10" name="number">
+                                                <label for="number10">10</label>
+                                                <input type="checkbox" id="number15" name="number">
+                                                <label for="number15">15</label>
+                                                <input type="checkbox" id="number25" name="number">
+                                                <label for="number25">25</label>
+                                            </div>
+                                            <div class="buyFlowers-item">
+                                                <p>Итого:</p>
+                                                <div class="buyFlowers-total">
+                                                    <p>15 роз - <span> 1 800 руб.</span></p>
+                                                    <p>20 пачек - <span class="buyFlowers-total-b">36 000 руб.</span></p>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#">добавить в букет</a>
+                        </div>
+                        <div class="addItem-item">
+                            <div class="addItem-top">
+                                <div class="rotate">
+                                    <div class="rotate-prev">
+                                        <div class="addItem-img">
+                                            <img src="img/flowers/rose-1.jpg" alt="flowers-rose-1">
+                                        </div>
+                                        <div class="addItem-desc">
+                                            <h5>Роза Pink</h5>
+                                            <p><span>150</span> руб./шт.</p>
+                                            <div class="addItem-btn"></div>
+                                        </div>
+                                    </div>
+                                    <div class="rotate-next">
+                                        <form action="/" class="buyFlowers">
+                                            <span class="close-btn"></span>
+                                            <div class="buyFlowers-item">
+                                                <p>Количество пачек</p>
+                                                <div class="b-range"></div>
+                                                <div class="number-range">
+                                                    <input type="text" class="range-value-n">
+                                                    <span>100</span>
+                                                </div>
+                                            </div>
+                                            <div class="buyFlowers-item">
+                                                <p>Количество штук в пачке</p>
+                                                <input type="checkbox" id="number10" name="number">
+                                                <label for="number10">10</label>
+                                                <input type="checkbox" id="number15" name="number">
+                                                <label for="number15">15</label>
+                                                <input type="checkbox" id="number25" name="number">
+                                                <label for="number25">25</label>
+                                            </div>
+                                            <div class="buyFlowers-item">
+                                                <p>Итого:</p>
+                                                <div class="buyFlowers-total">
+                                                    <p>15 роз - <span> 1 800 руб.</span></p>
+                                                    <p>20 пачек - <span class="buyFlowers-total-b">36 000 руб.</span></p>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#">добавить в букет</a>
+                        </div>
+                        <div class="addItem-item">
+                            <div class="addItem-top">
+                                <div class="rotate">
+                                    <div class="rotate-prev">
+                                        <div class="addItem-img">
+                                            <img src="img/flowers/peon-white.jpg" alt="peon-white">
+                                        </div>
+                                        <div class="addItem-desc">
+                                            <h5>Медведь Teddy Brown</h5>
+                                            <p><span>150</span> руб./шт.</p>
+                                            <div class="addItem-btn"></div>
+                                        </div>
+                                    </div>
+                                    <div class="rotate-next">
+                                        <form action="/" class="buyFlowers">
+                                            <span class="close-btn"></span>
+                                            <div class="buyFlowers-item">
+                                                <p>Количество пачек</p>
+                                                <div class="b-range"></div>
+                                                <div class="number-range">
+                                                    <input type="text" class="range-value-n">
+                                                    <span>100</span>
+                                                </div>
+                                            </div>
+                                            <div class="buyFlowers-item">
+                                                <p>Количество штук в пачке</p>
+                                                <input type="checkbox" id="number10" name="number">
+                                                <label for="number10">10</label>
+                                                <input type="checkbox" id="number15" name="number">
+                                                <label for="number15">15</label>
+                                                <input type="checkbox" id="number25" name="number">
+                                                <label for="number25">25</label>
+                                            </div>
+                                            <div class="buyFlowers-item">
+                                                <p>Итого:</p>
+                                                <div class="buyFlowers-total">
+                                                    <p>15 роз - <span> 1 800 руб.</span></p>
+                                                    <p>20 пачек - <span class="buyFlowers-total-b">36 000 руб.</span></p>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#">добавить в букет</a>
+                        </div>
+                    </div>
+                    <div class="futureBouquet">
+                        <ul class="futureTop">
+                            <li>
+                                <a href="#">цветы пачками</a>
+                            </li>
+                            <li>
+                                Ваш будущий букет
+                            </li>
+                            <li>
+                                <a href="#">Советы флориста</a>
+                            </li>
+                        </ul>
+                        <div class="futureBlock">
+                            <div class="futureContent">
+                                <div class="futureContent-item select f-flowers">
+                                    <div class="futureTemplate">
+                                        <p>Цветы</p>
+                                        <a href="#">+</a>
+                                        <img src="img/flowers/rose-1.jpg" alt="rose-1">
+                                        <span class="close-btn"></span>
+                                        <span class="future-edit"></span>
+                                    </div>
+                                    <div class="addItem-desc">
+                                        <h5>Роза Pink</h5>
+                                        <span class="addItem-price">36 000 руб.</span>
+                                        <span class="addItem-number">20 пачек</span>
+                                    </div>
+                                </div>
+                                <div class="futureContent-item select f-flowers">
+                                    <div class="futureTemplate">
+                                        <p>Цветы</p>
+                                        <a href="#">+</a>
+                                        <img src="img/flowers/rose-1.jpg" alt="rose-1">
+                                        <span class="close-btn"></span>
+                                        <span class="future-edit"></span>
+                                    </div>
+                                    <div class="addItem-desc">
+                                        <h5>Роза Pink</h5>
+                                        <span class="addItem-price">36 000 руб.</span>
+                                        <span class="addItem-number">20 пачек</span>
+                                    </div>
+                                </div>
+                                <div class="futureContent-item select f-herb">
+                                    <div class="futureTemplate">
+                                        <p>Зелень</p>
+                                        <a href="#">+</a>
+                                        <img src="img/herbage/img1.jpg" alt="herbage1">
+                                        <span class="close-btn"></span>
+                                    </div>
+                                    <div class="addItem-desc">
+                                        <h5>Рускус</h5>
+                                        <div class="spinner-global" >
+                                            <p class="spin-down">-</p>
+                                            <input type="text" value="0">
+                                            <p class="spin-up">+</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="futureContent-item select f-pack">
+                                    <div class="futureTemplate f-pack">
+                                        <p>Упаковка</p>
+                                        <a href="#">+</a>
+                                        <img src="img/packaging/img1.jpg" alt="packaging1">
+                                        <span class="close-btn"></span>
+                                    </div>
+                                    <div class="addItem-desc">
+                                        <h5>Крафтовая бумага</h5>
+                                        <div class="spinner-global" >
+                                            <p class="spin-down">-</p>
+                                            <input type="text" value="0">
+                                            <p class="spin-up">+</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="futureContent-item select f-access">
+                                    <div class="futureTemplate f-access">
+                                        <p>Аксессуары</p>
+                                        <a href="#">+</a>
+                                        <img src="img/gifts/img1.jpg" alt="gifts1">
+                                        <span class="close-btn"></span>
+                                    </div>
+                                    <div class="addItem-desc">
+                                        <h5>Медведь Love</h5>
+                                        <div class="spinner-global" >
+                                            <p class="spin-down">-</p>
+                                            <input type="text" value="0">
+                                            <p class="spin-up">+</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="futureContent-item select f-herb">
+                                <div class="futureTemplate">
+                                    <p>Зелень</p>
+                                    <a href="#">+</a>
+                                    <img src="img/herbage/img1.jpg" alt="herbage1">
+                                    <span class="close-btn"></span>
+                                </div>
+                                <div class="addItem-desc">
+                                    <h5>Рускус</h5>
+                                    <div class="spinner-global" >
+                                        <p class="spin-down">-</p>
+                                        <input type="text" value="0">
+                                        <p class="spin-up">+</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="futureContent-item select f-flowers">
+                                <div class="futureTemplate">
+                                    <p>Цветы</p>
+                                    <a href="#">+</a>
+                                    <img src="img/flowers/rose-1.jpg" alt="rose-1">
+                                    <span class="close-btn"></span>
+                                    <span class="future-edit"></span>
+                                </div>
+                                <div class="addItem-desc">
+                                    <h5>Роза Pink</h5>
+                                    <span class="addItem-price">36 000 руб.</span>
+                                    <span class="addItem-number">20 пачек</span>
+                                </div>
+                            </div>
+                            <div class="composition">
+                                <p class="composition-title">Состав букета</p>
+                                <div class="composition-txt">
+                                    <p class="composition-txt-flowers">Цветы: </p><span> Пион розовый - 1 шт.</span>
+                                </div>
+                                <div class="composition-price">
+                                    <p>Стоимость Вашего букета: <span>850 руб. </span> </p>
+                                    <a href="#">ЗАКАЗАТЬ БУКЕТ</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="futureLast">
+                        <p>Ваш букет соберет наш профессиональный флорист</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-left">
+                    <a href="index.html" class="footer-logo">
+                        <img src="img/logo.png" alt="logo">
+                    </a>
+                    <p>© 2017  “7 Цветов”.<br>
+                        All rigths reserved 2016.</p>
+                    <a href="#">Политика конфиденциальности</a>
+                </div>
+                <div class="footer-center">
+                    <div class="Ctop">
+                        <ul class="Fmenu">
+                            <li>
+                                <a href="index.html">Главная</a>
+                            </li>
+                            <li>
+                                <a href="">собрать букет</a>
+                            </li>
+                            <li>
+                                <a href="#">готовые букеты</a>
+                            </li>
+                        </ul>
+                        <ul class="Fmenu">
+                            <li>
+                                <a href="#">ПОДАРКИ</a>
+                            </li>
+                            <li>
+                                <a href="">АКСЕССУАРЫ</a>
+                            </li>
+                            <li>
+                                <a href="#">Акции</a>
+                            </li>
+                        </ul>
+                        <ul class="Fmenu">
+                            <li>
+                                <a href="about.html">О НАС</a>
+                            </li>
+                            <li>
+                                <a href="">ДОСТАВКА И ОПЛАТА</a>
+                            </li>
+                            <li>
+                                <a href="#">ЛИЧНЫЙ КАБИНЕТ</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="Cbot">
+                        <p>«Семь цветов» - молодая динамичная компания, которая находится на рынке более пяти лет. За эти пять лет мы стали опытнее, интереснее, современнее и каждый день мы стараемся совершенствоваться для Вас. В наших магазинах Вы найдете не только свежий цветок по приятной цене, но и получите качественное обслуживание от мастеров своего дела. </p>
+                    </div>
+                </div>
+                <div class="footer-right">
+                    <a href="https://www.google.com.ua/maps/place/%D1%83%D0%BB.+%D0%9F%D1%80%D0%BE%D1%84%D1%81%D0%BE%D1%8E%D0%B7%D0%BE%D0%B2,+31%2F2,+%D0%A1%D1%83%D1%80%D0%B3%D1%83%D1%82,+%D0%A5%D0%B0%D0%BD%D1%82%D1%8B-%D0%9C%D0%B0%D0%BD%D1%81%D0%B8%D0%B9%D1%81%D0%BA%D0%B8%D0%B9+%D0%B0%D0%B2%D1%82%D0%BE%D0%BD%D0%BE%D0%BC%D0%BD%D1%8B%D0%B9+%D0%BE%D0%BA%D1%80%D1%83%D0%B3,+%D0%A0%D0%BE%D1%81%D1%81%D0%B8%D1%8F,+628418/@61.2671626,73.4073193,17.25z/data=!4m5!3m4!1s0x4373976b8898c745:0x2de46eacb5ecfaf9!8m2!3d61.267176!4d73.408389" class="footer-right-address">г. Сургут ул. Профсоюзов 31/2</a>
+                    <a href="#" class="footer-right-phone">8 (3462) 490-890</a>
+                    <a href="#callback" class="footer-right-callback">Заказать обратный звонок</a>
+                    <ul class="social">
+                        <li><a href="#"><i class="fa fa-vk" aria-hidden="true"></i></a></li>
+                        <li><a href="#"><i class="fa fa-odnoklassniki" aria-hidden="true"></i></a></li>
+                    </ul>
+                    <div class="footer-info">
+                        <span>Сделано с любовью</span>
+                        <span>5 углов</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="Lside ">
+        <p>Меню</p>
+        <ul class="Lmenu">
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="#">собрать букет</a></li>
+            <li><a href="#">готовые букеты</a></li>
+            <li><a href="#">подарки</a></li>
+            <li><a href="#">аксессуары</a></li>
+            <li><a href="about.html">о нас</a></li>
+            <li><a href="#">доставка и оплата</a></li>
+            <li><a href="#sing">Вход и регистрация</a></li>
+            <li><a href="#callback">Заказать обратный звонок</a></li>
+        </ul>
+    </div>
+    <div class="hidden">
+        <div class="callback" id="callback">
+            <section class="section">
+                <div class="container">
+                    <h2 class="section-title">
+                        <span>Обратный звонок</span>
+                    </h2>
+                    <p class="section-desc">Оставьте свои котактные данные и мы свяжемся с вами в указанное время</p>
+                    <form action="/" class="formCallback">
+                        <input type="text" name="name-callback" placeholder="Ваше имя" required>
+                        <input type="text" name="phone-callback" placeholder="Ваш номер телефона" required>
+                        <input type="text" name="time-callback" placeholder="В какое время вам позвонить?">
+                        <input type="submit" name="send-callback" value="Отправить" class="form-btn">
+                    </form>
+                </div>
+            </section>
+        </div>
+        <div class="sing" id="sing">
+            <section class="section">
+                <div class="container">
+                    <h2 class="section-title">
+                        <span>Вход и регистрация</span>
+                    </h2>
+                    <p class="section-desc">Введите свой номер телефона и мы отправим вам СМС с кодом для авторизации</p>
+                    <form action="/" class="formSing">
+                        <input type="text" name="phone-sing" placeholder="Ваш номер телефона" required>
+                        <button name="confirm">Подтвердить</button>
+                        <input type="text" name="code-sms" placeholder="Введите код из СМС" required>
+                        <input type="submit" name="send-callback" value="Войти" class="form-btn">
+                    </form>
+                </div>
+            </section>
+        </div>
+    </div>
+</div>
+
+
+
+
+<link href="css/libs.min.css" rel="stylesheet" property=stylesheet type="text/css" >
+<link href="css/main.css" rel="stylesheet" property=stylesheet type="text/css" >
+<script type="text/javascript" src="js/libs.min.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+</body>
+</html>
