@@ -411,12 +411,14 @@ $(document).ready(function() {
         $('.wrapper').toggleClass('bg-active');
 
     });
+    
+    $('.tableOrder span').click(function () {
+        $(this).parents('.tableOrder').next().slideToggle(10);
+    });
 
     $('.burger__constructor').click(function(){
         $('.burger__line_constructor').toggleClass('active');
         $('.constructorNav').slideToggle();
-        // $('.Lside').toggleClass('active');
-        // $('.wrapper').toggleClass('bg-active');
 
     });
 
