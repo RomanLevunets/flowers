@@ -4126,16 +4126,17 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     width: 125px;
     height: 110px; }
 
-.alert-subscribe {
+.alert-subscribe,
+.alert-application {
   width: 300px;
   position: fixed;
-  display: none;
-  top: 30%;
+  overflow: hidden;
+  top: -100%;
   z-index: 999;
   left: 50%;
-  -webkit-transform: translate(-50%, -30%);
-      -ms-transform: translate(-50%, -30%);
-          transform: translate(-50%, -30%);
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
   background: #fff;
   -webkit-border-radius: 10px;
           border-radius: 10px;
@@ -4147,8 +4148,12 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   border: 1px solid #EC5A6F;
   padding: 20px;
   padding-top: 50px;
-  padding-bottom: 50px; }
-  .alert-subscribe::before {
+  padding-bottom: 50px;
+  -webkit-transition: top .5s linear;
+  -o-transition: top .5s linear;
+  transition: top .5s linear; }
+  .alert-subscribe::before,
+  .alert-application::before {
     content: " ";
     position: absolute;
     bottom: 30px;
@@ -4159,7 +4164,8 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     background-image: url("../img/svg/our-info-line.svg");
     width: 60px;
     height: 6px; }
-  .alert-subscribe::after {
+  .alert-subscribe::after,
+  .alert-application::after {
     content: " ";
     position: absolute;
     width: 45px;
@@ -5188,8 +5194,9 @@ input[name="filter-submit"] {
   position: absolute;
   left: 50%;
   top: 48%;
-  margin-left: -125px;
-  margin-top: -75px;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   color: #fff;
   text-align: center;
   letter-spacing: 2px;

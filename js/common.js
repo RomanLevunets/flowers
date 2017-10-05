@@ -279,14 +279,31 @@ $(document).ready(function() {
 
     $('.subscribe').on( 'submit', function (event) {
         event.preventDefault();
-        $('.alert-subscribe').show();
+        $('.alert-subscribe').css(
+            'top', '20%'
+        );
         function set() {
-            $('.alert-subscribe').hide();
+            $('.alert-subscribe').css(
+                'top', '-100%'
+            );
         }
-            setTimeout(set, 3000);
-            $('.subscribe input[type="email"]').val('');
+        setTimeout(set, 3000);
+        // $('.subscribe input[type="email"]').val('');
+    });
 
-
+    $('.formCallback').on('submit', function (event) {
+        event.preventDefault();
+        $('.mfp-close-btn-in .mfp-close').click();
+        $('.alert-application').css(
+            'top', '30%'
+        );
+        function set() {
+            $('.alert-application').css(
+                'top', '-100%'
+            );
+        }
+        setTimeout(set, 5000);
+        $('.subscribe input[type="text"]').val('');
     });
 
 
