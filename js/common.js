@@ -258,6 +258,8 @@ $(document).ready(function() {
     $('.card-bot .ourNav li a').click(function (event) {
         event.preventDefault();
     });
+
+
     $('.menu li').click(function() {
         if (!$(this).hasClass('active')) {
             $('.menu li').removeClass('active');
@@ -265,8 +267,37 @@ $(document).ready(function() {
         }
     });
 
+    // Select person
+    $('.for-entity').hide();
+
     $('.ordering-type').change(function () {
-        
+        var fei = $('.for-entity input');
+        if($('#entity').prop('checked')){
+            $('.for-entity').show();
+            fei.attr('type', 'text');
+            fei.attr('required', 'required');
+        }else{
+            fei.attr('type', 'hidden');
+            fei.removeAttr('required');
+            $('.for-entity').hide();
+        }
+    });
+
+
+
+
+
+    $('.ordering-delivery').change(function () {
+        var ai = $('#address input');
+        if($('#ordering-pickup').prop('checked')){
+            ai.attr('type', 'hidden');
+            ai.removeAttr('required');
+            $('#address').hide();
+        }else{
+            ai.attr('type', 'text');
+            ai.attr('required', 'required');
+            $('#address').show();
+        }
     });
 
 
