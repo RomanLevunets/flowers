@@ -96,7 +96,7 @@
                         <div class="ordering-left">
                             <div class="ordering-type">
                                 <p class="ordering-form-title">Тип плательщика</p>
-                                <input type="radio" name="type" id="individual" checked>
+                                <input type="radio" name="type" id="individual">
                                 <label for="individual">Физическое лицо</label>
                                 <input type="radio" name="type" id="entity">
                                 <label for="entity">Юридическое лицо</label>
@@ -110,7 +110,7 @@
                                     </tr>
                                     <tr>
                                         <td>E-mail</td>
-                                        <td><input type="email" name="ordering-email" id="ordering-email"></td>
+                                        <td><input type="email" name="ordering-email" id="ordering-email" required></td>
                                     </tr>
                                     <tr>
                                         <td>Телефон</td>
@@ -128,7 +128,31 @@
                                     </tr>
                                     <tr>
                                         <td>Индекс</td>
-                                        <td><input type="text" name="ordering-index" id="ordering-index" required></td>
+                                        <td><input type="text" name="ordering-index" id="ordering-index"></td>
+                                    </tr>
+                                    <tr class="for-entity">
+                                        <td>Название компании или ИП</td>
+                                        <td><input type="text" name="ordering-name-company" id="ordering-name-company" required></td>
+                                    </tr>
+                                    <tr class="for-entity">
+                                        <td>Юридический адрес</td>
+                                        <td><input type="text" name="ordering-address-entity" id="ordering-address-entity" required></td>
+                                    </tr>
+                                    <tr class="for-entity">
+                                        <td>ИНН</td>
+                                        <td><input type="text" name="ordering-identification-number" id="ordering-identification-number" required></td>
+                                    </tr>
+                                    <tr class="for-entity">
+                                        <td>Расчетный счет</td>
+                                        <td><input type="text" name="ordering-checking-account" id="ordering-checking-account" required></td>
+                                    </tr>
+                                    <tr class="for-entity">
+                                        <td>Наименование банка</td>
+                                        <td><input type="text" name="ordering-name-bank" id="ordering-name-bank" required></td>
+                                    </tr>
+                                    <tr class="for-entity">
+                                        <td>БИК</td>
+                                        <td><input type="text" name="bank-identification-number" id="bank-identification-number" required></td>
                                     </tr>
                                 </table>
                             </div>

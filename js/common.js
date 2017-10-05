@@ -246,15 +246,6 @@ $(document).ready(function() {
         showNavArrows: true
     });
 
-    //height service-top block====
-    function item(){
-        $('.services-top').each(function () {
-            var ths = $(this),
-                thsh = ths.find('.services-top-txt').outerHeight();
-            ths.find('.services-top-img').css('min-height', thsh);
-        });
-    }item();
-
     //header menu active
     $('.constructorNav li').click(function( even) {
         even.preventDefault();
@@ -263,13 +254,22 @@ $(document).ready(function() {
             $(this).addClass('active');
         }
     });
-
+    //
+    $('.card-bot .ourNav li a').click(function (event) {
+        event.preventDefault();
+    });
     $('.menu li').click(function() {
         if (!$(this).hasClass('active')) {
             $('.menu li').removeClass('active');
             $(this).addClass('active');
         }
     });
+
+    $('.ordering-type').change(function () {
+        
+    });
+
+
 
     //item select
     $('.addItem-item > a, .ourNav li a').click(function(event) {
@@ -288,7 +288,7 @@ $(document).ready(function() {
             );
         }
         setTimeout(set, 3000);
-        // $('.subscribe input[type="email"]').val('');
+        $('.subscribe input[type="email"]').val('');
     });
 
     $('.formCallback').on('submit', function (event) {
