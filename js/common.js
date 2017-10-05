@@ -284,9 +284,6 @@ $(document).ready(function() {
     });
 
 
-
-
-
     $('.ordering-delivery').change(function () {
         var ai = $('#address input');
         if($('#ordering-pickup').prop('checked')){
