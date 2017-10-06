@@ -267,9 +267,8 @@ $(document).ready(function() {
         }
     });
 
-    // Select person
+    //ordering form (add and remove inputs)
     $('.for-entity').hide();
-
     $('.ordering-type').change(function () {
         var fei = $('.for-entity input');
         if($('#entity').prop('checked')){
@@ -284,6 +283,7 @@ $(document).ready(function() {
     });
 
 
+    //ordering form (add and remove input address)
     $('.ordering-delivery').change(function () {
         var ai = $('#address input');
         if($('#ordering-pickup').prop('checked')){
@@ -298,45 +298,50 @@ $(document).ready(function() {
     });
 
 
-
-    //item select
-    $('.addItem-item > a, .ourNav li a').click(function(event) {
-            event.preventDefault();
-            $(this).parent().toggleClass('select');
-    });
-
+    //for subscribe
     $('.subscribe').on( 'submit', function (event) {
         event.preventDefault();
-        $('.alert-subscribe').css(
-            'top', '20%'
-        );
+        $('.subscribe-alert').show();
         function set() {
-            $('.alert-subscribe').css(
-                'top', '-100%'
-            );
+            $('.subscribe-alert').hide();
         }
-        setTimeout(set, 3000);
+        setTimeout(set, 4000);
         $('.subscribe input[type="email"]').val('');
     });
 
+
+    // products tabs
+    $('.card-bot .ourNav li').click(function () {
+        if(!$('.card-bot .ourNav li:first-child').hasClass('active')){
+            $('.card-desc').show();
+            $('.card-reviews').hide();
+        }else{
+            $('.card-reviews').show();
+            $('.card-desc').hide();
+        }
+    });
+
+
+
+    //for Callback
     $('.formCallback').on('submit', function (event) {
         event.preventDefault();
         $('.mfp-close-btn-in .mfp-close').click();
         $('.alert-application').css(
             'top', '30%'
         );
-        function set() {
-            $('.alert-application').css(
-                'top', '-100%'
-            );
-        }
-        setTimeout(set, 5000);
+        $('.wrapper').addClass('bg-active');
         $('.subscribe input[type="text"]').val('');
+    });
+    $('.alert-application span').click(function () {
+        $('.alert-application').css(
+            'top', '-100%'
+        );
+        $('.wrapper').removeClass('bg-active');
     });
 
 
-
-    //spiner card
+    //spiner (value = 1)
     $(".spin-up").click(function() {
         var value = parseInt($(this).closest(".spinner-card").find("input").val());
         if (value != 99){
@@ -351,21 +356,21 @@ $(document).ready(function() {
         }
     });
 
-    //spiner global
 
+    //spiner global (value = 0)
     $(".spin-up").click(function() {
         var value = parseInt($(this).closest(".spinner-global").find("input").val());
         if (value != 99){
             $(this).closest(".spinner-global").find("input").val(value + 1);
         }
     });
-
     $(".spin-down").click(function() {
         var value = parseInt($(this).closest(".spinner-global").find("input").val());
         if (value != 0)	{
             $(this).closest(".spinner-global").find("input").val(value - 1);
         }
     });
+
 
     //tabs active
     $('.ourNav li').click(function() {
@@ -374,24 +379,26 @@ $(document).ready(function() {
             $(this).addClass('active');
         }
     });
-
-    //
     $('.sort li').click(function() {
         if (!$(this).hasClass('active')) {
             $('.sort li').removeClass('active');
             $(this).addClass('active');
         }
     });
-    //accordion
+    //item select
+    $('.addItem-item > a, .ourNav li a').click(function(event) {
+        event.preventDefault();
+    });
+
+
+    //accordion filter
     $('.filter-category p').click(function () {
         $(this).toggleClass('active');
         $(this).next().slideToggle();
     });
 
-    $('.tableOrder-name span').click(function () {
-        $(this).toggleClass('active');
-    });
-    //range
+
+    //range for filter(max value 25 000)
     $(".f-range-ac").slider({
         range: true,
         min: 0,
@@ -405,8 +412,7 @@ $(document).ready(function() {
     $( ".range-value-ac" ).val( "От " + $(".f-range-ac").slider( "values", 0 ) +
         " до " + $(".f-range-ac").slider( "values", 1 ) + " руб");
 
-
-    //
+    //(30 000)
     $(".f-range").slider({
         range: true,
         min: 0,
@@ -423,6 +429,7 @@ $(document).ready(function() {
 
 
 
+    //range for card
     $(".b-range").slider({
         range: "min",
         min: 1,
@@ -435,7 +442,7 @@ $(document).ready(function() {
     $( ".range-value-n" ).val($( ".b-range" ).slider( "value" ));
 
 
-    //
+    //rotate card
     $('.addItem-btn').click(function () {
         $(this).parents('.rotate').addClass('active');
         $(this).parents('.addItem-item').siblings().find('.rotate').removeClass('active');
@@ -444,11 +451,11 @@ $(document).ready(function() {
     $('.buyFlowers .close-btn').click(function () {
         $(this).parents('.rotate').removeClass('active');
     });
-
-
     $('.rotate-next .close-bth').click(function () {
         $('.addItem-top').removeClass('active');
     });
+
+
     //burger animation
     $('.burger').click(function(){
         $('.burger__line').toggleClass('active-b');
@@ -456,16 +463,24 @@ $(document).ready(function() {
         $('.wrapper').toggleClass('bg-active');
 
     });
-    
+
+
+    //accordion filter table (basket, private-ordering)
     $('.tableOrder span').click(function () {
         $(this).parents('.tableOrder').next().slideToggle(10);
     });
+    $('.tableOrder-name span').click(function () {
+        $(this).toggleClass('active');
+    });
 
+
+    //burger animation for tabs (mobile version)
     $('.burger__constructor').click(function(){
         $('.burger__line_constructor').toggleClass('active');
         $('.constructorNav').slideToggle();
 
     });
+
 
     //slider
     if(document.documentElement.clientWidth < 1200) {
@@ -509,6 +524,8 @@ $(document).ready(function() {
             ]
         });
     }
+
+
     if(document.documentElement.clientWidth < 992) {
         $('.goods-content').slick({
             speed: 500,
@@ -550,10 +567,6 @@ $(document).ready(function() {
     //mask
     $('input[name="phone-callback"], input[name="phone-sing"], input[name="phone-buy"], #ordering-phone, #edit-phone').mask("+7(999) 999-99-99");
     $('input[name="time-callback"], input[name="time-buy"]').mask("99:99");
-
-
-
-
 
 });
 

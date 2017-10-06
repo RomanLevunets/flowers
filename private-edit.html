@@ -61,7 +61,7 @@
                         <li><a href="#">готовые букеты</a></li>
                         <li><a href="#">подарки</a></li>
                         <li><a href="#">аксессуары</a></li>
-                        <li class="active"><a href="about.html">о нас</a></li>
+                        <li><a href="about.html">о нас</a></li>
                         <li>
                             <a href="#">
                                 <img src="img/svg/header-search.svg" alt="header-search">
@@ -117,17 +117,17 @@
                                 </td>
                             </tr>
                             <tr>
-                                <td>Имя*</td>
-                                <td><input type="text" name="edit-name" value="Михаил Иванович" required></td>
+                                <td>Имя<span class="star-c">*</span></td>
+                                <td><input type="text" name="edit-name" required></td>
                             </tr>
                             <tr>
-                                <td>E-mail*</td>
-                                <td><input type="email" name="edit-email" value="Michael@mail.ru" required></td>
+                                <td>E-mail<span class="star-c">*</span></td>
+                                <td><input type="email" name="edit-email" required></td>
                             </tr>
                             <tr class="table-phone">
-                                <td>Телефон</td>
+                                <td>Телефон<span class="star-c">*</span></td>
                                 <td>
-                                    <input type="text" name="edit-phone" value="+7 925 100 00 05" id="edit-phone" required>
+                                    <input type="text" name="edit-phone" id="edit-phone" required>
                                     <label for="edit-phone">Для подтверждения нового номера вам будет выслан на него SMS-код</label>
                                 </td>
                             </tr>
@@ -151,7 +151,7 @@
                             </tr>
                         </table>
                         <div class="edit-btn">
-                            <a href="#">вернуться</a>
+                            <a href="#"><span></span>вернуться</a>
                             <input type="submit" name="edit-save" value="Сохранить">
                         </div>
                     </form>
