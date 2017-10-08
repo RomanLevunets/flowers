@@ -4146,6 +4146,20 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     width: 125px;
     height: 110px; }
 
+.basket-alert {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  color: #333;
+  font: 100% "PlayfairDisplay-Italic", sans-serif;
+  font-size: 20px;
+  background: #fff;
+  z-index: 999;
+  display: none; }
+
 .alert-application {
   width: 300px;
   position: fixed;
@@ -4571,7 +4585,11 @@ input[name="filter-submit"] {
 .sort {
   display: inline-block;
   font-size: 0;
-  margin-bottom: 35px; }
+  margin-bottom: 35px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none; }
   .sort li {
     font: 100% "Lato-Light", sans-serif;
     cursor: pointer;
@@ -4583,19 +4601,26 @@ input[name="filter-submit"] {
     position: relative;
     background: #fff;
     border-bottom: 3px solid transparent; }
+    .sort li::after {
+      border-bottom: 10px solid #EC5A6F;
+      border-top: 3px solid transparent;
+      border-left: 5px solid transparent;
+      border-right: 5px solid transparent;
+      content: " ";
+      position: absolute;
+      top: 2px;
+      right: -15px;
+      width: 0;
+      display: none;
+      height: 0; }
+    .sort li.sorts::after {
+      display: block;
+      border-top: 10px solid #999;
+      border-bottom: 3px solid transparent; }
     .sort li.active {
       border-bottom: 3px solid #F9CDD4; }
       .sort li.active::after {
-        border-bottom: 10px solid #EC5A6F;
-        border-top: 3px solid transparent;
-        border-left: 5px solid transparent;
-        border-right: 5px solid transparent;
-        content: " ";
-        position: absolute;
-        top: 2px;
-        right: -15px;
-        width: 0;
-        height: 0; }
+        display: block; }
 
 .range {
   font: 100% "Lato-Semibold", sans-serif;
@@ -5696,7 +5721,7 @@ input[name="filter-submit"] {
   .ournav-scr {
     overflow-x: scroll; }
   .ourNav {
-    width: 720px; }
+    width: 725px; }
   .ourNav li.active::before {
     display: none; }
   .reviews::before {
@@ -6016,10 +6041,23 @@ input[name="filter-submit"] {
   .section-title::before {
     display: none; }
   .section-title {
-    font-size: 20px; }
+    font-size: 20px;
+    text-align: left; }
     .section-title span {
       padding-right: 0;
       padding-left: 0; }
+  .floristSay {
+    display: none; }
+  .floristGallery {
+    display: none; }
+  .certificates {
+    margin-bottom: 30px; }
+  .certificates-content > .slick-list {
+    overflow: visible; }
+  .reviews-others > p {
+    display: none; }
+  .section-subscribe {
+    display: none; }
   .section-desc {
     display: none; }
   .ourNav {
@@ -6060,7 +6098,8 @@ input[name="filter-submit"] {
   .block-item2 span {
     font-size: 16px; }
   .florist-txt {
-    font-size: 14px; }
+    font-size: 14px;
+    text-align: left; }
   .florist-left p {
     font-size: 18px; }
   .florist-left {
@@ -6350,7 +6389,14 @@ input[name="filter-submit"] {
   .goods-sort p {
     display: block;
     text-align: center;
-    margin-bottom: 15px; } }
+    margin-bottom: 15px; }
+  .ourInfo > .slick-list {
+    overflow: visible; }
+  .reviews-slider > .slick-list {
+    overflow: visible; }
+  .florist-left {
+    -webkit-box-shadow: none;
+            box-shadow: none; } }
 
 /**/
 @media only screen and (max-width: 375px) {
@@ -6373,7 +6419,7 @@ input[name="filter-submit"] {
 /* Custom, iPhone Retina */
 @media only screen and (max-width: 320px) {
   .ourInfo-item {
-    margin: 0 3px; }
+    margin: 0 7px; }
   .ourContent-item {
     width: 240px; }
   .links li a {
@@ -6385,6 +6431,9 @@ input[name="filter-submit"] {
   .reviews-prev {
     left: -40px; }
   .addItem .slick-list {
-    padding-bottom: 0; } }
+    padding-bottom: 0; }
+  .florist-item-right {
+    margin-left: -15px;
+    width: 320px; } }
 
 /**/

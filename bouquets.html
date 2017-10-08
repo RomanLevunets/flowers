@@ -107,7 +107,7 @@
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="#">
+                                        <a href="#" class="addBasket">
                                             <img src="img/svg/fl-basket.svg" alt="fl-basket">
                                         </a>
                                     </li>
@@ -138,7 +138,7 @@
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="#">
+                                        <a href="#" class="addBasket">
                                             <img src="img/svg/fl-basket.svg" alt="fl-basket">
                                         </a>
                                     </li>
@@ -170,7 +170,7 @@
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="#">
+                                        <a href="#" class="addBasket">
                                             <img src="img/svg/fl-basket.svg" alt="fl-basket">
                                         </a>
                                     </li>
@@ -200,7 +200,7 @@
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="#">
+                                        <a href="#" class="addBasket">
                                             <img src="img/svg/fl-basket.svg" alt="fl-basket">
                                         </a>
                                     </li>
@@ -231,7 +231,7 @@
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="#">
+                                        <a href="#" class="addBasket">
                                             <img src="img/svg/fl-basket.svg" alt="fl-basket">
                                         </a>
                                     </li>
@@ -263,7 +263,7 @@
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="#">
+                                        <a href="#" class="addBasket">
                                             <img src="img/svg/fl-basket.svg" alt="fl-basket">
                                         </a>
                                     </li>
@@ -293,7 +293,7 @@
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="#">
+                                        <a href="#" class="addBasket">
                                             <img src="img/svg/fl-basket.svg" alt="fl-basket">
                                         </a>
                                     </li>
@@ -324,7 +324,7 @@
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="#">
+                                        <a href="#" class="addBasket">
                                             <img src="img/svg/fl-basket.svg" alt="fl-basket">
                                         </a>
                                     </li>
@@ -356,7 +356,7 @@
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="#">
+                                        <a href="#" class="addBasket">
                                             <img src="img/svg/fl-basket.svg" alt="fl-basket">
                                         </a>
                                     </li>
@@ -383,14 +383,14 @@
                     </a>
                 </div>
                 <div class="goods-filter">
-                    <p class="goods-title">Фильтр<span class="active">(2)</span></p>
+                    <p class="goods-title">Фильтр<span class="active">(<i id="filterCount">0</i>)</span></p>
                     <form action="/" method="post" class="form-filter">
                         <div class="cost filter-category">
                             <p class="active">По стоимости</p>
                             <div class="filter-content">
                                 <div class="f-range"></div>
                                 <div class="range">
-                                    <input type="text" class="range-value">
+                                    <span class="range-value"></span>
                                 </div>
                             </div>
                         </div>
@@ -579,11 +579,11 @@
                         <span>Обратный звонок</span>
                     </h2>
                     <p class="section-desc">Оставьте свои котактные данные и мы свяжемся с вами в указанное время</p>
-                    <form action="/" class="formCallback">
+                    <form action="/" class="formCallback" method="post" id="formCallback">
                         <input type="text" name="name-callback" placeholder="Ваше имя" required>
                         <input type="text" name="phone-callback" placeholder="Ваш номер телефона" required>
                         <input type="text" name="time-callback" placeholder="В какое время вам позвонить?">
-                        <input type="submit" name="send-callback" value="Отправить" class="form-btn">
+                        <input type="button" name="send-callback" value="Отправить" class="form-btn">
                     </form>
                 </div>
             </section>
@@ -595,11 +595,12 @@
                         <span>Купить в один клик</span>
                     </h2>
                     <p class="section-desc">Оставьте свои котактные данные и мы свяжемся с вами в указанное время</p>
-                    <form action="/" class="formBuy">
+                    <form action="/" class="formBuy" id="formBuy" method="post">
                         <input type="text" name="name-buy" placeholder="Ваше имя" required>
                         <input type="text" name="phone-buy" placeholder="Ваш номер телефона" required>
                         <input type="text" name="time-buy" placeholder="В какое время вам позвонить?">
-                        <input type="submit" name="send-buy" value="Отправить" class="form-btn">
+                        <input type="hidden" name="product-name" id="product-name">
+                        <input type="button" name="send-buy" value="Отправить" class="form-btn">
                     </form>
                 </div>
             </section>
@@ -611,7 +612,7 @@
                         <span>Вход и регистрация</span>
                     </h2>
                     <p class="section-desc">Введите свой номер телефона и мы отправим вам СМС с кодом для авторизации</p>
-                    <form action="/" class="formSing">
+                    <form action="/" class="formSing" id="formSing" method="post">
                         <input type="text" name="phone-sing" placeholder="Ваш номер телефона" required>
                         <button name="confirm">Подтвердить</button>
                         <input type="text" name="code-sms" placeholder="Введите код из СМС" required>
@@ -619,6 +620,16 @@
                     </form>
                 </div>
             </section>
+        </div>
+    </div>
+    <div class="alerts">
+        <div class="alert-application">
+            <p>ЗАЯВКА ОТПРАВЛЕНА<br>
+                Спасибо! Наши менеджеры свяжутся с вами в ближайшее время.</p>
+            <span></span>
+        </div>
+        <div class="basket-alert">
+            Товар добавлен!
         </div>
     </div>
 </div>

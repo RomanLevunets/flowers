@@ -214,7 +214,7 @@
                     </div>
                     <a href="#">добавить в букет</a>
                 </div>
-                <div class="addItem-item select">
+                <div class="addItem-item">
                     <div class="addItem-top">
                         <div class="addItem-img">
                             <img src="img/gifts/img2.jpg" alt="gifts-img-2">
@@ -401,27 +401,11 @@
                         <span>Обратный звонок</span>
                     </h2>
                     <p class="section-desc">Оставьте свои котактные данные и мы свяжемся с вами в указанное время</p>
-                    <form action="/" class="formCallback">
+                    <form action="/" class="formCallback" method="post" id="formCallback">
                         <input type="text" name="name-callback" placeholder="Ваше имя" required>
                         <input type="text" name="phone-callback" placeholder="Ваш номер телефона" required>
                         <input type="text" name="time-callback" placeholder="В какое время вам позвонить?">
                         <input type="submit" name="send-callback" value="Отправить" class="form-btn">
-                    </form>
-                </div>
-            </section>
-        </div>
-        <div class="sing" id="sing">
-            <section class="section">
-                <div class="container">
-                    <h2 class="section-title">
-                        <span>Вход и регистрация</span>
-                    </h2>
-                    <p class="section-desc">Введите свой номер телефона и мы отправим вам СМС с кодом для авторизации</p>
-                    <form action="/" class="formSing">
-                        <input type="text" name="phone-sing" placeholder="Ваш номер телефона" required>
-                        <button name="confirm">Подтвердить</button>
-                        <input type="text" name="code-sms" placeholder="Введите код из СМС" required>
-                        <input type="submit" name="send-callback" value="Войти" class="form-btn">
                     </form>
                 </div>
             </section>
@@ -433,14 +417,38 @@
                         <span>Купить в один клик</span>
                     </h2>
                     <p class="section-desc">Оставьте свои котактные данные и мы свяжемся с вами в указанное время</p>
-                    <form action="/" class="formBuy">
+                    <form action="/" class="formBuy" id="formBuy" method="post">
                         <input type="text" name="name-buy" placeholder="Ваше имя" required>
                         <input type="text" name="phone-buy" placeholder="Ваш номер телефона" required>
                         <input type="text" name="time-buy" placeholder="В какое время вам позвонить?">
+                        <input type="hidden" name="product-name" id="product-name">
                         <input type="submit" name="send-buy" value="Отправить" class="form-btn">
                     </form>
                 </div>
             </section>
+        </div>
+        <div class="sing" id="sing">
+            <section class="section">
+                <div class="container">
+                    <h2 class="section-title">
+                        <span>Вход и регистрация</span>
+                    </h2>
+                    <p class="section-desc">Введите свой номер телефона и мы отправим вам СМС с кодом для авторизации</p>
+                    <form action="/" class="formSing" id="formSing" method="post">
+                        <input type="text" name="phone-sing" placeholder="Ваш номер телефона" required>
+                        <button name="confirm">Подтвердить</button>
+                        <input type="text" name="code-sms" placeholder="Введите код из СМС" required>
+                        <input type="submit" name="send-callback" value="Войти" class="form-btn">
+                    </form>
+                </div>
+            </section>
+        </div>
+    </div>
+    <div class="alerts">
+        <div class="alert-application">
+            <p>ЗАЯВКА ОТПРАВЛЕНА<br>
+                Спасибо! Наши менеджеры свяжутся с вами в ближайшее время.</p>
+            <span></span>
         </div>
     </div>
 </div>

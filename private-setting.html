@@ -271,7 +271,7 @@
                         <span>Обратный звонок</span>
                     </h2>
                     <p class="section-desc">Оставьте свои котактные данные и мы свяжемся с вами в указанное время</p>
-                    <form action="/" class="formCallback">
+                    <form action="/" class="formCallback" id="formCallback" method="post">
                         <input type="text" name="name-callback" placeholder="Ваше имя" required>
                         <input type="text" name="phone-callback" placeholder="Ваш номер телефона" required>
                         <input type="text" name="time-callback" placeholder="В какое время вам позвонить?">
@@ -286,9 +286,8 @@
                     <h2 class="section-title">
                         <span>Вход и регистрация</span>
                     </h2>
-                    <p class="section-desc">Введите свой номер телефона и мы отправим вам СМС с кодом для
-                        авторизации</p>
-                    <form action="/" class="formSing">
+                    <p class="section-desc">Введите свой номер телефона и мы отправим вам СМС с кодом для авторизации</p>
+                    <form action="/" class="formSing" id="formSing" method="post">
                         <input type="text" name="phone-sing" placeholder="Ваш номер телефона" required>
                         <button name="confirm">Подтвердить</button>
                         <input type="text" name="code-sms" placeholder="Введите код из СМС" required>
@@ -296,6 +295,13 @@
                     </form>
                 </div>
             </section>
+        </div>
+    </div>
+    <div class="alerts">
+        <div class="alert-application">
+            <p>ЗАЯВКА ОТПРАВЛЕНА<br>
+                Спасибо! Наши менеджеры свяжутся с вами в ближайшее время.</p>
+            <span></span>
         </div>
     </div>
 </div>
