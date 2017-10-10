@@ -333,7 +333,7 @@ $(document).ready(function() {
 
     $(".spin-down").click(function() {
         var value = parseInt($(this).closest(".spinner-card").find("input").val());
-        if (value != 1)	{
+        if (value != 1) {
             $(this).closest(".spinner-card").find("input").val(value - 1);
         }
     });
@@ -348,7 +348,7 @@ $(document).ready(function() {
     });
     $(".spin-down").click(function() {
         var value = parseInt($(this).closest(".spinner-global").find("input").val());
-        if (value != 0)	{
+        if (value != 0) {
             $(this).closest(".spinner-global").find("input").val(value - 1);
         }
     });
@@ -446,11 +446,10 @@ $(document).ready(function() {
     //add Basket
     $('.addBasket').click(function (event) {
         event.preventDefault();
-        $('.basket-alert').show();
-        function set1() {
-            $('.basket-alert').hide();
-        }
-        setTimeout(set1, 3000);
+        $('.basket-alert').fadeIn(500);
+        $('.basket-alert span').click(function () {
+            $('.basket-alert').fadeOut(500);
+        });
 
     });
 
@@ -605,14 +604,10 @@ $(document).ready(function() {
         }).done(function() {
             $(this).find("input").val("");
             $('.mfp-close-btn-in .mfp-close').click();
-            $('.alert-application').css(
-                'top', '30%'
-            );
+            $('.alert-application').show();
             $('.wrapper').addClass('bg-active');
             $('.alert-application span').click(function () {
-                $('.alert-application').css(
-                    'top', '-100%'
-                );
+                $('.alert-application').hide();
                 $('.wrapper').removeClass('bg-active');
             });
             $("#formCallback").trigger("reset");
@@ -628,10 +623,11 @@ $(document).ready(function() {
         }).done(function() {
             $(this).find("input").val("");
             $('.subscribe-alert').show();
-            function set() {
+            $('.wrapper').addClass('bg-active');
+            $('.subscribe-alert span').click(function () {
                 $('.subscribe-alert').hide();
-            }
-            setTimeout(set, 4000);
+                $('.wrapper').removeClass('bg-active');
+            });
             $("#subscribe").trigger("reset");
         });
         return false;
@@ -645,15 +641,9 @@ $(document).ready(function() {
         }).done(function() {
             $(this).find("input").val("");
             $('.mfp-close-btn-in .mfp-close').click();
-            $('.alert-application').css(
-                'top', '30%'
-            );
-            $('.wrapper').addClass('bg-active');
+            $('.alert-application').show();
             $('.alert-application span').click(function () {
-                $('.alert-application').css(
-                    'top', '-100%'
-                );
-                $('.wrapper').removeClass('bg-active');
+                $('.alert-application').hide();
             });
             $("#formBuy").trigger("reset");
         });
@@ -664,6 +654,7 @@ $(document).ready(function() {
         var productTitle = $(this).parents('.ourContent-item').find('.ourDesc h5').text();
         $('#formBuy #product-name').val(productTitle);
     });
+
 
 });
 
