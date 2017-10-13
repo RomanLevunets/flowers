@@ -380,11 +380,10 @@ $(document).ready(function() {
 
 
     //accordion filter
-    $('.filter-category p').click(function () {
+    $('.filter-category:not(:first-child) p').click(function () {
         $(this).toggleClass('active');
         $(this).next().slideToggle();
     });
-
 
     //range for filter(max value 25 000)
     $(".f-range-ac").slider({
@@ -604,11 +603,11 @@ $(document).ready(function() {
         }).done(function() {
             $(this).find("input").val("");
             $('.mfp-close-btn-in .mfp-close').click();
-            $('.alert-application').show();
-            $('.wrapper').addClass('bg-active');
+            $('.alert-application').fadeIn(200);
+            $('.wrapper').addClass('fon');
             $('.alert-application span').click(function () {
-                $('.alert-application').hide();
-                $('.wrapper').removeClass('bg-active');
+                $('.alert-application').fadeOut(200);
+                $('.wrapper').removeClass('fon');
             });
             $("#formCallback").trigger("reset");
         });
@@ -622,11 +621,11 @@ $(document).ready(function() {
             data: $(this).serialize()
         }).done(function() {
             $(this).find("input").val("");
-            $('.subscribe-alert').show();
-            $('.wrapper').addClass('bg-active');
+            $('.subscribe-alert').fadeIn(200);
+            $('.wrapper').addClass('fon');
             $('.subscribe-alert span').click(function () {
-                $('.subscribe-alert').hide();
-                $('.wrapper').removeClass('bg-active');
+                $('.subscribe-alert').fadeOut(200);
+                $('.wrapper').removeClass('fon');
             });
             $("#subscribe").trigger("reset");
         });
@@ -640,10 +639,12 @@ $(document).ready(function() {
             data: $(this).serialize()
         }).done(function() {
             $(this).find("input").val("");
+            $('.wrapper').addClass('fon');
             $('.mfp-close-btn-in .mfp-close').click();
-            $('.alert-application').show();
+            $('.alert-application').fadeIn(200);
             $('.alert-application span').click(function () {
-                $('.alert-application').hide();
+                $('.alert-application').fadeOut(200);
+                $('.wrapper').removeClass('fon');
             });
             $("#formBuy").trigger("reset");
         });
@@ -655,6 +656,24 @@ $(document).ready(function() {
         $('#formBuy #product-name').val(productTitle);
     });
 
+
+
+
+    $('.card-fotorama a')
+        .each(function(){
+            $(this)
+                .append('<div class="photo"></div>')
+                .children('.photo').css({'background-image': 'url('+ $(this).attr('data-image') +')'});
+        })
+        .on('mouseover', function(){
+            $(this).children('.photo').css({'transform': 'scale('+ $(this).attr('data-scale') +')'});
+        })
+        .on('mouseout', function(){
+            $(this).children('.photo').css({'transform': 'scale(1)'});
+        })
+        .on('mousemove', function(e){
+            $(this).children('.photo').css({'transform-origin': ((e.pageX - $(this).offset().left) / $(this).width()) * 100 + '% ' + ((e.pageY - $(this).offset().top) / $(this).height()) * 100 +'%'});
+        })
 
 });
 
