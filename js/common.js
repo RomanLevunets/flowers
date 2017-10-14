@@ -446,7 +446,7 @@ $(document).ready(function() {
     $('.addBasket').click(function (event) {
         event.preventDefault();
         $('.basket-alert').fadeIn(500);
-        $('.basket-alert span').click(function () {
+        $('.alert-close').click(function () {
             $('.basket-alert').fadeOut(500);
         });
 
@@ -605,7 +605,7 @@ $(document).ready(function() {
             $('.mfp-close-btn-in .mfp-close').click();
             $('.alert-application').fadeIn(200);
             $('.wrapper').addClass('fon');
-            $('.alert-application span').click(function () {
+            $('.alert-close').click(function () {
                 $('.alert-application').fadeOut(200);
                 $('.wrapper').removeClass('fon');
             });
@@ -623,7 +623,7 @@ $(document).ready(function() {
             $(this).find("input").val("");
             $('.subscribe-alert').fadeIn(200);
             $('.wrapper').addClass('fon');
-            $('.subscribe-alert span').click(function () {
+            $('.alert-close').click(function () {
                 $('.subscribe-alert').fadeOut(200);
                 $('.wrapper').removeClass('fon');
             });
@@ -642,7 +642,7 @@ $(document).ready(function() {
             $('.wrapper').addClass('fon');
             $('.mfp-close-btn-in .mfp-close').click();
             $('.alert-application').fadeIn(200);
-            $('.alert-application span').click(function () {
+            $('.alert-close').click(function () {
                 $('.alert-application').fadeOut(200);
                 $('.wrapper').removeClass('fon');
             });
@@ -658,22 +658,6 @@ $(document).ready(function() {
 
 
 
-
-    $('.card-fotorama a')
-        .each(function(){
-            $(this)
-                .append('<div class="photo"></div>')
-                .children('.photo').css({'background-image': 'url('+ $(this).attr('data-image') +')'});
-        })
-        .on('mouseover', function(){
-            $(this).children('.photo').css({'transform': 'scale('+ $(this).attr('data-scale') +')'});
-        })
-        .on('mouseout', function(){
-            $(this).children('.photo').css({'transform': 'scale(1)'});
-        })
-        .on('mousemove', function(e){
-            $(this).children('.photo').css({'transform-origin': ((e.pageX - $(this).offset().left) / $(this).width()) * 100 + '% ' + ((e.pageY - $(this).offset().top) / $(this).height()) * 100 +'%'});
-        })
 
 });
 
