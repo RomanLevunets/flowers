@@ -4119,11 +4119,11 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 
 .basket-alert {
   position: fixed;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
   color: #333;
   font: 100% "PlayfairDisplay-Italic", sans-serif;
   font-size: 20px;
@@ -4234,14 +4234,13 @@ input[type="date"]::-webkit-calendar-picker-indicator {
           box-shadow: 0 2px 40px rgba(0, 0, 0, 0.2);
   width: 100%;
   max-width: 647px;
-  margin: 0 auto;
   height: 283px;
   position: fixed;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  margin: auto;
   padding-top: 68px;
   padding-bottom: 68px;
   background: #fff;
@@ -4280,7 +4279,21 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   background: #fff;
   padding-top: 50px;
   padding-bottom: 50px;
-  height: auto; }
+  height: 150px;
+  text-align: center; }
+  .subscribe-alert p {
+    position: relative; }
+    .subscribe-alert p::after {
+      content: " ";
+      position: absolute;
+      bottom: -25px;
+      left: 50%;
+      -webkit-transform: translateX(-50%);
+          -ms-transform: translateX(-50%);
+              transform: translateX(-50%);
+      background-image: url("../img/svg/our-info-line.svg");
+      width: 60px;
+      height: 6px; }
 
 .tableBasket {
   width: 100%; }
@@ -5080,7 +5093,7 @@ input[name="filter-submit"] {
     font: 100% "Lato-Light", sans-serif;
     font-size: 30px;
     color: #EC5A6F;
-    line-height: 0.8;
+    line-height: 30px;
     -webkit-transition: border-color .2s linear, background .2s linear, color .2s linear;
     -o-transition: border-color .2s linear, background .2s linear, color .2s linear;
     transition: border-color .2s linear, background .2s linear, color .2s linear; }
@@ -6550,7 +6563,7 @@ input[name="filter-submit"] {
   .basket-alert {
     padding-top: 50px;
     padding-bottom: 20px;
-    height: auto; }
+    height: 210px; }
   .alert-img {
     max-width: 176px;
     height: 100px;
