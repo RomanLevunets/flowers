@@ -3006,50 +3006,6 @@ a:focus {
     width: 100%;
     max-width: 515px;
     float: left; }
-  .card .fotorama__stage {
-    border: 1px solid #F9CDD4;
-    padding: 12px; }
-  .card .fotorama__stage__shaft {
-    margin: 12px; }
-  .card .fotorama__img {
-    width: 95% !important;
-    display: block;
-    margin: 0 auto;
-    height: 95% !important;
-    top: 0 !important; }
-  .card .fotorama__nav-wrap {
-    margin-top: 20px;
-    margin-bottom: 30px; }
-  .card .fotorama__active > .fotorama__thumb {
-    border-color: #EC5A6F; }
-  .card .fotorama__thumb-border {
-    display: none; }
-  .card .fotorama__nav__frame {
-    width: 100px !important;
-    height: 100px !important;
-    margin-right: 10px; }
-    .card .fotorama__nav__frame:last-child {
-      margin-right: 0; }
-  .card .fotorama__thumb {
-    background-color: #fff !important;
-    width: 100px !important;
-    height: 100px !important; }
-  .card .fotorama__thumb {
-    width: 100px;
-    height: 100px;
-    border: 1px solid #F9CDD4;
-    -webkit-transition: border-color .2s linear;
-    -o-transition: border-color .2s linear;
-    transition: border-color .2s linear; }
-    .card .fotorama__thumb:hover {
-      border-color: #EC5A6F; }
-    .card .fotorama__thumb img {
-      display: block;
-      width: 80px !important;
-      height: 80px !important;
-      margin: 0 auto;
-      left: 0 !important;
-      top: 9px !important; }
   .card-info {
     float: left;
     width: -webkit-calc(100% - 515px);
@@ -5398,6 +5354,54 @@ input[name="filter-submit"] {
   overflow: hidden;
   display: block; }
 
+.xzoom {
+  width: 100%;
+  height: 100%;
+  position: relative; }
+
+.xzoom-container {
+  display: block;
+  position: relative; }
+
+.xzoom-top {
+  margin: 0 auto;
+  position: relative;
+  width: 100%;
+  max-width: 510px;
+  height: 510px;
+  padding: 15px;
+  border: 1px solid #F9CDD4; }
+
+.xzoom-gallery, .xzoom-gallery2, .xzoom-gallery3, .xzoom-gallery4, .xzoom-gallery5 {
+  margin-left: 0;
+  margin-bottom: 0; }
+
+.xzoom-lens, .xzoom-preview {
+  z-index: 999;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border: none; }
+
+.xzoom, .xzoom2, .xzoom3, .xzoom4, .xzoom5 {
+  -webkit-box-shadow: none;
+          box-shadow: none; }
+
+.xzoom-gallery {
+  width: 100px;
+  height: 93px;
+  padding: 10px;
+  margin-right: 10px;
+  border: 1px solid #F9CDD4; }
+
+.xactive {
+  -webkit-box-shadow: 0 0 5px 0 #EC5A6F;
+          box-shadow: 0 0 5px 0 #EC5A6F; }
+
+.xzoom-thumbs {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-align: left; }
+
 @media (max-width: 1440px) {
   .floristGallery {
     height: 300px; }
@@ -6568,7 +6572,9 @@ input[name="filter-submit"] {
       top: 10px;
       right: 10px; }
   .basket-alert-txt, .subscribe-alert-txt {
-    font-size: 16px; } }
+    font-size: 16px; }
+  .xzoom-top {
+    height: 420px; } }
 
 @media only screen and (max-width: 375px) {
   .card-photo, .private-user-img {
@@ -6576,6 +6582,8 @@ input[name="filter-submit"] {
     display: block;
     margin: 0 auto;
     margin-bottom: 20px; }
+  .xzoom-top {
+    height: 330px; }
   .subBasket tr td {
     padding-left: 120px; }
   .tableOrder tbody tr td {
@@ -6585,7 +6593,9 @@ input[name="filter-submit"] {
     float: none;
     display: block; }
   .formSearch input[type="submit"] {
-    width: 100%; } }
+    width: 100%; }
+  .xzoom-gallery {
+    margin-bottom: 15px; } }
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width: 320px) {
@@ -6593,6 +6603,8 @@ input[name="filter-submit"] {
     margin: 0 7px; }
   .ourContent-item {
     width: 240px; }
+  .xzoom-top {
+    height: 280px; }
   .links li a {
     font-size: 12px; }
   .addItem {

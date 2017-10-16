@@ -656,9 +656,23 @@ $(document).ready(function() {
         $('#formBuy #product-name').val(productTitle);
     });
 
-
-
-
+    $('.xzoom, .xzoom-gallery').xzoom({
+        title: true,
+        tint: '#333',
+        position: 'inside',
+        Xoffset: 0,
+        Yoffset: 0,
+        fadeIn: true,
+        fadeTrans: true,
+        loadingClass: 'xzoom-loading',
+        lensClass: 'xzoom-lens',
+        zoomClass: 'xzoom-preview',
+        activeClass: 'xactive',
+        lensOpacity: 0.5,
+        lensShape: 'box',
+        zoomHeight: 'auto',
+        zoomWidth: 'auto',
+    });
 });
 
 
