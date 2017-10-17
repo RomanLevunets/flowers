@@ -4551,54 +4551,96 @@ input[name="filter-submit"] {
     background: #EC5A6F;
     color: #fff; }
 
-.form-filter .color .c-yellow {
+.color-content label {
+  position: relative; }
+  .color-content label::after {
+    content: " ";
+    position: absolute;
+    top: -5px;
+    bottom: -5px;
+    left: -5px;
+    right: -5px;
+    border: 1.3px solid #fff;
+    -webkit-border-radius: 50%;
+            border-radius: 50%;
+    opacity: 0;
+    -webkit-transition: border-color .1s linear, opacity .1s linear;
+    -o-transition: border-color .1s linear, opacity .1s linear;
+    transition: border-color .1s linear, opacity .1s linear; }
+  .color-content label:hover {
+    -webkit-box-shadow: none;
+            box-shadow: none; }
+    .color-content label:hover::after {
+      opacity: 1; }
+
+.form-filter .color .c-yellow,
+.color-content .c-yellow {
   background: #F2C94C; }
-  .form-filter .color .c-yellow:hover::after {
+  .form-filter .color .c-yellow:hover::after,
+  .color-content .c-yellow:hover::after {
     border-color: #F2C94C; }
 
-.form-filter .color .c-Lpink {
+.form-filter .color .c-Lpink,
+.color-content .c-Lpink {
   background: #FF9494; }
-  .form-filter .color .c-Lpink:hover::after {
+  .form-filter .color .c-Lpink:hover::after,
+  .color-content .c-Lpink:hover::after {
     border-color: #FF9494; }
 
-.form-filter .color .c-pink {
+.form-filter .color .c-pink,
+.color-content .c-pink {
   background: #FF4383; }
-  .form-filter .color .c-pink:hover::after {
+  .form-filter .color .c-pink:hover::after,
+  .color-content .c-pink:hover::after {
     border-color: #FF4383; }
 
-.form-filter .color .c-red {
+.form-filter .color .c-red,
+.color-content .c-red {
   background: #FF2222; }
-  .form-filter .color .c-red:hover::after {
+  .form-filter .color .c-red:hover::after,
+  .color-content .c-red:hover::after {
     border-color: #FF2222; }
 
-.form-filter .color .c-white {
+.form-filter .color .c-white,
+.color-content .c-white {
   background: #fff; }
-  .form-filter .color .c-white:hover::after {
+  .form-filter .color .c-white:hover::after,
+  .color-content .c-white:hover::after {
     border-color: #fff; }
 
-.form-filter .color .c-orange {
+.form-filter .color .c-orange,
+.color-content .c-orange {
   background: #F2994A; }
-  .form-filter .color .c-orange:hover::after {
+  .form-filter .color .c-orange:hover::after,
+  .color-content .c-orange:hover::after {
     border-color: #F2994A; }
 
-.form-filter .color .c-Lgreen {
+.form-filter .color .c-Lgreen,
+.color-content .c-Lgreen {
   background: #6FCF97; }
-  .form-filter .color .c-Lgreen:hover::after {
+  .form-filter .color .c-Lgreen:hover::after,
+  .color-content .c-Lgreen:hover::after {
     border-color: #6FCF97; }
 
-.form-filter .color .c-purple {
+.form-filter .color .c-purple,
+.color-content .c-purple {
   background: #C500E1; }
-  .form-filter .color .c-purple:hover::after {
+  .form-filter .color .c-purple:hover::after,
+  .color-content .c-purple:hover::after {
     border-color: #C500E1; }
 
-.form-filter .color .c-green {
+.form-filter .color .c-purple,
+.color-content .c-purple {
   background: #219653; }
-  .form-filter .color .c-green:hover::after {
+  .form-filter .color .c-purple:hover::after,
+  .color-content .c-purple:hover::after {
     border-color: #219653; }
 
-.form-filter .color .c-blue {
+.form-filter .color .c-blue,
+.color-content .c-blue {
   background: #0F3261; }
-  .form-filter .color .c-blue:hover::after {
+  .form-filter .color .c-blue:hover::after,
+  .color-content .c-blue:hover::after {
     border-color: #0F3261; }
 
 .filter-reset {
@@ -5373,13 +5415,13 @@ input[name="filter-submit"] {
             border-radius: 50%;
     display: inline-block;
     margin-right: 12px;
-    -webkit-box-shadow: 2px 5px 8px rgba(0, 0, 0, 0.15);
-            box-shadow: 2px 5px 8px rgba(0, 0, 0, 0.15); }
+    -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.7);
+            box-shadow: 0 1px 1px rgba(0, 0, 0, 0.7); }
     .color-content label:last-child {
       margin-right: 0; }
   .color-content input[type="checkbox"]:checked + label {
-    -webkit-box-shadow: 2px 5px 8px rgba(0, 0, 0, 0.3) inset;
-            box-shadow: 2px 5px 8px rgba(0, 0, 0, 0.3) inset; }
+    -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.7) inset;
+            box-shadow: 0 1px 1px rgba(0, 0, 0, 0.7) inset; }
 
 .Lside p {
   display: none; }
