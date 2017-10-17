@@ -96,8 +96,7 @@
     right: 0;
     left: 0;
     background: rgba(0, 0, 0, 0.8);
-    z-index: 800;
-    display: block; }
+    z-index: 800; }
   .wrapper.bg-active {
     overflow-y: hidden;
     position: fixed;
@@ -106,18 +105,22 @@
     right: 0;
     bottom: 0; }
     .wrapper.bg-active::after {
-      display: block; }
+      top: 0;
+      left: 0; }
   .wrapper::after {
     background: rgba(0, 0, 0, 0.8);
     content: " ";
     position: fixed;
     top: 0;
-    left: 0;
+    left: -100%;
     right: 0;
-    display: none;
     bottom: 0;
+    width: 100%;
     z-index: 100;
-    overflow: hidden; }
+    overflow: hidden;
+    -webkit-transition: left .2s linear;
+    -o-transition: left .2s linear;
+    transition: left .2s linear; }
 
 .section-header {
   background: #F3F3F3;
@@ -1918,21 +1921,51 @@ a:focus {
   margin-left: 2px; }
 
 .Lside {
-  position: fixed;
-  top: 70px;
-  right: -100%;
-  bottom: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: -100%;
   width: 100%;
   background: #fff;
-  -webkit-transition: right .3s linear, opacity .3s linear;
-  -o-transition: right .3s linear, opacity .3s linear;
-  transition: right .3s linear, opacity .3s linear;
+  -webkit-transition: left .2s linear, opacity .3s linear;
+  -o-transition: left .2s linear, opacity .3s linear;
+  transition: left .2s linear, opacity .3s linear;
   opacity: 0;
-  overflow-y: auto;
-  z-index: 999; }
+  z-index: 999;
+  padding-top: 18px;
+  padding-bottom: 10px; }
+  .Lside-close {
+    position: absolute;
+    top: 27px;
+    right: 27px;
+    width: 23px;
+    height: 23px;
+    -webkit-border-radius: 50%;
+            border-radius: 50%;
+    border: 1px solid #EC5A6F;
+    background-image: url("../img/svg/close-btn2.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 9999;
+    display: block;
+    cursor: pointer; }
+  .Lside::after {
+    content: " ";
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    right: 0;
+    background-image: url("../img/m-menu.png");
+    background-position: center;
+    background-repeat: repeat-x;
+    width: 100%;
+    height: 25px;
+    z-index: 1;
+    display: block; }
   .Lside.active {
     opacity: 1;
-    right: 0; }
+    top: 0;
+    left: 0; }
   .Lside p {
     font: 100% "Lato-Semibold", sans-serif;
     text-transform: none;
@@ -1944,11 +1977,16 @@ a:focus {
     text-decoration: underline; }
 
 .Lmenu li {
-  margin: 0 auto;
   text-align: left;
   width: 100%;
   padding: 14px 0;
-  padding-left: 15px; }
+  display: block;
+  padding-left: 15px;
+  font: 100% "Lato-Semibold", sans-serif;
+  font-size: 13px;
+  color: #000;
+  position: relative;
+  text-transform: uppercase; }
   .Lmenu li:last-child a {
     color: #EC5A6F; }
   .Lmenu li:nth-child(2) a {
@@ -1960,7 +1998,8 @@ a:focus {
     font-size: 13px;
     color: #000;
     position: relative;
-    z-index: 3; }
+    z-index: 3;
+    display: block; }
 
 .links {
   width: 100%;
@@ -2740,7 +2779,7 @@ a:focus {
       text-transform: uppercase;
       color: #333;
       background: #fff;
-      padding: 13px 32px 13px 32px;
+      padding: 15px 32px 12px 32px;
       width: 151px;
       position: relative;
       margin-right: 30px;
@@ -3114,7 +3153,8 @@ a:focus {
                   box-shadow: 0 0 7px #fff inset; }
   .card-bot .ourNav {
     text-align: left;
-    font-size: 0; }
+    font-size: 0;
+    width: auto; }
     .card-bot .ourNav::after {
       display: none; }
     .card-bot .ourNav li {
@@ -4816,45 +4856,45 @@ input[name="filter-submit"] {
       height: 56px;
       background-image: url("../img/nav-img/all.png"); }
     .constructorNav li.active .n-alstroemeria::before {
-      top: -80px;
-      width: 103px;
-      height: 80px;
-      background-image: url("../img/nav-img/alstroemeria.jpg"); }
+      top: -61px;
+      width: 56px;
+      height: 61px;
+      background-image: url("../img/nav-img/alstromeria.png"); }
     .constructorNav li.active .n-gerbera::before {
       top: -70px;
       width: 60px;
       height: 70px;
       background-image: url("../img/nav-img/gerbera.jpg"); }
     .constructorNav li.active .n-iris::before {
-      top: -60px;
-      width: 91px;
-      height: 60px;
-      background-image: url("../img/nav-img/iris.jpg"); }
+      top: -61px;
+      width: 51px;
+      height: 61px;
+      background-image: url("../img/nav-img/iris.png"); }
     .constructorNav li.active .n-lilly::before {
-      top: -85px;
-      width: 55px;
-      height: 85px;
-      background-image: url("../img/nav-img/lilly.jpg"); }
+      top: -61px;
+      width: 57px;
+      height: 61px;
+      background-image: url("../img/nav-img/lilia.png"); }
     .constructorNav li.active .n-rose::before {
-      top: -66px;
-      width: 58px;
-      height: 66px;
-      background-image: url("../img/nav-img/rose.jpg"); }
+      top: -61px;
+      width: 79px;
+      height: 61px;
+      background-image: url("../img/nav-img/rosa.png"); }
     .constructorNav li.active .n-peon::before {
-      top: -66px;
-      width: 82px;
-      height: 66px;
-      background-image: url("../img/nav-img/peony.png"); }
+      top: -61px;
+      width: 61px;
+      height: 61px;
+      background-image: url("../img/nav-img/pion.png"); }
     .constructorNav li.active .n-tulips::before {
-      top: -76px;
-      width: 87px;
-      height: 76px;
-      background-image: url("../img/nav-img/tulips.jpg"); }
+      top: -61px;
+      width: 58px;
+      height: 61px;
+      background-image: url("../img/nav-img/tulpan.png"); }
     .constructorNav li.active .n-chrysanthemums::before {
-      top: -76px;
-      width: 87px;
-      height: 76px;
-      background-image: url("../img/nav-img/chrysanthemums.png"); }
+      top: -61px;
+      width: 61px;
+      height: 61px;
+      background-image: url("../img/nav-img/chrizantema.png"); }
     .constructorNav li a {
       padding: 19px 14px 17px;
       position: relative;
@@ -5415,6 +5455,36 @@ input[name="filter-submit"] {
   padding-bottom: 20px;
   text-align: left; }
 
+.sub-about {
+  display: none;
+  padding-top: 15px; }
+  .sub-about li a {
+    font-size: 12px;
+    color: #000 !important; }
+
+.Lmenu-about {
+  position: relative; }
+  .Lmenu-about.active::after {
+    -webkit-transform: rotateX(180deg);
+            transform: rotateX(180deg);
+    border-top-color: #EC5A6F; }
+  .Lmenu-about::after {
+    content: " ";
+    border-top: 10px solid #EC5A6F;
+    border-bottom: 3px solid transparent;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    -webkit-transition: border-top-color .4s linear, -webkit-transform .4s linear;
+    transition: border-top-color .4s linear, -webkit-transform .4s linear;
+    -o-transition: transform .4s linear, border-top-color .4s linear;
+    transition: transform .4s linear, border-top-color .4s linear;
+    transition: transform .4s linear, border-top-color .4s linear, -webkit-transform .4s linear;
+    position: absolute;
+    top: 15px;
+    right: 33px;
+    width: 0;
+    height: 0; }
+
 @media (max-width: 1440px) {
   .floristGallery {
     height: 300px; }
@@ -5617,8 +5687,6 @@ input[name="filter-submit"] {
     width: 70%; }
   .shares {
     padding: 0; }
-  .Lside {
-    width: 50%; }
   .notFound p {
     margin-top: 19px;
     font-size: 20px;
@@ -5746,8 +5814,6 @@ input[name="filter-submit"] {
     display: none !important; }
   .constructorNav li.active a::after {
     display: none !important; }
-  .constructor-block {
-    border: 1px solid #EC5A6F; }
   .constructor-toggle {
     position: relative;
     display: block;
@@ -5778,6 +5844,14 @@ input[name="filter-submit"] {
   .ourInfo-item {
     margin-right: 8px;
     margin-left: 8px; }
+  .about .ourNav {
+    width: auto; }
+    .about .ourNav li {
+      display: none; }
+      .about .ourNav li.active {
+        display: inline-block; }
+  .mob-basket span {
+    line-height: 21px; }
   .addItem {
     max-width: 400px; }
   .card-btn li a {
@@ -6163,8 +6237,6 @@ input[name="filter-submit"] {
     right: 10px; }
   .map {
     height: 350px; }
-  .Lside {
-    width: 100%; }
   .intro-item {
     height: 250px; }
   .intro-desc a {
@@ -6252,7 +6324,7 @@ input[name="filter-submit"] {
   .certificates-title {
     font-size: 24px; }
   .certificates-item {
-    height: 230px; }
+    height: 350px; }
   .certificates-content {
     height: 210px; }
   .floristSay h6 {
@@ -6587,7 +6659,13 @@ input[name="filter-submit"] {
   .basket-alert-txt, .subscribe-alert-txt {
     font-size: 16px; }
   .xzoom-top {
-    height: 420px; } }
+    height: 420px; }
+  .about .section-title {
+    display: none; } }
+
+@media only screen and (max-width: 425px) {
+  .certificates-item {
+    height: 300px; } }
 
 @media only screen and (max-width: 375px) {
   .card-photo, .private-user-img {
@@ -6608,7 +6686,9 @@ input[name="filter-submit"] {
   .formSearch input[type="submit"] {
     width: 100%; }
   .xzoom-gallery {
-    margin-bottom: 15px; } }
+    margin-bottom: 15px; }
+  .certificates-item {
+    height: 260px; } }
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width: 320px) {
@@ -6630,6 +6710,8 @@ input[name="filter-submit"] {
     padding-bottom: 0; }
   .florist-item-right {
     margin-left: -15px;
-    width: 320px; } }
+    width: 320px; }
+  .certificates-item {
+    height: 230px; } }
 
 /**/

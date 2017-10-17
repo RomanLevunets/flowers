@@ -455,10 +455,20 @@ $(document).ready(function() {
 
     //burger animation
     $('.burger').click(function(){
-        $('.burger__line').toggleClass('active-b');
-        $('.Lside').toggleClass('active');
-        $('.wrapper').toggleClass('bg-active');
+        $('.Lside').addClass('active');
+        $('.wrapper').addClass('fon');
 
+
+    });
+    $('.Lside-close').click(function () {
+        $('.Lside').removeClass('active');
+        $('.wrapper').removeClass('fon');
+    });
+
+    //
+    $('.Lmenu-about').click(function () {
+        $(this).toggleClass('active');
+        $('.sub-about').slideToggle();
     });
 
 
@@ -501,7 +511,7 @@ $(document).ready(function() {
 
 
     //burger animation for tabs (mobile version)
-    $('.burger__constructor').click(function(){
+    $('.constructor-toggle').click(function(){
         $('.burger__line_constructor').toggleClass('active');
         $('.constructorNav').slideToggle();
 
@@ -585,7 +595,7 @@ $(document).ready(function() {
         });
     }
     //popUp
-    $('.header-callback p a, .footer-right-callback, .Lmenu li a, .ourSelect li:last-child a, .header-sing a, .card-top a, .ordering-table td p a').magnificPopup({
+    $('.header-callback p a, .footer-right-callback, .Lmenu>li:last-child a, .ourSelect li:last-child a, .header-sing a, .card-top a, .ordering-table td p a').magnificPopup({
         removalDelay: 250,
         mainClass: 'mfp-fade'
     });
